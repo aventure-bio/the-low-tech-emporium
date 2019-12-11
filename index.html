@@ -1,0 +1,56 @@
+---
+title: Page d'accueil
+layout: default
+section_principale:
+  titre: Nos valeurs
+  contenu: L’engagement de The Green Emporium est d’offrir les meilleures alternatives
+    aux produits du quotidien tout en réduisant le plus possible l’impact écologique
+    sur la planète et les animaux.
+  texte_du_bouton: En savoir plus
+section_la_gamme:
+- titre: Cheveux secs
+  descriptif: Ils retrouveront douceur souplesse et brillance !
+- titre: Détox
+  descriptif: Vos cheveux et votre cuir chevelu seront assainis et frais !
+- titre: Cuirs chevelus sensibles
+  descriptif: Les cuirs chevelus sensibles seront zen !
+- titre: Cheveux gras
+  descriptif: Vos cheveux regraissent moins vite !
+- titre: Cheveux normaux
+  descriptif: Vos cheveux seront revitalisés et fortifiés, tout simplement en pleine
+    santé !
+- titre: Familial
+  descriptif: Tous les cheveux de la famille seront forts et brillants !
+section_fabrique_en_france:
+  titre: Fabriqué en France
+  contenu: Tous nos shampoings sont fabriqués à Nice.
+section_ingredients: Découvrez nos ingrédients
+section_engagement:
+  titre: Une marque engagée
+  contenu: Tous nos shampoings sont fabriqués à Nice.
+---
+
+<h2>{{ page.section_principale['titre'] | upcase | textilize }}</h2>
+<p>{{ page.section_principale['contenu'] | textilize }}</p>
+<button>{{ page.section_principale['texte_du_bouton'] | upcase | textilize }}</button>
+
+<hr>
+
+{% for produit in page.section_la_gamme %}
+  <h3>{{ produit.titre | upcase | textilize }}</h3>
+  <p>{{ produit.descriptif | textilize }}</p>
+{% endfor %}
+
+<hr>
+
+<h3>{{ page.section_fabrique_en_france['titre'] | upcase | textilize }}</h3>
+<p>{{ page.section_fabrique_en_france['contenu'] | textilize }}</p>
+
+<hr>
+
+<h3>{{ page.section_ingredients | upcase | textilize }}</h3>
+
+<hr>
+
+<h3>{{ page.section_engagement['titre'] | upcase | textilize }}</h3>
+<p>{{ page.section_engagement['contenu'] | textilize }}</p>
