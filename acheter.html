@@ -1,0 +1,22 @@
+---
+title: Acheter
+layout: default
+titre_principal: OÙ TROUVER NOS PRODUITS ?
+sous_titre: Retrouvez nos produits en magasins physiques uniquement !
+section_magasins:
+- nom: Super magasin 1
+  adresse: Paris
+- nom: Super magasin 2
+  adresse: Lyon
+---
+
+<h2>{{ page.titre_principal | upcase | textilize }}</h2>
+<h2>{{ page.sous_titre | textilize }}</h2>
+
+<hr>
+
+<ul>
+  {% for magasin in page.section_magasins %}
+    <li>{{ magasin.nom }}: {{ magasin.adresse }}</li>
+  {% endfor %}
+</ul>
