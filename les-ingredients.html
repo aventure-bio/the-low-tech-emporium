@@ -1,0 +1,55 @@
+---
+title: Nos ingrédients
+layout: default
+titre_principal: Nos ingrédients
+section_ingredients:
+- couleur: "#FFE72C"
+  titre: Huile de tournesol bio
+  description: Elle a des effets adoucissants et hydratants. Sur les cheveux, elle les rend brillants, soyeux et pleins de vie.
+- couleur: "#CBF7AB"
+  titre: Huile d'amande douce bio
+  description: Riche en vitamines A et E, cette huile assouplissante permet de revitaliser et fortifier votre chevelure. Elle possède des vertus adoucissantes, nourrissantes et réparatrices qui prévient la déshydratation des cheveux et redonne de la vigueur aux cheveux abîmés.
+- couleur: "#DDBA92"
+  titre: Huile d'argan bio
+  description: Cette huile riche en vitamine E, en acides gras et en polyphénols, est idéale pour prévenir le dessèchement. Elle est parfaite pour les cheveux dévitalisés, cassants, déshydratés. Elle donne brillance et éclat aux cheveux ternes et fatigués.
+- couleur: "#DE815E"
+  titre: Huile de jojoba bio
+  description: Cette huile convient bien aux cheveux gras, elle les rééquilibre en normalisant la production desébum. Toutefois ses propriétés nourrissantes, réhydratantes et adoucissantes conviendront auxcheveux secs et cassants pour retrouver vitalité, brillance et souplesse.
+- couleur: "#FFF4E2"
+  titre: Beurre de karité bio
+  description: Le beurre de karité, riche en acides gras essentiels et en vitamine A, permet de pénétrer la fibre capillaire en profondeur et au cuir chevelu de se réhydrater. Il est l’ingrédient idéal des cheveux secs, bouclés ou cassants, et ternes, et rendra votre chevelure douce et soyeuse.
+- couleur: "#FFB055"
+  titre: Huile d'abricot bio
+  description: Riche en sels minéraux et en vitamine A, elle tonifie les cheveux, les revitalise et les nourrit pour leur redonner éclat, brillance et vitalité. Elle renforce également le cuir chevelu.
+- couleur: "#748D61"
+  titre: Huile essentielle de baie de laurier bio
+  description: Très connue pour purifier et apaiser les cuirs chevelus irrités et abîmés, d’où sa présence dans notre shampoing pour cuirs chevelus sensibles. Elle aide également à lutter contre les pellicules.
+- couleur: "#FF7B41"
+  titre: Huile essentielle de pamplemousse
+  description: Grâce à ses propriétés antiseptiques, l’huile de pamplemousse peut aider à faire disparaître les problèmes de peau, de cheveux gras et de perte de cheveux.
+- couleur: "#22580A"
+  titre: Huile essentielle de menthe des champs
+  description: Avec son odeur rafraîchissante et forte, elle apporte un effet tonique. Elle a également des effets analgésiques qui apaisent les maux de têtes.
+- couleur: "#FFB100"
+  titre: Extrait de fleur de calendula bio
+  description: Le calendula soulage les problèmes cutanés, et cicatrice les petites plaies et inflammation. Par ailleurs il a une action régénératrice sur les cheveux, grâce à lui les reflets sont ravivés.
+- couleur: "#FFEAFD"
+  titre: Poudre de racines de guimauve bio
+  description: Cette poudre a beaucoup de vertus, dans notre shampoing pour cuirs chevelus sensibles, nous l’utilisons pour sa qualité à soulager les démangeaisons et irritations. Elle protège le cuir chevelu des pellicules, hydrate et démêle les cheveux et les rend plus volumineux.
+- couleur: "#E3C3F7"
+  titre: Huile essentielle de lavandin grosso bio
+  description: Emblématique de notre région, cette huile essentielle, fraîche et camphrée, est appréciée pour son parfum, comme pour ses vertus. Son action est principalement apaisante et décontractante. Elle agit également comme anti-inflammatoire et peut être utilisé pour sécher et cicatriser des plaies. Enfin, elle est traditionnellement conseillée en complément des soins anti-poux.
+- couleur: "#FF4941"
+  titre: Huile de ricin bio
+  description: Connue pour favoriser la croissance des cheveux, cette huile ne pénètre pas le cheveu mais l’enrobe et le protège. Elle possède des acides gras proches de ceux présents naturellement dans le sébum du cuir chevelu, ce qui en fait un produit naturel très efficace pour les tous les cheveux dévitalisés ou fourchus qui deviendront moins secs, plus souples et plus brillants.
+---
+
+<h2>{{ page.titre_principal | upcase | textilize }}</h2>
+
+<hr>
+
+{% for ingredient in page.section_ingredients %}
+<div class="circle" style={{ ingredient.couleur | prepend: 'background-color:' }}></div>
+<h4>{{ ingredient.titre | upcase | textilize }}</h4>
+<p>{{ ingredient.description | textilize }}</p>
+{% endfor %}

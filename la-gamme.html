@@ -28,16 +28,16 @@ section_conseils:
 - numero: N°4
   paragraphe_1: Savez-vous que se démêler les cheveux avant shampoing permet de les
     avoir plus doux après le lavage !
-  paragraphe_2: 
+  paragraphe_2:
 - numero: N°5
   paragraphe_1: Pour faciliter le coiffage après le lavage, appliquez le shampoing
     solide en effectuant un mouvement de brossage sur toute la chevelure, plutôt que
     des cercles qui emmêlent vos cheveux.
-  paragraphe_2: 
+  paragraphe_2:
 - numero: N°6
   paragraphe_1: Pour faire mousser votre shampoing, vous pouvez également frotter
     le pain entre vos mains et masser vos cheveux comme avec un shampoing liquide.
-  paragraphe_2: 
+  paragraphe_2:
 titre_section_gamme: La gamme
 section_gamme:
 - titre: Shampoing cheveux normaux
@@ -117,9 +117,9 @@ section_ingredients: Découvrez nos ingrédients
 <hr>
 
 {% for conseil in page.section_conseils %}
-<h4>{{ conseil.numero | upcase | textilize }}</h4>
-<p>{{ conseil.paragraphe_1 | textilize }}</p>
-<p>{{ conseil.paragraphe_2 | textilize }}</p>
+  <h4>{{ conseil.numero | upcase | textilize }}</h4>
+  <p>{{ conseil.paragraphe_1 | textilize }}</p>
+  <p>{{ conseil.paragraphe_2 | textilize }}</p>
 {% endfor %}
 
 <hr>
@@ -127,11 +127,11 @@ section_ingredients: Découvrez nos ingrédients
 <p>{{ page.titre_section_gamme | upcase | textilize }}</p>
 
 {% for produit in page.section_gamme %}
-<h4>{{ produit.titre | upcase | textilize }}</h4>
-<p>{{ produit.description | textilize }}</p>
-<p>{{ produit.formules | textilize }}</p>
-<p>{{ produit.benefices | upcase | textilize }}</p>
-<p>{{ produit.allergenes | textilize }}</p>
+  <h4>{{ produit.titre | upcase | textilize }}</h4>
+  <p>{{ produit.description | textilize }}</p>
+  <p>{{ produit.formules | textilize }}</p>
+  <p>{{ produit.benefices | upcase | textilize }}</p>
+  <p>{{ produit.allergenes | textilize }}</p>
 {% endfor %}
 
 <hr>

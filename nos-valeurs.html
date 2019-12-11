@@ -32,9 +32,10 @@ section_engagement:
 <hr>
 
 <h3>{{ page.titre_section_chiffres | upcase | textilize }}</h3>
+
 {% for produit in page.section_chiffres %}
-<h4>{{ produit.chiffre | upcase | textilize }}</h4>
-<p>{{ produit.details | upcase | textilize }}</p>
+  <h4>{{ produit.chiffre | upcase | textilize }}</h4>
+  <p>{{ produit.details | upcase | textilize }}</p>
 {% endfor %}
 
 <hr>
