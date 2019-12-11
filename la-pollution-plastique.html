@@ -1,4 +1,20 @@
 ---
-title: Happy Jekylling!
+title: La pollution plastique
 layout: default
+titre_principal: La pollution plastique
+paragraphe_1: The Green Emporium vous partage cette vidéo de la pollution plastique expliquée par Surfrider
+lien_video: https://www.youtube.com/watch?v=Cxvk6AAJiSA&feature=emb_logo
+paragraphe_2: 19 tonnes de plastique sont rejetées chaque minute dans l’Océan. Seulement 1% des déchets plastiques sont captés en surface, les autres 99% sont désagrégés en microparticules dans les fonds marins.
+paragraphe_3: Le fléau du plastique est dû à sa sur consommation. Trop souvent privilégié à d’autres matières, il est difficile de le revaloriser à grande échelle. Son impact sur notre écosystème est tel que d’ici moins de 30 ans, l’Océan contiendra plus de matière plastique que d’êtres marins.
+paragraphe_4: Il est primordial de faire disparaître le déchet plastique.
 ---
+
+<h2>{{ page.titre_principal | upcase | textilize }}</h2>
+
+<hr>
+
+<p>{{ page.paragraphe_1 | textilize }}</p>
+<a href="{{ page.lien_video }}" target='_blank'>{{ page.lien_video }}</a>
+<p>{{ page.paragraphe_2 | textilize }}</p>
+<p>{{ page.paragraphe_3 | textilize }}</p>
+<p>{{ page.paragraphe_4 | textilize }}</p>
