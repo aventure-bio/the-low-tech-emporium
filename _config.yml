@@ -17,6 +17,8 @@ social:
 google_site_verification:
 lang: fr_FR
 
+exclude: ['README.md']
+
 jekyll_admin:
   hidden_links:
     - staticfiles
