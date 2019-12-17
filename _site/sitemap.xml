@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://low-tech.the-green-emporium.com/acheter.html</loc>
+<loc>http://localhost:4000/acheter.html</loc>
 </url>
 <url>
-<loc>https://low-tech.the-green-emporium.com/</loc>
+<loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>https://low-tech.the-green-emporium.com/la-gamme.html</loc>
+<loc>http://localhost:4000/la-gamme.html</loc>
 </url>
 <url>
-<loc>https://low-tech.the-green-emporium.com/la-pollution-plastique.html</loc>
+<loc>http://localhost:4000/la-pollution-plastique.html</loc>
 </url>
 <url>
-<loc>https://low-tech.the-green-emporium.com/les-ingredients.html</loc>
+<loc>http://localhost:4000/les-ingredients.html</loc>
 </url>
 <url>
-<loc>https://low-tech.the-green-emporium.com/nos-valeurs.html</loc>
+<loc>http://localhost:4000/nos-valeurs.html</loc>
 </url>
 <url>
-<loc>https://low-tech.the-green-emporium.com/votre-impact.html</loc>
+<loc>http://localhost:4000/votre-impact.html</loc>
 </url>
 </urlset>

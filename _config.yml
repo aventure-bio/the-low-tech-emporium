@@ -20,3 +20,7 @@ lang: fr_FR
 jekyll_admin:
   hidden_links:
     - staticfiles
+
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
