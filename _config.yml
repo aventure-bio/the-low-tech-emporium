@@ -1,7 +1,28 @@
-url: "https://low-tech.the-green-emporium.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://low-tech.the-green-emporium.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "The Low Tech Emporium" # the name of your site, e.g. ACME Corp.
+tagline: "Le site low tech de The Green Emporium"
+description: "Pour le site de la marque The Green Emporium, Lamazuna a tenu à développer une nouvelle version low tech, peu consommatrice en énergie et auto-hébergée"
+twitter:
+  username:
+  card: summary
+facebook:
+  app_id:
+  publisher:
+  admins:
+logo:
+social:
+  name:
+  links:
+google_site_verification:
+lang: fr_FR
+
+exclude: ['README.md']
 
 jekyll_admin:
   hidden_links:
     - staticfiles
+
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
