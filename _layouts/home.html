@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'fr' }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ site.title }} ~ Pour la beauté du geste</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  </head>
+
+  <body>
+
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
