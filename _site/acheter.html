@@ -1,47 +1,71 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Acheter ~ The Low Tech Emporium</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <title>Acheter - The Low Tech Emporium</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-</head>
+  <body>
 
-<body>
-  <nav>
-  
-  <a href="/" >
-    The Green Emporium
-  </a>
-  
-  <a href="/nos-valeurs" >
-    Nos valeurs
-  </a>
-  
-  <a href="/la-gamme" >
-    La gamme
-  </a>
-  
-  <a href="/les-ingredients" >
-    Les ingrédients
-  </a>
-  
-  <a href="/la-pollution-plastique" >
-    La pollution plastique
-  </a>
-  
-  <a href="/votre-impact" >
-    Votre impact
-  </a>
-  
-  <a href="/acheter" >
-    Acheter
-  </a>
-  
+    <header id="header" role="banner" class="flex flex-col justify-between">
+	<div id="top" class="container invert uppercase ta-center flex justify-center items-center">Le geste beauté devient un beau geste pour l’environnement.</div>
+	<div class="container">
+		<a href="/"><img id="logo" src="/assets/img/TGE-logo.svg" alt="Logo The Green Emporium"></a>
+	</div>
+	<nav class="container" role="navigation">
+  <ul class="flex justify-center items-center align-center">
+    
+    <li class="flex">
+      <a href="/#top" class="uppercase">
+      
+      </a>
+    </li>
+    
+    <li class="flex">
+      <a href="/nos-valeurs" class="uppercase">
+      Nos valeurs
+      </a>
+    </li>
+    
+    <li class="flex">
+      <a href="/la-gamme" class="uppercase">
+      La gamme
+      </a>
+    </li>
+    
+    <li class="flex">
+      <a href="/les-ingredients" class="uppercase">
+      Les ingrédients
+      </a>
+    </li>
+    
+    <li class="flex">
+      <a href="/la-pollution-plastique" class="uppercase">
+      La pollution plastique
+      </a>
+    </li>
+    
+    <li class="flex">
+      <a href="/votre-impact" class="uppercase">
+      Votre impact
+      </a>
+    </li>
+    
+    <li class="flex">
+      <a href="/acheter" class="uppercase">
+      Acheter
+      </a>
+    </li>
+    
+  </ul>
 </nav>
 
-  <h2>OÙ TROUVER NOS PRODUITS ?</h2>
+</header>
+
+    <h2>OÙ TROUVER NOS PRODUITS ?</h2>
 <h2>Retrouvez nos produits en magasins physiques uniquement !</h2>
 
 <hr>
@@ -54,60 +78,61 @@
   
 </ul>
 
-  
-
-<hr>
-<footer>
+    <section id="newsletter" class="container flex flex-col content-center items-center ta-center bg--vanille-light">
   <!-- Begin Mailchimp Signup Form -->
-  <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet"
-    type="text/css">
-  <style type="text/css">
-    #mc_embed_signup {
-      background: #fff;
-      clear: left;
-      font: 14px Helvetica, Arial, sans-serif;
-      width: 100%;
-    }
-
-    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-  	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-  </style>
   <div id="mc_embed_signup">
     <form
       action="https://bio.us19.list-manage.com/subscribe/post?u=1cf940aaf720b45d6c32cfc36&amp;id=4f1e18ea36"
-      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate wave--before"
       target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
-        <label for="mce-EMAIL">REJOIGNEZ NOUS !</label>
-        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
-          placeholder="INSCRIVEZ-VOUS À NOTRE NEWSLETTER !" required>
-        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-            name="b_1cf940aaf720b45d6c32cfc36_4f1e18ea36" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Valider" name="subscribe"
-            id="mc-embedded-subscribe" class="button"></div>
+        <label for="mce-EMAIL" class="uppercase clearfix">Rejoignez-nous !</label>
+        <div class="flex align-baseline">
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
+            placeholder="INSCRIVEZ-VOUS À NOTRE NEWSLETTER !" required>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+              name="b_1cf940aaf720b45d6c32cfc36_4f1e18ea36" tabindex="-1" value=""></div>
+          <input type="submit" value="Valider" name="subscribe"
+              id="mc-embedded-subscribe" class="btn bg--vanille uppercase">
+        </div>
       </div>
     </form>
+  </div> <!--End mc_embed_signup-->
+</section>
+
+<footer id="footer" class="container padded invert grid-5_md-2_xs-1 items-start">
+  <div class="col flex justify-center">
+    <img src="assets/img/TGE-icon-white.png" alt="Logo The Green Emporium" width="135" height="131">
   </div>
 
-  <!--End mc_embed_signup-->
-  <br>
-  
-    <a href="/">The Green Emporium</a>
-  
-    <a href="/nos-valeurs">Nos valeurs</a>
-  
-    <a href="/la-gamme">La gamme</a>
-  
-    <a href="/les-ingredients">Les ingrédients</a>
-  
-    <a href="/la-pollution-plastique">La pollution plastique</a>
-  
-    <a href="/votre-impact">Votre impact</a>
-  
-    <a href="/acheter">Acheter</a>
-  
-  <br><br>
+  <nav class="col">
+    <ul>
+    
+      <li><a href="/nos-valeurs">Nos valeurs</a></li>
+    
+      <li><a href="/la-gamme">La gamme</a></li>
+    
+      <li><a href="/les-ingredients">Les ingrédients</a></li>
+    
+      <li><a href="/la-pollution-plastique">La pollution plastique</a></li>
+    
+      <li><a href="/votre-impact">Votre impact</a></li>
+    
+      <li><a href="/acheter">Acheter</a></li>
+    
+    </ul>
+  </nav>
+
+  <nav class="col">
+    <ul>
+      <li><a href="/confidentialite">Politique de confidentialité</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/service-client">Serive client</a></li>
+    </ul>
+  </nav>
+
+  <div class="col fw-book">
   
     EOLYS beauté – Distributeur France et Belgique<br>
   
@@ -121,18 +146,23 @@
   
     François-Xavier Laude<br>
   
-  <br>
+  </div>
   
-    <a href="mailto:fx@eolys-beaute.com">fx@eolys-beaute.com</a>
-  
-    <a href="mailto:bonjour@the-green-emporium.com">bonjour@the-green-emporium.com</a>
-  
-    <a href="https://www.instagram.com/the.green.emporium/">Instagram</a>
-  
-    <a href="https://www.facebook.com/thegreenemporium/">Facebook</a>
-  
+  <div id="socials" class="col">
+    <ul>
+    
+      <li><a href="mailto:fx@eolys-beaute.com">fx@eolys-beaute.com</a></li>
+    
+      <li><a href="mailto:bonjour@the-green-emporium.com">bonjour@the-green-emporium.com</a></li>
+    
+      <li><a href="https://www.instagram.com/the.green.emporium/">Instagram</a></li>
+    
+      <li><a href="https://www.facebook.com/thegreenemporium/">Facebook</a></li>
+    
+    </ul>
+  </div>
 </footer>
 
-</body>
-
+    
+  </body>
 </html>
