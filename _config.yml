@@ -19,6 +19,9 @@ lang: fr_FR
 
 exclude: ['README.md']
 
+sass:
+  style: compressed
+
 jekyll_admin:
   hidden_links:
     - staticfiles

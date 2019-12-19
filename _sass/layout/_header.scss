@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+
+#header {
+	height: 315px;
+	#top {
+		font-size: 21px;
+		height: 54px;
+	}
+	#logo {
+		margin: auto;
+		max-width: 330px;
+	}
+	#hero {
+		img { 
+			height: 640px;
+		}
+	}
+	nav {
+		height: 50px;
+		line-height: 50px;
+		font-size: 18px;
+		ul {
+			margin: auto;
+			padding: 0;
+			list-style: none;
+			li {
+				padding: 0 10px;
+				&:first-child {
+					display: none;
+					& > a {
+						background: center / contain no-repeat url("../img/TGE-icon.png");
+						width: 70px;
+						height: 67.5px; 
+					}
+				}
+			}
+		}
+	}
+}

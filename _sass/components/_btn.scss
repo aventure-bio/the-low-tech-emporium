@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	line-height: 1;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 0.75em 1.25em 0.666em;
+	@include on-event {
+		opacity: 0.9;
+	}
+}
+.btn--outline {
+	color: var(--brand-color);
+	border: 5px solid var(--brand-color);
+}
+.btn--lg {
+	font-size: 24px;
+}

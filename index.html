@@ -1,55 +1,148 @@
 ---
-title: Page d'accueil
-description:
-image:
-layout: default
-section_principale:
+title: The Green Emporium
+description: The Green Emporium est la dernière création de Laëtitia Van de Walle, fondatrice de Lamazuna. Depuis 2010, Lamazuna est la marque de référence du zéro déchet dans la salle de bain.
+layout: home
+hero:
+  img:
+    src: SLIDER_-1-16c-1920w.png
+    alt: Shampoing solide – Cheveux sec
+section_valeurs:
   titre: Nos valeurs
   contenu: L’engagement de The Green Emporium est d’offrir les meilleures alternatives aux produits du quotidien tout en réduisant le plus possible l’impact écologique sur la planète et les animaux.
-  texte_du_bouton: En savoir plus
-section_la_gamme:
+  btn: En savoir plus
+section_gamme:
 - titre: Cheveux secs
   descriptif: Ils retrouveront douceur souplesse et brillance !
+  color: vanille
+  background:
+    url: VISUEL_vanille.png
 - titre: Détox
   descriptif: Vos cheveux et votre cuir chevelu seront assainis et frais !
+  color: menthe
+  background:
+    url: VISUEL_menthe-12.png
 - titre: Cuirs chevelus sensibles
   descriptif: Les cuirs chevelus sensibles seront zen !
+  color: lavande
+  background:
+    url: VISUEL_LAVANDE-13.png
 - titre: Cheveux gras
   descriptif: Vos cheveux regraissent moins vite !
+  color: pamplemousse
+  background:
+    url: VISUEL_PAMPLEMOUSSE-14.png
 - titre: Cheveux normaux
   descriptif: Vos cheveux seront revitalisés et fortifiés, tout simplement en pleine santé !
+  color: amande
+  background:
+    url: VISUEL_AMANDE-15.png
 - titre: Familial
   descriptif: Tous les cheveux de la famille seront forts et brillants !
-section_fabrique_en_france:
+  color: fruits-exotiques
+  background:
+    url: VISUEL_FE.png
+section_made_in_france:
   titre: Fabriqué en France
   contenu: Tous nos shampoings sont fabriqués à Nice.
-section_ingredients: Découvrez nos ingrédients
-section_engagement:
+  background:
+    url: AdobeStock_-36-b&w-960w.png
+    color: menthe-light
+section_ingredients:
+  titre: Découvrez <br>nos ingrédients
+  href: /les-ingredients
+  background:
+    url: AdobeStock_-35-b&w-960w.png
+    color: fruits-exotiques-light
+section_engagements:
   titre: Une marque engagée
-  contenu: Tous nos shampoings sont fabriqués à Nice.
+  contenu: Au cœur du projet, The Green Emporium s’engage avec Surfrider Foundation Europe, on vous explique tout <a href="/la-pollution-plastique">ici</a>
+  background:
+    url: AdobeStock_-1-b&w-960w.png
+    color: menthe-light
+  img:
+    src: logo-surfrider-foundation-europe.svg
+    alt: Nice
 ---
 
-<h2>{{ page.section_principale.titre | upcase | textilize }}</h2>
-<p>{{ page.section_principale.contenu | textilize }}</p>
-<button>{{ page.section_principale.texte_du_bouton | upcase | textilize }}</button>
+<main class="home">
 
-<hr>
+  <h1 class="visually-hidden">{{ site.title }}</h1>
 
-{% for produit in page.section_la_gamme %}
-  <h3>{{ produit.titre | upcase | textilize }}</h3>
-  <p>{{ produit.descriptif | textilize }}</p>
-{% endfor %}
+  <div id="hero">
+    <img class="w-100" src="/assets/img/{{ page.hero.img.src }}" alt="{{ page.hero.img.alt }}">
+  </div>
 
-<hr>
+  <section id="valeurs" class="py-8">
+    <div class="container flex flex-col items-center ta-center wave--before">
+      <h2>{{ page.section_valeurs.titre | textilize }}</h2>
+      <p>{{ page.section_valeurs.contenu | textilize }}</p>
+      <ul class="features grid-4">
+      {% for feature in site.data.features %}
+        <li class="col">
+          <figure>
+            <img src="{{ feature.img }}">
+            <figcaption>{{ feature.titre | textilize }}</figcaption>
+          </figure>
+        </li>
+      {% endfor %}
+      </ul>
+      <a href="#" class="btn btn--outline btn--lg">{{ page.section_valeurs.btn | textilize }}</a>
+    </div>
+  </section>
 
-<h3>{{ page.section_fabrique_en_france.titre | upcase | textilize }}</h3>
-<p>{{ page.section_fabrique_en_france.contenu | textilize }}</p>
+  <section id="gamme" class="grid-2_md-1 grid-noGutter">
+    <div class="swiper-container section__text col">
+      <div class="swiper-wrapper">
+        {% for produit in page.section_gamme %}
+        <div class="swiper-slide section__text invert flex flex-col justify-center ta-center wave--before wave--after wave--white" style="background-color: var(--{{ produit.color }})">
+          <h3 class="px-8">{{ produit.titre | textilize }}</h3>
+          <p class="px-8">{{ produit.descriptif | textilize }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-container section__img col">
+      <div class="swiper-wrapper">
+        {% for produit in page.section_gamme %}
+        <div class="swiper-slide" style="background: center / cover no-repeat url('/assets/img/{{ produit.background.url }}')"></div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
 
-<hr>
+  <section id="made-in-france" class="grid-2_md-1 grid-noGutter">
+    <div class="section__img col filter--brand-color">
+      <div class="h-100 bg--darken" style="background-image: linear-gradient(var(--{{ page.section_made_in_france.background.color }}), var(--{{ page.section_made_in_france.background.color }})), url('/assets/img/{{ page.section_made_in_france.background.url }}')"></div>
+    </div>
+    <div class="section__text col padded invert flex flex-col justify-center ta-center wave--before wave--after wave--white">
+      <h3>{{ page.section_made_in_france.titre | textilize }}</h3>
+      <p>{{ page.section_made_in_france.contenu | textilize }}</p>
+    </div>
+  </section>
 
-<h3>{{ page.section_ingredients | upcase | textilize }}</h3>
+  <section id="ingredients" class="relative">
+    <div class="section__img filter--fruits-exotiques">
+      <div class="h-100 bg--darken" style="background-image: linear-gradient(var(--{{ page.section_ingredients.background.color }}), var(--{{ page.section_ingredients.background.color }})), url('/assets/img/{{ page.section_ingredients.background.url }}')">
+      </div>
+    </div>
+    <div class="grid-2_md-1 grid-noGutter" style="position:absolute; top:0; left:0; right:0">
+      <div class="section__text col padded flex flex-col justify-center content-center ta-center wave--before wave--after">
+        <h3><a href="{{ page.section_ingredients.href }}">{{ page.section_ingredients.titre | textilize }}</a></h3>
+      </div>
+    </div>
+  </section>
 
-<hr>
-
-<h3>{{ page.section_engagement.titre | upcase | textilize }}</h3>
-<p>{{ page.section_engagement.contenu | textilize }}</p>
+  <section id="engagements" class="grid-2_md-1 grid-noGutter">
+    <div class="section__img col filter--menthe">
+      <div class="padded h-100 bg--darken flex justify-center items-center" style="background-image: linear-gradient(var(--{{ page.section_engagements.background.color }}), var(--{{ page.section_engagements.background.color }})), url('/assets/img/{{ page.section_engagements.background.url }}')">
+        <img class="" src="/assets/img/{{ page.section_engagements.img.src }}" alt="{{ page.section_engagements.img.alt }}" width="207" height="300">
+      </div>
+    </div>
+    <div class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
+      <h3>{{ page.section_engagements.titre | textilize }}</h3>
+      <p>{{ page.section_engagements.contenu | textilize }}</p>
+    </div>
+  </section>
+</main>

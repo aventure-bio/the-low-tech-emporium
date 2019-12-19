@@ -1,0 +1,120 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+
+/// Fluid Type
+/// @author MadeByMike
+/// @link https://codepen.io/MadeByMike/pen/vNrvdZ
+
+@mixin interpolate($properties, $min-screen, $max-screen, $min-value, $max-value) {
+  & {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
+
+    @media screen and (min-width: $min-screen) {
+      @each $property in $properties {
+        #{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value); 
+      }
+    }
+
+    @media screen and (min-width: $max-screen) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+  }
+}
+
+// Requires the calc-interpolation function which can also be used independently
+
+@function calc-interpolation($min-screen, $min-value, $max-screen, $max-value) {
+  $a: ($max-value - $min-value) / ($max-screen - $min-screen);
+  $b: $min-value - $a * $min-screen; 
+
+  $sign: "+";
+  @if ($b < 0) {
+    $sign: "-";
+    $b: abs($b);
+  }
+  @return calc(#{$a*100}vw #{$sign} #{$b});
+}
+
+
+
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+// Horizontal list mixins
+// @link https://gist.github.com/wzup/ee78c8eb3b39e91e8e124e7ac5073940
+
+// Standard horizontal list, using word-spacing trick to remove whitespace between inline-block elements.
+
+@mixin horizontal-list {
+  padding: 0;
+  //text-align: center;
+  word-spacing: -1em;
+  display: table;
+  width: 100%;
+  li {
+    display: inline-block;
+    word-spacing: 0;
+  }
+}
+
+// Horizontal list separated by :after content.
+
+@mixin horizontal-list-separated($separator:'') {
+  @include horizontal-list;
+  li:not(.last):after {
+    content: $separator;
+  }
+}
+
+// Horizontal list with padded links.
+
+@mixin horizontal-list-padded($vertical, $horizontal) {
+  @include horizontal-list;
+  li {
+    padding: $vertical 0;
+    a {
+      padding: $vertical $horizontal;
+    }
+  }
+}
+
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
