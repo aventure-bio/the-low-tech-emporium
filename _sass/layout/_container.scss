@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the container of the site/application.
+// -----------------------------------------------------------------------------
+
+
+/**
+ * Main content containers
+ */
+.container {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px 50px;
+	clear: both;
+}
+.padded {
+	padding: 50px !important;
+}

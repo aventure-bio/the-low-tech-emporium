@@ -1,0 +1,91 @@
+// -------------------------------------------------------------------------------
+// This file contains all styles related to the typography of the site/application.
+// -------------------------------------------------------------------------------
+
+
+/**
+ * Webfonts
+ */
+@font-face {
+  font-family: "NeutraText-BookAlt";
+  src: local("Neutra Text Book Alt"),
+       local("NeutraText-BookAlt"),
+       url("/assets/fonts/NeutraText-BookAlt.woff2") format("woff2"),
+       url("/assets/fonts/NeutraText-BookAlt.woff") format("woff");
+	font-weight: normal;
+}
+@font-face {
+  font-family: "NeutraText-BoldAlt";
+  src: local("Neutra Text Bold Alt"),
+       local("NeutraText-BoldAlt"),
+       url("/assets/fonts/NeutraText-BoldAlt.woff2") format("woff2"),
+       url("/assets/fonts/NeutraText-BoldAlt.woff") format("woff");
+	font-weight: normal;
+}
+
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+	font-family: 'NeutraText-BoldAlt', $font-stack;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fw-book {
+	font-family: "NeutraText-BookAlt", $font-stack;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin-left: -0.05em;
+	line-height: 1;
+}
+
+h1, h2 { 
+	font-size: 40px;
+}
+h3 {
+	font-size: 37px;
+}
+
+h1, h2, h3, h4,
+.uppercase {
+	text-transform: uppercase;
+}
+
+p {
+	line-height: 1.5; // (24px)
+	margin: 1.5rem 0;
+	max-width: 30em;
+}
+
+small, .small {
+	font-size: $font-size-1;
+	line-height: 1.685;
+}
+
+ul, li {
+	padding: 0;
+}
+
+.fz-1, .fz-1 > * { font-size: $font-size-1; }
+.fz-2, .fz-2 > * { font-size: $font-size-2; }
+.fz-3, .fz-3 > * { font-size: $font-size-3; }
+.fz-4, .fz-4 > * { font-size: $font-size-4; }
+.fz-5, .fz-5 > * { font-size: $font-size-5; }
+
+
+/**
+ * Selection
+ */
+::selection {
+  background-color: var(--brand-color);
+  color: white;
+}
+::-moz-selection {
+  background-color: var(--brand-color);
+  color: white;
+}

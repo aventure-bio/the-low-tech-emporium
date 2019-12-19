@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the image component.
+// -----------------------------------------------------------------------------
+
+figure {
+	position: relative;
+	margin: 0;
+  figcaption {
+    margin-top: 1.5em;
+  }
+}
+
+img, video {
+	display: block;
+  object-fit: cover;
+}
+
+
+// Filters
+.bg--darken {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+[class*="filter--"] {
+  > * {
+    mix-blend-mode: screen;
+  }
+}
+.filter--brand-color {
+  background-color: var(--brand-color);
+}
+.filter--menthe {
+  background-color: var(--menthe);
+}
+.filter--fruits-exotiques {
+  background-color: var(--fruits-exotiques);
+}
+
+
+// Aspect ratio
+[class^="aspect-ratio"] {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: #eee;
+}
+[class^="aspect-ratio"] > * {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.aspect-ratio-2x3  { padding-top: 150%; }
+.aspect-ratio-1x1  { padding-top: 100%; }
+.aspect-ratio-3x2  { padding-top: 66.666%; }
+.aspect-ratio-16x9 { padding-top: 56.25%;  }
+.aspect-ratio-2x1  { padding-top: 50%;     }
+
+// Color overlay on top of images depending of data-category
+// [data-category] [class^='aspect-ratio']:after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   opacity: 33.333%;
+// }
+// [data-category="theme"] [class^='aspect-ratio']:after,
+// [data-category="theme"] .video {
+//   background-color: var(--themes-color);
+// }
+// [data-category="outil"] [class^='aspect-ratio']:after,
+// [data-category="outil"] .video {
+//   background-color: var(--outils-color);
+// }
+// [data-category="action"] [class^='aspect-ratio']:after,
+// [data-category="action"] .video {
+//   background-color: var(--actions-color);
+// }

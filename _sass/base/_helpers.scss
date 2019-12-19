@@ -1,0 +1,249 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+
+/**
+ * Size
+ */
+.w-100   { width: 100%   }
+.w-100vw { width: 100vw  }
+.h-100   { height: 100%  }
+.h-100vh { height: 100vh }
+
+
+
+/**
+ * Hide / Show elements
+ */
+@media (min-width: 0px) {
+  .hidden {
+    display: none;
+  }
+  .show {
+    display: initial;
+  }
+}
+@media (min-width: $breakpoint-xs) {
+  .hidden-xs {
+    display: none;
+  }
+  .show-xs {
+    display: initial;
+  }
+}
+@media (min-width: $breakpoint-sm) {
+  .hidden-sm {
+    display: none;
+  }
+  .show-sm {
+    display: initial;
+  }
+}
+@media (min-width: $breakpoint-md) {
+  .hidden-md {
+    display: none;
+  }
+  .show-md {
+    display: initial;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .hidden-lg {
+    display: none;
+  }
+  .show-lg {
+    display: initial;
+  }
+}
+
+/**
+ * Colors
+ */
+.invert {
+  background-color: var(--brand-color);
+  color: #fff;
+}
+.bg--brand-color   { background-color: var(--menthe) }
+.bg--menthe        { background-color: var(--menthe) }
+.bg--menthe-light  { background-color: var(--menthe-light) }
+.bg--vanille       { background-color: var(--vanille) }
+.bg--vanille-light { background-color: var(--vanille-light) }
+
+
+/**
+ * Text alignements
+ */
+.ta-center {
+  text-align: center;
+}
+.ta-right {
+  text-align: right;
+}
+
+
+/**
+ * Position
+ */
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+
+
+/**
+ * Display
+ */
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.flex {
+  display: flex;
+}
+
+/**
+ * Flexbox
+ */
+.flex-row          { flex-direction: row; }
+.flex-row-reverse  { flex-direction: row-reverse; }
+.flex-col          { flex-direction: column; }
+.flex-col-reverse  { flex-direction: column-reverse; }
+
+.flex-wrap         { flex-wrap: wrap; }
+.flex-wrap-reverse { flex-wrap: wrap-reverse; }
+
+.justify-start   { justify-content: flex-start; }   
+.justify-center  { justify-content: center; }
+.justify-end     { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-around  { justify-content: space-around; }
+
+.content-start   { align-content: flex-start; }   
+.content-center  { align-content: center; }
+.content-end     { align-content: flex-end; }
+.content-between { align-content: space-between; }
+.content-around  { align-content: space-around; }
+
+.items-stretch   { align-items: stretch; }
+.items-start     { align-items: flex-start; }
+.items-center    { align-items: center; }
+.items-end       { align-items: flex-end; }
+.items-baseline  { align-items: baseline; }
+
+.flex-shrink    { flex-shrink: 1; }
+.flex-shrink-0  { flex-shrink: 0; }
+
+
+/**
+ * Text decoration & list style
+ */
+.no-list-style {
+  list-style: none;
+}
+.no-text-deco {
+  text-decoration: none;
+}
+
+
+
+
+/*
+This .scss loop will create "margin helpers" and "padding helpers" for use in your web projects.
+It will generate several classes such as:
+.mr-0
+.mr-7
+.mt-6
+.mx-2
+.pb-4
+.pl-5
+.py-3
+The first letter is "m" or "p" for MARGIN or PADDING
+Second letter is "t", "b", "l", or "r" for TOP, BOTTOM, LEFT, or RIGHT
+or "x" / "y" for horizontal / vertical spacing
+*/
+
+$spaceamounts: ($space-0, $space-1, $space-2, $space-3, $space-4, $space-5, $space-6, $space-7, $space-8); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+$axes: (x, y);
+
+@each $space in $spaceamounts {
+  $i: index($spaceamounts, $space) - 1; // 0, 1, 2, 3, etc.
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$i} {
+      margin-#{$side}: #{$space};
+    }
+    .p#{str-slice($side, 0, 1)}-#{$i} {
+      padding-#{$side}: #{$space};
+    }
+  }
+  @each $axe in $axes {
+    @if $axe == x {
+      .m#{$axe}-#{$i} {
+        margin: 0 #{$space};
+      }
+      .p#{$axe}-#{$i} {
+        padding: 0 #{$space};
+      }
+    } @else {
+      .m#{$axe}-#{$i} {
+        margin: #{$space} 0;
+      }
+      .p#{$axe}-#{$i} {
+        padding: #{$space} 0;
+      }
+    }
+  }
+}

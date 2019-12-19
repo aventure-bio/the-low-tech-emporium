@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the wave component.
+// -----------------------------------------------------------------------------
+
+.wave--before:before,
+.wave--after:after {
+	content: "";
+	display: block;
+	background-image: var(--wave);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 50px auto;
+	width: 87px;
+	height: 15px;
+	@media (min-width: $breakpoint-md) {
+		width: 116px;
+		height: 20px;
+	}
+}
+.wave--white:before,
+.wave--white:after, {
+	background-image: var(--wave-white);
+}
+
+
