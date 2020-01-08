@@ -4,58 +4,142 @@ layout: default
 section_histoire:
   titre: Notre histoire
   contenu: The Green Emporium est la dernière création de Laëtitia Van de Walle, fondatrice de Lamazuna. Depuis 2010, Lamazuna est la marque de référence du zéro déchet dans la salle de bain. Dédiée originellement aux réseaux bio, elle propose aujourd’hui une nouvelle version de ses shampoings solides en exclusivité pour le réseau GMS.
-titre_section_chiffres: En chiffres
+  img: 
+    src: LAETITIA-64c-480w.png
+    alt: Portrait de Laëtitia Van de Walle.
 section_chiffres:
-- chiffre: 9
-  details: Ans d'expérience
-- chiffre: 38
-  details: Salariés
-- chiffre: 29
-  details: Millions de déchets évités depuis 2010
+  titre: En chiffres
+  chiffres:
+  - chiffre: 9 ans
+    details: d’expérience
+  - chiffre: 38
+    details: salariés
+  - chiffre: 29
+    details: millions de déchets évités depuis 2010
 section_video:
   url: https://www.brut.media/fr/health/objectif-zero-dechet-dans-la-salle-de-bains-78db296f-2581-4769-ade3-9171978dfe29
+  img: 
+    src: IMG_BRUT-16c-442w.png
+    alt: Brut.
 section_origine:
+  img: 
+    src: TGE-logo.svg
+    alt: Logo The Green Emporium
   contenu: Laëtitia a découvert le film « Mr Magorium’s Wonder Emporium » dans lequel « Emporium » fait référence à un fantastique magasin de jouets. Quelques années plus tard, elle reprend ce nom pour offrir des solutions écologiques à nos supermarchés.
 section_valeurs:
   titre: Nos valeurs
   contenu: L’engagement de The Green Emporium est d’offrir les meilleures alternatives aux produits du quotidien tout en réduisant le plus possible l’impact écologique sur la planète et les animaux. Nos shampoings solides permettent d’éliminer les flacons en plastique et d’utiliser la juste dose de produit tout en respectant le cuir chevelu grâce à des formules véganes et naturelles. La fabrication est 100% française.
-section_label:
+section_labels:
   titre: Nous sommes labellisés
-section_engagement:
+  labels:
+  - img: 
+      src: logo-slow-cosmetique.svg
+      alt: Slow cosmétiques
+  - img: 
+      src: logo-OFG.svg
+      alt: Origine France garantie
+  - img: 
+      src: logo-vegan.svg
+      alt: Vegan
+section_engagements:
   titre: Une marque engagée
-  contenu: Au coeur du projet, The Green Emporium s’engage avec Surfrider Foundation Europe, on vous explique tout ici
+  contenu: Au cœur du projet, The Green Emporium s’engage avec Surfrider Foundation Europe, on vous explique tout <a href="/la-pollution-plastique">ici</a>
+  background: 
+    url: AdobeStock_-1-b&w-960w.png
+    color: menthe-light
+  img: 
+    src: logo-surfrider-foundation-europe.svg
+    alt: Nice
 ---
 
-<h2>{{ page.section_histoire.titre | upcase | textilize }}</h2>
-<p>{{ page.section_histoire.contenu | textilize }}</p>
+<main class="nos-valeurs">
 
-<hr>
+  <h1 class="visually-hidden">{{ page.title }}</h1>
 
-<h3>{{ page.titre_section_chiffres | upcase | textilize }}</h3>
+  <section id="histoire" class="section grid grid-noGutter">
+    <div class="section__img col-4_sm-12">
+      <img class="h-100 w-100" src="/assets/img/{{ page.section_histoire.img.src }}" alt="{{ page.section_histoire.img.alt }}">
+    </div>
+    <div class="container bg--amande-light col-8_sm-12 flex flex-col items-center justify-center ta-center wave--before wave--after">
+      <div class="mx-8">
+        <h3>{{ page.section_histoire.titre | textilize }}</h3>
+        <p>{{ page.section_histoire.contenu | textilize }}</p>
+      </div>
+    </div>
+  </section>
 
-{% for produit in page.section_chiffres %}
-  <h4>{{ produit.chiffre | upcase | textilize }}</h4>
-  <p>{{ produit.details | upcase | textilize }}</p>
-{% endfor %}
+  <section id="chiffres" class="section py-8">
+    <div class="container flex flex-col items-center ta-center">
+      <h2 class="menthe">{{ page.section_chiffres.titre | textilize }}</h2>
+      <div class="grid-3_md-1 items-end">
+      {% for produit in page.section_chiffres.chiffres %}
+        <div class="col uppercase wave--after">
+          <p><span class="chiffre">{{ produit.chiffre | textilize }}</span><br>
+          <span class="details">{{ produit.details | textilize }}</span></p>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </section>
 
-<hr>
+  <section id="video" class="section bg--amande-light py-8">
+    <div class="container flex flex-col items-center justify-center">
+      <figure>
+        <a href="{{ page.section_video.url }}" target='_blank'><img src="/assets/img/{{ page.section_video.img.src }}" alt="{{ page.section_video.img.alt }}"></a>
+      </figure>
+    </div>
+  </section>
 
-<a href="{{ page.section_video.url }}" target='_blank'>{{ page.section_video.url }}</a>
+  <section id="origine" class="section py-8">
+    <div class="container flex flex-col items-center justify-center ta-center wave--before wave--after">
+      <img src="/assets/img/{{ page.section_origine.img.src }}" alt="{{ page.section_origine.img.alt }}" class="mb-7">
+      <p>{{ page.section_origine.contenu | textilize }}</p>
+    </div>
+  </section>
+  
 
-<hr>
+  <section id="valeurs" class="section py-8 invert">
+    <div class="container flex flex-col items-center ta-center wave--before">
+      <h2>{{ page.section_valeurs.titre | textilize }}</h2>
+      <p>{{ page.section_valeurs.contenu | textilize }}</p>
+      <ul class="features grid-4">
+      {% for feature in site.data.features %}
+        <li class="col">
+          <figure>
+            <img src="{{ feature.img }}" class="b-2s br-50">
+            <figcaption>{{ feature.titre | textilize }}</figcaption>
+          </figure>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </section>
 
-<p>{{ page.section_origine.contenu | textilize }}</p>
+  <section id="labels" class="section py-8">
+    <div class="container flex flex-col items-center ta-center wave--before">
+      <h3>{{ page.section_labels.titre | textilize }}</h3>
+      <ul class="features grid-3">
+      {% for label in page.section_labels.labels %}
+        <li class="col">
+          <figure>
+            <img src="/assets/img/{{ label.img.src }}" alt="{{ label.img.alt }}">
+          </figure>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </section>
 
-<hr>
+  <section id="engagements" class="section grid-2_md-1 grid-noGutter">
+    <div class="section__img col filter--menthe">
+      <div class="padded h-100 bg--darken flex justify-center items-center" style="background-image: linear-gradient(var(--{{ page.section_engagements.background.color }}), var(--{{ page.section_engagements.background.color }})), url('/assets/img/{{ page.section_engagements.background.url }}')">
+        <img class="" src="/assets/img/{{ page.section_engagements.img.src }}" alt="{{ page.section_engagements.img.alt }}" width="207" height="300">
+      </div>
+    </div>
+    <div class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
+      <h3>{{ page.section_engagements.titre | textilize }}</h3>
+      <p>{{ page.section_engagements.contenu | textilize }}</p>
+    </div>
+  </section>
 
-<h2>{{ page.section_valeurs.titre | upcase | textilize }}</h2>
-<p>{{ page.section_valeurs.contenu | textilize }}</p>
-
-<hr>
-
-<h2>{{ page.section_label.titre | upcase | textilize }}</h2>
-
-<hr>
-
-<h2>{{ page.section_engagement.titre | upcase | textilize }}</h2>
-<p>{{ page.section_engagement.contenu | textilize }}</p>
+</main>

@@ -17,9 +17,23 @@
 		height: 20px;
 	}
 }
+.invert .wave--before:before,
+.invert .wave--after:after,
+.invert.wave--before:before,
+.invert.wave--after:after,
 .wave--white:before,
 .wave--white:after, {
 	background-image: var(--wave-white);
+}
+
+.wave--amande:before,
+.wave--amande:after, {
+	background-image: var(--wave-amande);
+}
+
+.wave--menthe:before,
+.wave--menthe:after, {
+	background-image: var(--wave-menthe);
 }
 
 

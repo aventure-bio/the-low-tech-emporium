@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the sections of the site/application.
+// -----------------------------------------------------------------------------
+
+
+/**
+ * Main content sections
+ */
+main {
+	.section {
+		min-height: 593px;
+		.section__img {
+		  min-height: 280px;
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  background-position: center;
+		}
+		p {
+		  font-size: 22px;
+		  margin: 1em auto;
+		}
+	}
+}

@@ -72,7 +72,7 @@ section_engagements:
     <img class="w-100" src="/assets/img/{{ page.hero.img.src }}" alt="{{ page.hero.img.alt }}">
   </div>
 
-  <section id="valeurs" class="py-8">
+  <section id="valeurs" class="section py-8">
     <div class="container flex flex-col items-center ta-center wave--before">
       <h2>{{ page.section_valeurs.titre | textilize }}</h2>
       <p>{{ page.section_valeurs.contenu | textilize }}</p>
@@ -80,7 +80,7 @@ section_engagements:
       {% for feature in site.data.features %}
         <li class="col">
           <figure>
-            <img src="{{ feature.img }}">
+            <img src="{{ feature.img }}" class="b-2s br-50">
             <figcaption>{{ feature.titre | textilize }}</figcaption>
           </figure>
         </li>
@@ -90,7 +90,7 @@ section_engagements:
     </div>
   </section>
 
-  <section id="gamme" class="grid-2_md-1 grid-noGutter">
+  <section id="gamme" class="section grid-2_md-1 grid-noGutter">
     <div class="swiper-container section__text col">
       <div class="swiper-wrapper">
         {% for produit in page.section_gamme %}
@@ -112,7 +112,7 @@ section_engagements:
     </div>
   </section>
 
-  <section id="made-in-france" class="grid-2_md-1 grid-noGutter">
+  <section id="made-in-france" class="section grid-2_md-1 grid-noGutter">
     <div class="section__img col filter--brand-color">
       <div class="h-100 bg--darken" style="background-image: linear-gradient(var(--{{ page.section_made_in_france.background.color }}), var(--{{ page.section_made_in_france.background.color }})), url('/assets/img/{{ page.section_made_in_france.background.url }}')"></div>
     </div>
@@ -122,7 +122,7 @@ section_engagements:
     </div>
   </section>
 
-  <section id="ingredients" class="relative">
+  <section id="ingredients" class="section relative">
     <div class="section__img filter--fruits-exotiques">
       <div class="h-100 bg--darken" style="background-image: linear-gradient(var(--{{ page.section_ingredients.background.color }}), var(--{{ page.section_ingredients.background.color }})), url('/assets/img/{{ page.section_ingredients.background.url }}')">
       </div>
@@ -134,7 +134,7 @@ section_engagements:
     </div>
   </section>
 
-  <section id="engagements" class="grid-2_md-1 grid-noGutter">
+  <section id="engagements" class="section grid-2_md-1 grid-noGutter">
     <div class="section__img col filter--menthe">
       <div class="padded h-100 bg--darken flex justify-center items-center" style="background-image: linear-gradient(var(--{{ page.section_engagements.background.color }}), var(--{{ page.section_engagements.background.color }})), url('/assets/img/{{ page.section_engagements.background.url }}')">
         <img class="" src="/assets/img/{{ page.section_engagements.img.src }}" alt="{{ page.section_engagements.img.alt }}" width="207" height="300">
