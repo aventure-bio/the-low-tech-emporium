@@ -103,9 +103,19 @@
   background-color: var(--brand-color);
   color: #fff;
 }
+.brand-color   { color: var(--menthe) }
+.menthe        { color: var(--menthe) }
+.menthe-light  { color: var(--menthe-light) }
+.amande        { color: var(--amande) }
+.amande-light  { color: var(--amande-light) }
+.vanille       { color: var(--vanille) }
+.vanille-light { color: var(--vanille-light) }
+
 .bg--brand-color   { background-color: var(--menthe) }
 .bg--menthe        { background-color: var(--menthe) }
 .bg--menthe-light  { background-color: var(--menthe-light) }
+.bg--amande        { background-color: var(--amande) }
+.bg--amande-light  { background-color: var(--amande-light) }
 .bg--vanille       { background-color: var(--vanille) }
 .bg--vanille-light { background-color: var(--vanille-light) }
 
@@ -198,6 +208,22 @@
 }
 
 
+/**
+ * Borders
+ */
+.b-1s { border: 1px solid var(--brand-color); }
+.b-2s { border: 2px solid var(--brand-color); }
+
+.invert {
+  &.b-1s, &.b-2s,
+  .b-1s, .b-2s { 
+    border-color: white;
+  }
+}
+
+.br-50 {
+  border-radius: 50%;
+}
 
 
 /*
@@ -232,17 +258,21 @@ $axes: (x, y);
   @each $axe in $axes {
     @if $axe == x {
       .m#{$axe}-#{$i} {
-        margin: 0 #{$space};
+        margin-left: #{$space};
+        margin-right: #{$space};
       }
       .p#{$axe}-#{$i} {
-        padding: 0 #{$space};
+        padding-left: #{$space};
+        padding-right: #{$space};
       }
     } @else {
       .m#{$axe}-#{$i} {
-        margin: #{$space} 0;
+        margin-top: #{$space};
+        margin-bottom: #{$space};
       }
       .p#{$axe}-#{$i} {
-        padding: #{$space} 0;
+        padding-top: #{$space};
+        padding-bottom: #{$space};
       }
     }
   }

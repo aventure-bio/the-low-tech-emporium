@@ -20,9 +20,11 @@
 			img {
 				width: 128px;
 				height: 128px;
-				border: 2px solid var(--brand-color);
-				border-radius: 50%;
+				object-fit: contain;
 			}
 		}
 	}
+}
+.invert .features img {
+	border-color: white;
 }
