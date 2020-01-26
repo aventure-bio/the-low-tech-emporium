@@ -65,7 +65,7 @@ section_engagements:
     <div class="container bg--amande-light col-8_sm-12 flex flex-col items-center justify-center ta-center wave--before wave--after">
       <div class="mx-8">
         <h3>{{ page.section_histoire.titre | textilize }}</h3>
-        <p>{{ page.section_histoire.contenu | textilize }}</p>
+        <p class="fz-3">{{ page.section_histoire.contenu | textilize }}</p>
       </div>
     </div>
   </section>
@@ -75,7 +75,7 @@ section_engagements:
       <h2 class="menthe">{{ page.section_chiffres.titre | textilize }}</h2>
       <div class="grid-3_md-1 items-end">
       {% for produit in page.section_chiffres.chiffres %}
-        <div class="col uppercase wave--after">
+        <div class="col uppercase fw-bold wave--after">
           <p><span class="chiffre">{{ produit.chiffre | textilize }}</span><br>
           <span class="details">{{ produit.details | textilize }}</span></p>
         </div>
@@ -95,7 +95,7 @@ section_engagements:
   <section id="origine" class="section py-8">
     <div class="container flex flex-col items-center justify-center ta-center wave--before wave--after">
       <img src="/assets/img/{{ page.section_origine.img.src }}" alt="{{ page.section_origine.img.alt }}" class="mb-7">
-      <p>{{ page.section_origine.contenu | textilize }}</p>
+      <p class="fz-3 geomanist">{{ page.section_origine.contenu | textilize }}</p>
     </div>
   </section>
 
@@ -103,13 +103,13 @@ section_engagements:
   <section id="valeurs" class="section py-8 invert">
     <div class="container flex flex-col items-center ta-center wave--before">
       <h2>{{ page.section_valeurs.titre | textilize }}</h2>
-      <p>{{ page.section_valeurs.contenu | textilize }}</p>
+      <p class="fz-3 geomanist">{{ page.section_valeurs.contenu | textilize }}</p>
       <ul class="features grid-4">
       {% for feature in site.data.features %}
         <li class="col">
           <figure>
             <img src="{{ feature.img }}" class="b-2s br-50">
-            <figcaption>{{ feature.titre | textilize }}</figcaption>
+            <figcaption class="fw-bold">{{ feature.titre | textilize }}</figcaption>
           </figure>
         </li>
       {% endfor %}
@@ -140,7 +140,7 @@ section_engagements:
     </div>
     <div class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
       <h3>{{ page.section_engagements.titre | textilize }}</h3>
-      <p>{{ page.section_engagements.contenu | textilize }}</p>
+      <p class="mx-auto">{{ page.section_engagements.contenu | textilize }}</p>
     </div>
   </section>
 
