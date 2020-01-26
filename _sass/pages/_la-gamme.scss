@@ -1,0 +1,65 @@
+// -------------------------------------------------------------------------------
+// This file contains all styles related to page la-gamme of the site/application.
+// -------------------------------------------------------------------------------
+
+.la-gamme {
+  #conseils {
+    min-height: 410px;
+    .swiper-slide {
+      height: 410px;
+      p {
+        max-width: 34rem;
+      }
+    }
+    h3 {
+      font-size: 100px;
+      line-height: 1;
+      margin: 0;
+      @media (min-width: $breakpoint-md) {
+        font-size: 175px,
+      }
+    }
+    .conseil p:nth-child(1) {
+      font-size: 24px;
+    }
+  }
+  #gamme {
+    .section__text {
+      padding: 5%;
+      p {
+        max-width: none;
+      }
+    }
+    > [class^="grid"]:nth-child(2n) {
+      flex-direction: row;
+    }
+    .produit {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .produit__titre {
+      font-size: 30px;
+      font-weight: normal;
+    }
+    .produit__benefices {
+      text-transform: uppercase;
+    }
+    .produit__allergenes {
+      font-size: 12px;
+    }
+  }
+  #ingredients {
+    > div {
+      min-height: 593px;
+    }
+    h3 {
+      max-width: 10em;
+      margin: 0 auto;
+    }
+    .section__img {
+      div {
+        padding-top: 593px;
+      }
+    }
+  }
+}
