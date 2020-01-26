@@ -13,7 +13,11 @@
 var textSwiper = new Swiper('.swiper-container.section__text', {
   speed: 350,
   loop: true,
-  autoplay: true
+  autoplay: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
 
 var imgSwiper = new Swiper('.swiper-container.section__img', {
