@@ -6,15 +6,12 @@
   h2 {
     margin-top: 2em;
   }
-  #valeurs {
-    p {
-      font-size: 24px;
-      font-family: serif;
-    }
-  }
   #gamme {
     h3 {
       margin: 0;
+    }
+    p {
+      font-size: 22px;
     }
   }
   #ingredients {
@@ -30,19 +27,5 @@
         padding-top: 593px;
       }
     }
-  }
-}
-
-// Swiper
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 20px !important;
-}
-.swiper-pagination-bullet {
-  width: 24px !important;
-  height: 24px !important;
-  background-color: #fff !important;
-  opacity: 1 !important;
-  &-active {
-    background-color: var(--brand-color) !important;
   }
 }
