@@ -1,5 +1,5 @@
-url: "https://low-tech.the-green-emporium.com" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://aventure-bio.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/the-low-tech-emporium" # the subpath of your site, e.g. /blog
 title: "The Low Tech Emporium" # the name of your site, e.g. ACME Corp.
 tagline: "Le site low tech de The Green Emporium"
 description: "Pour le site de la marque The Green Emporium, Lamazuna a tenu à développer une nouvelle version low tech, peu consommatrice en énergie et auto-hébergée"
