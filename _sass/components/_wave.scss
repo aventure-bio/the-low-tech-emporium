@@ -6,7 +6,7 @@
 .wave--after:after {
 	content: "";
 	display: block;
-	background-image: var(--wave);
+	// background-image: var(--wave);
 	background-repeat: no-repeat;
 	background-position: center;
 	margin: 50px auto;
@@ -23,17 +23,15 @@
 .invert.wave--after:after,
 .wave--white:before,
 .wave--white:after, {
-	background-image: var(--wave-white);
+	// background-image: var(--wave-white);
 }
 
 .wave--amande:before,
 .wave--amande:after, {
-	background-image: var(--wave-amande);
+	// background-image: var(--wave-amande);
 }
 
 .wave--menthe:before,
 .wave--menthe:after, {
-	background-image: var(--wave-menthe);
+	// background-image: var(--wave-menthe);
 }
-
-
