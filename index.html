@@ -1,7 +1,7 @@
 ---
 title: The Green Emporium
 description: The Green Emporium est la dernière création de Laëtitia Van de Walle, fondatrice de Lamazuna. Depuis 2010, Lamazuna est la marque de référence du zéro déchet dans la salle de bain.
-layout: home
+layout: default
 hero:
   img:
     src: SLIDER_-1-16c-1920w.png
@@ -75,13 +75,13 @@ section_engagements:
   <section id="valeurs" class="section py-8">
     <div class="container flex flex-col items-center ta-center wave--before">
       <h2>{{ page.section_valeurs.titre | textilize }}</h2>
-      <p>{{ page.section_valeurs.contenu | textilize }}</p>
+      <p class="fz-3 geomanist">{{ page.section_valeurs.contenu | textilize }}</p>
       <ul class="features grid-4">
       {% for feature in site.data.features %}
         <li class="col">
           <figure>
             <img src="{{ feature.img }}" class="b-2s br-50">
-            <figcaption>{{ feature.titre | textilize }}</figcaption>
+            <figcaption class="fw-bold">{{ feature.titre | textilize }}</figcaption>
           </figure>
         </li>
       {% endfor %}
@@ -96,7 +96,7 @@ section_engagements:
         {% for produit in page.section_gamme %}
         <div class="swiper-slide section__text invert flex flex-col justify-center ta-center wave--before wave--after wave--white" style="background-color: var(--{{ produit.color }})">
           <h3 class="px-8">{{ produit.titre | textilize }}</h3>
-          <p class="px-8">{{ produit.descriptif | textilize }}</p>
+          <p class="px-8 mx-auto">{{ produit.descriptif | textilize }}</p>
         </div>
         {% endfor %}
       </div>
@@ -118,13 +118,13 @@ section_engagements:
     </div>
     <div class="section__text col padded invert flex flex-col justify-center ta-center wave--before wave--after wave--white">
       <h3>{{ page.section_made_in_france.titre | textilize }}</h3>
-      <p>{{ page.section_made_in_france.contenu | textilize }}</p>
+      <p class="mx-auto">{{ page.section_made_in_france.contenu | textilize }}</p>
     </div>
   </section>
 
   <section id="ingredients" class="section relative">
     <div class="section__img filter--fruits-exotiques">
-      <div class="h-100 bg--darken" style="background-image: linear-gradient(var(--{{ page.section_ingredients.background.color }}), var(--{{ page.section_ingredients.background.color }})), url('/assets/img/{{ page.section_ingredients.background.url }}')">
+      <div class="bg--darken" style="background-image: linear-gradient(var(--{{ page.section_ingredients.background.color }}), var(--{{ page.section_ingredients.background.color }})), url('/assets/img/{{ page.section_ingredients.background.url }}')">
       </div>
     </div>
     <div class="grid-2_md-1 grid-noGutter" style="position:absolute; top:0; left:0; right:0">
