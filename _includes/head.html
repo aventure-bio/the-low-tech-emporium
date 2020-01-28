@@ -1,6 +1,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
+<style>
+  /**
+  * Webfonts
+  */
+  @font-face {
+    font-family: "NeutraText";
+    src: local("Neutra Text Book Alt"),
+        local("NeutraText-BookAlt"),
+        url("{{ '/assets/fonts/NeutraText-BookAlt.woff2' | relative_url }}") format("woff2"),
+        url("{{ '/assets/fonts/NeutraText-BookAlt.woff | relative_url }}") format("woff");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "NeutraText";
+    src: local("Neutra Text Bold Alt"),
+        local("NeutraText-BoldAlt"),
+        url("{{ '/assets/fonts/NeutraText-BoldAlt.woff2' | relative_url }}") format("woff2"),
+        url("{{ '/assets/fonts/NeutraText-BoldAlt.woff | relative_url }}") format("woff");
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Geomanist";
+    src: url("{{ '/assets/fonts/Geomanist-Book.woff2 | relative_url }}") format("woff2"),
+        url("{{ '/assets/fonts/Geomanist-Book.woff | relative_url }}") format("woff");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "Geomanist";
+    src: url("{{ '/assets/fonts/Geomanist-Black.woff2 | relative_url }}") format("woff2"),
+        url("{{ '/assets/fonts/Geomanist-Black.woff | relative_url }}") format("woff");
+    font-weight: bold;
+  }
+</style>
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-<link rel="manifest" href="{{ '/manifest.json' | prepend: site.baseurl | prepend: site.url }}" />
+<link rel="manifest" href="{{ '/manifest.json' | absolute_url }}" />
 {% seo %}
-

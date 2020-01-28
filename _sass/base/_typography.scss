@@ -2,40 +2,6 @@
 // This file contains all styles related to the typography of the site/application.
 // -------------------------------------------------------------------------------
 
-
-/**
- * Webfonts
- */
-@font-face {
-  font-family: "NeutraText";
-  src: local("Neutra Text Book Alt"),
-       local("NeutraText-BookAlt"),
-       url("/assets/fonts/NeutraText-BookAlt.woff2") format("woff2"),
-       url("/assets/fonts/NeutraText-BookAlt.woff") format("woff");
-	font-weight: normal;
-}
-@font-face {
-  font-family: "NeutraText";
-  src: local("Neutra Text Bold Alt"),
-       local("NeutraText-BoldAlt"),
-       url("/assets/fonts/NeutraText-BoldAlt.woff2") format("woff2"),
-       url("/assets/fonts/NeutraText-BoldAlt.woff") format("woff");
-	font-weight: bold;
-}
-@font-face {
-  font-family: "Geomanist";
-  src: url("/assets/fonts/Geomanist-Book.woff2") format("woff2"),
-       url("/assets/fonts/Geomanist-Book.woff") format("woff");
-	font-weight: normal;
-}
-@font-face {
-  font-family: "Geomanist";
-  src: url("/assets/fonts/Geomanist-Black.woff2") format("woff2"),
-       url("/assets/fonts/Geomanist-Black.woff") format("woff");
-	font-weight: bold;
-}
-
-
 /**
  * Basic typography style for copy text
  */
@@ -62,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1;
 }
 
-h1, h2 { 
+h1, h2 {
 	font-size: 40px;
 }
 h3 {

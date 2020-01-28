@@ -2,7 +2,7 @@
   <ul class="flex flex-wrap justify-center items-center align-center">
     {% for item in site.data.nav %}
     <li class="flex fw-bold">
-      <a href="{{ item.link }}" class="uppercase{% if item.link == page.url %} active{% endif %}">
+      <a href="{{ item.link | relative_url }}" class="uppercase{% if item.link == page.url %} active{% endif %}">
       {{ item.name }}
       </a>
     </li>

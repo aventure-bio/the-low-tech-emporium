@@ -1,10 +1,11 @@
-<section id="newsletter" class="container flex flex-col content-center items-center ta-center bg--vanille-light">
+<section id="newsletter"
+  class="container flex flex-col content-center items-center ta-center bg--vanille-light">
   <!-- Begin Mailchimp Signup Form -->
   <div id="mc_embed_signup">
     <form
       action="https://bio.us19.list-manage.com/subscribe/post?u=1cf940aaf720b45d6c32cfc36&amp;id=4f1e18ea36"
-      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate wave--before"
-      target="_blank" novalidate>
+      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+      class="validate wave--before" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
         <label for="mce-EMAIL" class="uppercase fw-bold clearfix">Rejoignez-nous !</label>
         <div class="flex align-baseline">
@@ -13,46 +14,48 @@
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
               name="b_1cf940aaf720b45d6c32cfc36_4f1e18ea36" tabindex="-1" value=""></div>
-          <input type="submit" value="Valider" name="subscribe"
-              id="mc-embedded-subscribe" class="btn bg--vanille uppercase">
+          <input type="submit" value="Valider" name="subscribe" id="mc-embedded-subscribe"
+            class="btn bg--vanille uppercase">
         </div>
       </div>
     </form>
-  </div> <!--End mc_embed_signup-->
+  </div>
+  <!--End mc_embed_signup-->
 </section>
 
 <footer id="footer" class="container padded invert grid-5_md-2_xs-1 items-start">
   <div class="col flex justify-center">
-    <img src="assets/img/TGE-icon-white.png" alt="Logo The Green Emporium" width="135" height="131">
+    <img src="{{ '/assets/img/TGE-icon-white.png' | relative_url }}" alt="Logo The Green Emporium"
+      width="135" height="131">
   </div>
 
   <nav class="col">
     <ul>
-    {% for item in site.data.footer_links %}
-      <li><a href="{{ item.link }}">{{ item.name }}</a></li>
-    {% endfor %}
+      {% for item in site.data.footer_links %}
+      <li><a href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
+      {% endfor %}
     </ul>
   </nav>
 
   <nav class="col">
     <ul>
-      <li><a href="/confidentialite">Politique de confidentialité</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/service-client">Serive client</a></li>
+      <li><a href="{{ '/confidentialite' | relative_url }}">Politique de confidentialité</a></li>
+      <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+      <li><a href="{{ '/service-client' | relative_url }}">Serive client</a></li>
     </ul>
   </nav>
 
   <div class="col fw-book">
-  {% for item in site.data.address %}
+    {% for item in site.data.address %}
     {{ item.line }}<br>
-  {% endfor %}
+    {% endfor %}
   </div>
-  
+
   <div id="socials" class="col">
     <ul>
-    {% for item in site.data.social_media %}
-      <li><a href="{{ item.link }}">{{ item.name }}</a></li>
-    {% endfor %}
+      {% for item in site.data.social_media %}
+      <li><a href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
+      {% endfor %}
     </ul>
   </div>
 </footer>

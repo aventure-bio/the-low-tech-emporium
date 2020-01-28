@@ -55,7 +55,7 @@ section_ingredients:
     color: fruits-exotiques-light
 section_engagements:
   titre: Une marque engagée
-  contenu: Au cœur du projet, The Green Emporium s’engage avec Surfrider Foundation Europe, on vous explique tout <a href="/la-pollution-plastique">ici</a>
+  contenu: Au cœur du projet, The Green Emporium s’engage avec Surfrider Foundation Europe, on vous explique tout <a href="{{ '/la-pollution-plastique' | relative_url }}">ici</a>
   background:
     url: AdobeStock_-1-b&w-960w.png
     color: menthe-light
@@ -69,7 +69,8 @@ section_engagements:
   <h1 class="visually-hidden">{{ site.title }}</h1>
 
   <div id="hero">
-    <img class="w-100" src="/assets/img/{{ page.hero.img.src }}" alt="{{ page.hero.img.alt }}">
+    <img class="w-100" src="{{ page.hero.img.src | prepend: '/assets/img/' | relative_url }}"
+      alt="{{ page.hero.img.alt }}">
   </div>
 
   <section id="valeurs" class="section py-8">
@@ -77,14 +78,15 @@ section_engagements:
       <h2>{{ page.section_valeurs.titre | textilize }}</h2>
       <p class="fz-3 geomanist">{{ page.section_valeurs.contenu | textilize }}</p>
       <ul class="features grid-4">
-      {% for feature in site.data.features %}
+        {% for feature in site.data.features %}
         <li class="col">
           <figure>
-            <img src="{{ feature.img }}" class="b-2s br-50">
+            <img src="{{ feature.img | relative_url }}"
+              class="b-2s br-50">
             <figcaption class="fw-bold">{{ feature.titre | textilize }}</figcaption>
           </figure>
         </li>
-      {% endfor %}
+        {% endfor %}
       </ul>
       <a href="#" class="btn btn--outline btn--lg">{{ page.section_valeurs.btn | textilize }}</a>
     </div>
@@ -94,7 +96,9 @@ section_engagements:
     <div class="swiper-container section__text col">
       <div class="swiper-wrapper">
         {% for produit in page.section_gamme %}
-        <div class="swiper-slide section__text invert flex flex-col justify-center ta-center wave--before wave--after wave--white" style="background-color: var(--{{ produit.color }})">
+        <div
+          class="swiper-slide section__text invert flex flex-col justify-center ta-center wave--before wave--after wave--white"
+          style="background-color: var(--{{ produit.color }})">
           <h3 class="px-8">{{ produit.titre | textilize }}</h3>
           <p class="px-8 mx-auto">{{ produit.descriptif | textilize }}</p>
         </div>
@@ -105,7 +109,9 @@ section_engagements:
     <div class="swiper-container section__img col">
       <div class="swiper-wrapper">
         {% for produit in page.section_gamme %}
-        <div class="swiper-slide" style="background: center / cover no-repeat url('/assets/img/{{ produit.background.url }}')"></div>
+        <div class="swiper-slide"
+          style="background: center / cover no-repeat url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}')">
+        </div>
         {% endfor %}
       </div>
       <div class="swiper-pagination"></div>
@@ -114,9 +120,12 @@ section_engagements:
 
   <section id="made-in-france" class="section grid-2_md-1 grid-noGutter">
     <div class="section__img col filter--brand-color">
-      <div class="h-100 bg--darken" style="background-image: linear-gradient(var(--{{ page.section_made_in_france.background.color }}), var(--{{ page.section_made_in_france.background.color }})), url('/assets/img/{{ page.section_made_in_france.background.url }}')"></div>
+      <div class="h-100 bg--darken"
+        style="background-image: linear-gradient(var(--{{ page.section_made_in_france.background.color }}), var(--{{ page.section_made_in_france.background.color }})), url('{{ page.section_made_in_france.background.url | prepend: '/assets/img/' | relative_url }}')">
+      </div>
     </div>
-    <div class="section__text col padded invert flex flex-col justify-center ta-center wave--before wave--after wave--white">
+    <div
+      class="section__text col padded invert flex flex-col justify-center ta-center wave--before wave--after wave--white">
       <h3>{{ page.section_made_in_france.titre | textilize }}</h3>
       <p class="mx-auto">{{ page.section_made_in_france.contenu | textilize }}</p>
     </div>
@@ -124,23 +133,31 @@ section_engagements:
 
   <section id="ingredients" class="section relative">
     <div class="section__img filter--fruits-exotiques">
-      <div class="bg--darken" style="background-image: linear-gradient(var(--{{ page.section_ingredients.background.color }}), var(--{{ page.section_ingredients.background.color }})), url('/assets/img/{{ page.section_ingredients.background.url }}')">
+      <div class="bg--darken"
+        style="background-image: linear-gradient(var(--{{ page.section_ingredients.background.color }}), var(--{{ page.section_ingredients.background.color }})), url('{{ page.section_ingredients.background.url | prepend: '/assets/img/' | relative_url }}')">
       </div>
     </div>
     <div class="grid-2_md-1 grid-noGutter" style="position:absolute; top:0; left:0; right:0">
-      <div class="section__text col padded flex flex-col justify-center content-center ta-center wave--before wave--after">
-        <h3><a href="{{ page.section_ingredients.href }}">{{ page.section_ingredients.titre | textilize }}</a></h3>
+      <div
+        class="section__text col padded flex flex-col justify-center content-center ta-center wave--before wave--after">
+        <h3><a
+            href="{{ page.section_ingredients.href | relative_url }}">{{ page.section_ingredients.titre | textilize }}</a>
+        </h3>
       </div>
     </div>
   </section>
 
   <section id="engagements" class="section grid-2_md-1 grid-noGutter">
     <div class="section__img col filter--menthe">
-      <div class="padded h-100 bg--darken flex justify-center items-center" style="background-image: linear-gradient(var(--{{ page.section_engagements.background.color }}), var(--{{ page.section_engagements.background.color }})), url('/assets/img/{{ page.section_engagements.background.url }}')">
-        <img class="" src="/assets/img/{{ page.section_engagements.img.src }}" alt="{{ page.section_engagements.img.alt }}" width="207" height="300">
+      <div class="padded h-100 bg--darken flex justify-center items-center"
+        style="background-image: linear-gradient(var(--{{ page.section_engagements.background.color }}), var(--{{ page.section_engagements.background.color }})), url('{{ page.section_engagements.background.url | prepend: '/assets/img/' | relative_url }}')">
+        <img class=""
+          src="{{ page.section_engagements.img.src | prepend: '/assets/img/' | relative_url }}"
+          alt="{{ page.section_engagements.img.alt }}" width="207" height="300">
       </div>
     </div>
-    <div class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
+    <div
+      class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
       <h3>{{ page.section_engagements.titre | textilize }}</h3>
       <p>{{ page.section_engagements.contenu | textilize }}</p>
     </div>

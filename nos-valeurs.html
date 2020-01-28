@@ -45,7 +45,7 @@ section_labels:
       alt: Vegan
 section_engagements:
   titre: Une marque engagée
-  contenu: Au cœur du projet, The Green Emporium s’engage avec Surfrider Foundation Europe, on vous explique tout <a href="/la-pollution-plastique">ici</a>
+  contenu: Au cœur du projet, The Green Emporium s’engage avec Surfrider Foundation Europe, on vous explique tout <a href="{{ '/la-pollution-plastique' | relative_url }}">ici</a>
   background:
     url: AdobeStock_-1-b&w-960w.png
     color: menthe-light
@@ -60,9 +60,12 @@ section_engagements:
 
   <section id="histoire" class="section grid grid-noGutter">
     <div class="section__img col-4_sm-12">
-      <img class="h-100 w-100" src="/assets/img/{{ page.section_histoire.img.src }}" alt="{{ page.section_histoire.img.alt }}">
+      <img class="h-100 w-100"
+        src="{{ page.section_histoire.img.src | prepend: '/assets/img/' | relative_url }}"
+        alt="{{ page.section_histoire.img.alt }}">
     </div>
-    <div class="container bg--amande-light col-8_sm-12 flex flex-col items-center justify-center ta-center wave--before wave--after">
+    <div
+      class="container bg--amande-light col-8_sm-12 flex flex-col items-center justify-center ta-center wave--before wave--after">
       <div class="mx-8">
         <h3>{{ page.section_histoire.titre | textilize }}</h3>
         <p class="fz-3">{{ page.section_histoire.contenu | textilize }}</p>
@@ -74,12 +77,12 @@ section_engagements:
     <div class="container flex flex-col items-center ta-center">
       <h2 class="menthe">{{ page.section_chiffres.titre | textilize }}</h2>
       <div class="grid-3_md-1 items-end">
-      {% for produit in page.section_chiffres.chiffres %}
+        {% for produit in page.section_chiffres.chiffres %}
         <div class="col uppercase fw-bold wave--after">
           <p><span class="chiffre">{{ produit.chiffre | textilize }}</span><br>
-          <span class="details">{{ produit.details | textilize }}</span></p>
+            <span class="details">{{ produit.details | textilize }}</span></p>
         </div>
-      {% endfor %}
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -87,14 +90,18 @@ section_engagements:
   <section id="video" class="section bg--amande-light py-8">
     <div class="container flex flex-col items-center justify-center">
       <figure>
-        <a href="{{ page.section_video.url }}" target='_blank'><img src="/assets/img/{{ page.section_video.img.src }}" alt="{{ page.section_video.img.alt }}"></a>
+        <a href="{{ page.section_video.url }}" target='_blank'><img
+            src="{{ page.section_video.img.src | prepend: '/assets/img/' | relative_url }}"
+            alt="{{ page.section_video.img.alt }}"></a>
       </figure>
     </div>
   </section>
 
   <section id="origine" class="section py-8">
-    <div class="container flex flex-col items-center justify-center ta-center wave--before wave--after">
-      <img src="/assets/img/{{ page.section_origine.img.src }}" alt="{{ page.section_origine.img.alt }}" class="mb-7">
+    <div
+      class="container flex flex-col items-center justify-center ta-center wave--before wave--after">
+      <img src="{{ page.section_origine.img.src | prepend: '/assets/img/' | relative_url }}"
+        alt="{{ page.section_origine.img.alt }}" class="mb-7">
       <p class="fz-3 geomanist">{{ page.section_origine.contenu | textilize }}</p>
     </div>
   </section>
@@ -105,14 +112,14 @@ section_engagements:
       <h2>{{ page.section_valeurs.titre | textilize }}</h2>
       <p class="fz-3 geomanist">{{ page.section_valeurs.contenu | textilize }}</p>
       <ul class="features grid-4">
-      {% for feature in site.data.features %}
+        {% for feature in site.data.features %}
         <li class="col">
           <figure>
-            <img src="{{ feature.img }}" class="b-2s br-50">
+            <img src="{{ feature.img | prepend: '/assets/img/' | relative_url }}" class="b-2s br-50">
             <figcaption class="fw-bold">{{ feature.titre | textilize }}</figcaption>
           </figure>
         </li>
-      {% endfor %}
+        {% endfor %}
       </ul>
     </div>
   </section>
@@ -121,24 +128,27 @@ section_engagements:
     <div class="container flex flex-col items-center ta-center wave--before">
       <h3>{{ page.section_labels.titre | textilize }}</h3>
       <ul class="features grid-3">
-      {% for label in page.section_labels.labels %}
+        {% for label in page.section_labels.labels %}
         <li class="col">
           <figure>
-            <img src="/assets/img/{{ label.img.src }}" alt="{{ label.img.alt }}">
+            <img src="{{ label.img.src | prepend: '/assets/img/' | relative_url }}" alt="{{ label.img.alt }}">
           </figure>
         </li>
-      {% endfor %}
+        {% endfor %}
       </ul>
     </div>
   </section>
 
   <section id="engagements" class="section grid-2_md-1 grid-noGutter">
     <div class="section__img col filter--menthe">
-      <div class="padded h-100 bg--darken flex justify-center items-center" style="background-image: linear-gradient(var(--{{ page.section_engagements.background.color }}), var(--{{ page.section_engagements.background.color }})), url('/assets/img/{{ page.section_engagements.background.url }}')">
-        <img class="" src="/assets/img/{{ page.section_engagements.img.src }}" alt="{{ page.section_engagements.img.alt }}" width="207" height="300">
+      <div class="padded h-100 bg--darken flex justify-center items-center"
+        style="background-image: linear-gradient(var(--{{ page.section_engagements.background.color }}), var(--{{ page.section_engagements.background.color }})), url('{{ page.section_engagements.background.url | prepend: '/assets/img/' | relative_url }}')">
+        <img class="" src="{{ page.section_engagements.img.src | prepend: '/assets/img/' | relative_url }}"
+          alt="{{ page.section_engagements.img.alt }}" width="207" height="300">
       </div>
     </div>
-    <div class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
+    <div
+      class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
       <h3>{{ page.section_engagements.titre | textilize }}</h3>
       <p class="mx-auto">{{ page.section_engagements.contenu | textilize }}</p>
     </div>

@@ -146,7 +146,7 @@ section_ingredients:
       <p class="fz-3">{{ page.section_protocole.contenu | textilize }}</p>
     </div>
   </section>
-  
+
   <section id="conseils" class="section">
     <div class="swiper-container section__text">
       <div class="swiper-wrapper">
@@ -181,7 +181,7 @@ section_ingredients:
         <p class="produit__allergenes geomanist fw-bold"><small>{{ produit.allergenes | textilize }}</small></p>
       </div>
       <div class="section__img col" style="background-color: var(--{{ produit.color }})">
-        <div class="h-100" style="background: center / cover no-repeat url('/assets/img/{{ produit.background.url }}')"></div>
+        <div class="h-100" style="background: center / cover no-repeat url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}')"></div>
       </div>
     </div>
     {% endfor %}
@@ -189,12 +189,12 @@ section_ingredients:
 
   <section id="ingredients" class="section relative">
     <div class="section__img filter--fruits-exotiques">
-      <div class="bg--darken" style="background-image: linear-gradient(var(--{{ page.section_ingredients.background.color }}), var(--{{ page.section_ingredients.background.color }})), url('/assets/img/{{ page.section_ingredients.background.url }}')">
+      <div class="bg--darken" style="background-image: linear-gradient(var(--{{ page.section_ingredients.background.color }}), var(--{{ page.section_ingredients.background.color }})), url('{{ page.section_ingredients.background.url | prepend: '/assets/img/' | relative_url }}')">
       </div>
     </div>
     <div class="grid-2_md-1 grid-noGutter" style="position:absolute; top:0; left:0; right:0">
       <div class="section__text col padded flex flex-col justify-center content-center ta-center wave--before wave--after">
-        <h3><a href="{{ page.section_ingredients.href }}">{{ page.section_ingredients.titre | textilize }}</a></h3>
+        <h3><a href="{{ page.section_ingredients.href | relative_url }}">{{ page.section_ingredients.titre | textilize }}</a></h3>
       </div>
     </div>
   </section>
