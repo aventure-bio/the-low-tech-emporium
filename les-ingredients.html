@@ -46,12 +46,22 @@ section_ingredients:
   description: Connue pour favoriser la croissance des cheveux, cette huile ne pénètre pas le cheveu mais l’enrobe et le protège. Elle possède des acides gras proches de ceux présents naturellement dans le sébum du cuir chevelu, ce qui en fait un produit naturel très efficace pour les tous les cheveux dévitalisés ou fourchus qui deviendront moins secs, plus souples et plus brillants.
 ---
 
-<h2>{{ page.titre_principal | upcase | textilize }}</h2>
+<main class="les-ingredients">
 
-<hr>
+  <section id="nos-ingredients" class="section invert bg--vanille py-6">
+    <div class="container flex flex-col items-center justify-center ta-center wave--before wave--after">
+      <h1>{{ page.titre_principal | textilize }}</h1>
+    </div>
+  </section>
+  
+  <section id="ingredients" class="section flex flex-wrap justify-center">
+  {% for ingredient in page.section_ingredients %}
+    <article class="ingredient flex flex-col content-center ta-center">
+      <div class="circle mx-auto" style="{{ ingredient.couleur | prepend: 'background-color:' }}"></div>
+      <h4 class="ingredient__title fw-book">{{ ingredient.titre | textilize }}</h4>
+      <p class="ingredient__description geomanist mx-auto">{{ ingredient.description | textilize }}</p>
+    </article>
+  {% endfor %}
+  </section>
 
-{% for ingredient in page.section_ingredients %}
-<div class="circle" style={{ ingredient.couleur | prepend: 'background-color:' }}></div>
-<h4>{{ ingredient.titre | upcase | textilize }}</h4>
-<p>{{ ingredient.description | textilize }}</p>
-{% endfor %}
+</main>

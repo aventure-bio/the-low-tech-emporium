@@ -15,32 +15,32 @@ section_gamme:
   descriptif: Ils retrouveront douceur souplesse et brillance !
   color: vanille
   background:
-    url: VISUEL_vanille.png
+    url: VISUEL_vanille.jpg
 - titre: Détox
   descriptif: Vos cheveux et votre cuir chevelu seront assainis et frais !
   color: menthe
   background:
-    url: VISUEL_menthe-12.png
+    url: VISUEL_menthe-12.jpg
 - titre: Cuirs chevelus sensibles
   descriptif: Les cuirs chevelus sensibles seront zen !
   color: lavande
   background:
-    url: VISUEL_LAVANDE-13.png
+    url: VISUEL_LAVANDE-13.jpg
 - titre: Cheveux gras
   descriptif: Vos cheveux regraissent moins vite !
   color: pamplemousse
   background:
-    url: VISUEL_PAMPLEMOUSSE-14.png
+    url: VISUEL_PAMPLEMOUSSE-14.jpg
 - titre: Cheveux normaux
   descriptif: Vos cheveux seront revitalisés et fortifiés, tout simplement en pleine santé !
   color: amande
   background:
-    url: VISUEL_AMANDE-15.png
+    url: VISUEL_AMANDE-15.jpg
 - titre: Familial
   descriptif: Tous les cheveux de la famille seront forts et brillants !
   color: fruits-exotiques
   background:
-    url: VISUEL_FE.png
+    url: VISUEL_FE.jpg
 section_made_in_france:
   titre: Fabriqué en France
   contenu: Tous nos shampoings sont fabriqués à Nice.
@@ -162,7 +162,8 @@ section_engagements:
     <div
       class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
       <h3>{{ page.section_engagements.titre | textilize }}</h3>
-      <p>{{ page.section_engagements.contenu | textilize }}</p>
+      <p class="mx-auto">{{ page.section_engagements.contenu | textilize }}</p>
     </div>
   </section>
+
 </main>
