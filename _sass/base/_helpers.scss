@@ -103,25 +103,29 @@
   background-color: var(--brand-color);
   color: #fff;
 }
-.brand-color   { color: var(--menthe) }
-.menthe        { color: var(--menthe) }
-.menthe-light  { color: var(--menthe-light) }
-.amande        { color: var(--amande) }
-.amande-light  { color: var(--amande-light) }
-.vanille       { color: var(--vanille) }
-.vanille-light { color: var(--vanille-light) }
+.brand-color        { color: var(--menthe) }
+.menthe             { color: var(--menthe) }
+.menthe-light       { color: var(--menthe-light) }
+.amande             { color: var(--amande) }
+.amande-light       { color: var(--amande-light) }
+.vanille            { color: var(--vanille) }
+.vanille-light      { color: var(--vanille-light) }
 .pamplemousse       { color: var(--pamplemousse) }
 .pamplemousse-light { color: var(--pamplemousse-light) }
+.lavande            { color: var(--lavande) }
+.lavande-light      { color: var(--lavande-light) }
 
-.bg--brand-color   { background-color: var(--menthe) }
-.bg--menthe        { background-color: var(--menthe) }
-.bg--menthe-light  { background-color: var(--menthe-light) }
-.bg--amande        { background-color: var(--amande) }
-.bg--amande-light  { background-color: var(--amande-light) }
-.bg--vanille       { background-color: var(--vanille) }
-.bg--vanille-light { background-color: var(--vanille-light) }
+.bg--brand-color        { background-color: var(--menthe) }
+.bg--menthe             { background-color: var(--menthe) }
+.bg--menthe-light       { background-color: var(--menthe-light) }
+.bg--amande             { background-color: var(--amande) }
+.bg--amande-light       { background-color: var(--amande-light) }
+.bg--vanille            { background-color: var(--vanille) }
+.bg--vanille-light      { background-color: var(--vanille-light) }
 .bg--pamplemousse       { background-color: var(--pamplemousse) }
 .bg--pamplemousse-light { background-color: var(--pamplemousse-light) }
+.bg--lavande            { background-color: var(--lavande) }
+.bg--lavande-light      { background-color: var(--lavande-light) }
 
 /**
  * Text alignements
