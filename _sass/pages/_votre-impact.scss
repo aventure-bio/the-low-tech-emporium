@@ -1,0 +1,27 @@
+// -------------------------------------------------------------------------------
+// This file contains all styles related to page votre-impact of the site/application.
+// -------------------------------------------------------------------------------
+
+.votre-impact {
+  #votre-impact {
+    min-height: 440px;
+  }
+  #texte {
+    max-width: 35em;
+    p {
+      font-size: 24px;
+    }
+    strong {
+      font-size: 29px;
+    }
+    figure {
+      max-width: 30em;
+    }
+    > * {
+      margin: inherit auto;
+    }
+    > * + * {
+      margin: 3em auto 0;
+    }
+  }
+}
