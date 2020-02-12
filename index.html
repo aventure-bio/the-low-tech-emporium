@@ -109,12 +109,7 @@ section_engagements:
     <div class="swiper-container section__img col">
       <div class="swiper-wrapper">
         {% for produit in page.section_gamme %}
-        <style>
-          .swiper-slide-style {
-            background: center / cover no-repeat url("{{ produit.background.url | prepend: '/assets/img/' | relative_url }}")
-          }
-        </style>
-        <div class="swiper-slide swiper-slide-style"></div>
+        <div class="swiper-slide swiper-slide-style" style="background: center / cover no-repeat url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}')"></div>
         {% endfor %}
       </div>
       <div class="swiper-pagination"></div>
