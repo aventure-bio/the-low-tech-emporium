@@ -4,19 +4,32 @@ description:
 image:
 layout: default
 titre_principal: Votre impact
-paragraphe_1: Le meilleur déchet est celui que l’on ne produit pas.
-paragraphe_2: Avec nos shampoings solides vous ne produisez plus de déchet !
-paragraphe_3: Pour tout achat de nos shampoings nous reversons 0,50€ à Surfrider Foundation Europe. Cette association agit à la source du problème pour endiguer la pollution et protéger les océans.
-paragraphe_4: 0,50€ / produit reversé à Surfrider Foundation Europe c’est 2,5m² de plage préservée !
-paragraphe_5: Avec vous, nous comptons préserver en 2020, 360 000m² de plage, soit 33 terrains de foot !!
+paragraphe_1: <strong>Le meilleur déchet est celui que l’on ne produit pas.</strong> <br>Avec nos shampoings solides vous ne produisez plus de déchet !
+paragraphe_2: Pour tout achat de nos shampoings nous reversons 0,50€ à Surfrider Foundation Europe. Cette association agit à la source du problème pour endiguer la pollution et protéger les océans.
+paragraphe_3: 0,50€ / produit reversé à Surfrider Foundation Europe c’est 2,5m² de plage préservée !
+img:
+  src: TERRAIN_FOOT.png
+  alt: Illustration terrains de foot.
+paragraphe_4: Avec vous, nous comptons préserver en 2020, 360 000m² de plage, soit 33 terrains de foot !!
 ---
 
-<h2>{{ page.titre_principal | upcase | textilize }}</h2>
+<main class="votre-impact">
 
-<hr>
+  <section id="votre-impact" class="section invert bg--pamplemousse py-6">
+    <div class="container flex flex-col items-center justify-center ta-center wave--before wave--after">
+      <h1>{{ page.titre_principal | textilize }}</h1>
+    </div>
+  </section>
 
-<p>{{ page.paragraphe_1 | textilize }}</p>
-<p>{{ page.paragraphe_2 | textilize }}</p>
-<p>{{ page.paragraphe_3 | textilize }}</p>
-<p>{{ page.paragraphe_4 | textilize }}</p>
-<p>{{ page.paragraphe_5 | textilize }}</p>
+  <section id="texte" class="section flex flex-col justify-center ta-center mx-auto py-8 px-6 geomanist">
+    <p>{{ page.paragraphe_1 | textilize }}</p>
+    <p>{{ page.paragraphe_2 | textilize }}</p>
+    <p>{{ page.paragraphe_3 | textilize }}</p>
+    <figure>
+      <img class="w-100 mb-8" src="{{ page.img.src | prepend: '/assets/img/' | relative_url }}" alt="{{ page.img.alt }}">
+      <figcaption class="pamplemousse"><strong>{{ page.paragraphe_4 | textilize }}</strong></figcaption>
+    </figure>
+    <p></p>
+  </section>
+
+</main>
