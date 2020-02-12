@@ -3,22 +3,35 @@ title: Acheter
 description:
 image:
 layout: default
-titre_principal: OÙ TROUVER NOS PRODUITS ?
+titre_principal: Où trouver nos produits ?
 sous_titre: Retrouvez nos produits en magasins physiques uniquement !
 section_magasins:
 - nom: Super magasin 1
-  adresse: Paris
+  adresse: 123 place de République, 75011 Paris
+  url: https://exemple.com
 - nom: Super magasin 2
-  adresse: Lyon
+  adresse: 45 quai de la gare, Lyon
+  url: https://exemple.com
 ---
 
-<h2>{{ page.titre_principal | upcase | textilize }}</h2>
-<h2>{{ page.sous_titre | textilize }}</h2>
+<main class="acheter">
 
-<hr>
+  <section id="acheter" class="section invert bg--lavande py-6">
+    <div class="container flex flex-col items-center justify-center ta-center wave--before wave--after">
+      <h1>{{ page.titre_principal | textilize }}</h1>
+      <h2 class="geomanist fw-book">{{ page.sous_titre | textilize }}</h2>
+    </div>
+  </section>
+	
+  <section id="magasins" class="section flex flex-col justify-center mx-auto py-8 px-6">
+    <ul class="magasins no-list-style">
+      {% for magasin in page.section_magasins %}
+      <li class="magasin px-6 py-5 b-1s">
+        <h3 class="mb-2"><a class="uppercase" href="{{ magasin.url }}" target="_blank">{{ magasin.nom }}</a></h3>
+        <p class="geomanist">{{ magasin.adresse }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-<ul>
-  {% for magasin in page.section_magasins %}
-    <li>{{ magasin.nom }}: {{ magasin.adresse }}</li>
-  {% endfor %}
-</ul>
+</main>

@@ -1,0 +1,27 @@
+// -------------------------------------------------------------------------------
+// This file contains all styles related to page votre-impact of the site/application.
+// -------------------------------------------------------------------------------
+
+.acheter {
+  #acheter {
+    min-height: 440px;
+    h2 {
+      font-size: 24px;
+      text-transform: none;
+    }
+  }
+  #magasins {
+    max-width: 30em;
+    min-height: unset;
+    .magasin {
+      border-color: #ebebeb;
+      margin-bottom: -1px;
+      h3 {
+        font-size: 24px;
+      }
+    }
+    > * + * {
+      margin: 3em auto 0;
+    }
+  }
+}
