@@ -115,7 +115,7 @@ section_engagements:
         {% for feature in site.data.features %}
         <li class="col">
           <figure>
-            <img src="{{ feature.img | prepend: '/assets/img/' | relative_url }}" class="b-2s br-50">
+            {{ feature.svg }}
             <figcaption class="fw-bold">{{ feature.titre | textilize }}</figcaption>
           </figure>
         </li>

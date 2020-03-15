@@ -17,14 +17,13 @@
 			justify-content: center;
 			align-items: center;
 			text-align: center;
-			img {
+			svg {
 				width: 128px;
 				height: 128px;
-				object-fit: contain;
 			}
 		}
 	}
 }
 .invert .features img {
-	border-color: white;
+	color: white;
 }

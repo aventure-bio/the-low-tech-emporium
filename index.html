@@ -9,7 +9,7 @@ hero:
 section_valeurs:
   titre: Nos valeurs
   contenu: L’engagement de The Green Emporium est d’offrir les meilleures alternatives aux produits du quotidien tout en réduisant le plus possible l’impact écologique sur la planète et les animaux.
-  btn: En savoir plus
+  btn: En savoir +
 section_gamme:
 - titre: Cheveux secs
   descriptif: Ils retrouveront douceur souplesse et brillance !
@@ -81,8 +81,7 @@ section_engagements:
         {% for feature in site.data.features %}
         <li class="col">
           <figure>
-            <img src="{{ feature.img | relative_url }}"
-              class="b-2s br-50">
+            {{ feature.svg }}
             <figcaption class="fw-bold">{{ feature.titre | textilize }}</figcaption>
           </figure>
         </li>
