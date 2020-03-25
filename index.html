@@ -2,57 +2,69 @@
 title: The Green Emporium
 description: The Green Emporium est la dernière création de Laëtitia Van de Walle, fondatrice de Lamazuna. Depuis 2010, Lamazuna est la marque de référence du zéro déchet dans la salle de bain.
 layout: default
+
 hero:
   img:
     src: SLIDER_-1-16c-1920w.png
     alt: Shampoing solide – Cheveux sec
+
 section_valeurs:
   titre: Nos valeurs
   contenu: L’engagement de The Green Emporium est d’offrir les meilleures alternatives aux produits du quotidien tout en réduisant le plus possible l’impact écologique sur la planète et les animaux.
   btn: En savoir +
+
 section_gamme:
 - titre: Cheveux secs
   descriptif: Ils retrouveront douceur souplesse et brillance !
   color: vanille
   background:
-    url: VISUEL_vanille.jpg
+    color: vanille-light
+    url: SHAMPOING_SOLIDE_VANILLE.png
 - titre: Détox
   descriptif: Vos cheveux et votre cuir chevelu seront assainis et frais !
   color: menthe
   background:
-    url: VISUEL_menthe-12.jpg
+    color: menthe-light
+    url: SHAMPOING_SOLIDE_MENTHE.png
 - titre: Cuirs chevelus sensibles
   descriptif: Les cuirs chevelus sensibles seront zen !
   color: lavande
   background:
-    url: VISUEL_LAVANDE-13.jpg
+    color: lavande-light
+    url: SHAMPOING_SOLIDE_LAVANDE.png
 - titre: Cheveux gras
   descriptif: Vos cheveux regraissent moins vite !
   color: pamplemousse
   background:
-    url: VISUEL_PAMPLEMOUSSE-14.jpg
+    color: pamplemousse-light
+    url: SHAMPOING_SOLIDE_PAMPLEMOUSSE.png
 - titre: Cheveux normaux
   descriptif: Vos cheveux seront revitalisés et fortifiés, tout simplement en pleine santé !
   color: amande
   background:
-    url: VISUEL_AMANDE-15.jpg
+    color: amande-light
+    url: SHAMPOING_SOLIDE_AMANDE.png
 - titre: Familial
   descriptif: Tous les cheveux de la famille seront forts et brillants !
   color: fruits-exotiques
   background:
-    url: VISUEL_FE.jpg
+    color: fruits-exotiques-light
+    url: SHAMPOING_SOLIDE_EXOTIQUES.png
+
 section_made_in_france:
   titre: Fabriqué en France
   contenu: Tous nos shampoings sont fabriqués à Nice.
   background:
     url: AdobeStock_-36-b&w-960w.png
     color: menthe-light
+
 section_ingredients:
   titre: Découvrez <br>nos ingrédients
   href: /les-ingredients
   background:
     url: AdobeStock_-35-b&w-960w.png
     color: fruits-exotiques-light
+
 section_engagements:
   titre: Une marque engagée
   contenu: Au cœur du projet, The Green Emporium s’engage avec Surfrider Foundation Europe, on vous explique tout <a href="{{ '/la-pollution-plastique' | relative_url }}">ici</a>
@@ -73,25 +85,9 @@ section_engagements:
       alt="{{ page.hero.img.alt }}">
   </div>
 
-  <section id="valeurs" class="section py-8">
-    <div class="container flex flex-col items-center ta-center wave--before">
-      <h2>{{ page.section_valeurs.titre | textilize }}</h2>
-      <p class="fz-3 geomanist">{{ page.section_valeurs.contenu | textilize }}</p>
-      <ul class="features grid-4">
-        {% for feature in site.data.features %}
-        <li class="col">
-          <figure>
-            {{ feature.svg }}
-            <figcaption class="fw-bold">{{ feature.titre | textilize }}</figcaption>
-          </figure>
-        </li>
-        {% endfor %}
-      </ul>
-      <a href="#" class="btn btn--outline btn--lg">{{ page.section_valeurs.btn | textilize }}</a>
-    </div>
-  </section>
+  {% include valeurs.html valeurs=page.section_valeurs %}
 
-  <section id="gamme" class="section grid-2_md-1 grid-noGutter">
+  <section class="section grid-2_md-1 grid-noGutter gamme">
     <div class="swiper-container section__text col">
       <div class="swiper-wrapper">
         {% for produit in page.section_gamme %}
@@ -103,12 +99,13 @@ section_engagements:
         </div>
         {% endfor %}
       </div>
-      <div class="swiper-pagination"></div>
     </div>
     <div class="swiper-container section__img col">
       <div class="swiper-wrapper">
         {% for produit in page.section_gamme %}
-        <div class="swiper-slide swiper-slide-style" style="background: center / cover no-repeat url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}')"></div>
+        <div class="h100 swiper-slide swiper-slide-style"
+          style="background: center / cover no-repeat var(--{{ produit.background.color }}) url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}')">
+        </div>
         {% endfor %}
       </div>
       <div class="swiper-pagination"></div>
@@ -128,36 +125,9 @@ section_engagements:
     </div>
   </section>
 
-  <section id="ingredients" class="section relative">
-    <div class="section__img filter--fruits-exotiques">
-      <div class="bg--darken"
-        style="background-image: linear-gradient(var(--{{ page.section_ingredients.background.color }}), var(--{{ page.section_ingredients.background.color }})), url('{{ page.section_ingredients.background.url | prepend: '/assets/img/' | relative_url }}')">
-      </div>
-    </div>
-    <div class="grid-2_md-1 grid-noGutter" style="position:absolute; top:0; left:0; right:0">
-      <div
-        class="section__text col padded flex flex-col justify-center content-center ta-center wave--before wave--after">
-        <h3><a
-            href="{{ page.section_ingredients.href | relative_url }}">{{ page.section_ingredients.titre | textilize }}</a>
-        </h3>
-      </div>
-    </div>
-  </section>
+  {% include ingredients.html ingredients=page.section_ingredients %}
 
-  <section id="engagements" class="section grid-2_md-1 grid-noGutter">
-    <div class="section__img col filter--menthe">
-      <div class="padded h-100 bg--darken flex justify-center items-center"
-        style="background-image: linear-gradient(var(--{{ page.section_engagements.background.color }}), var(--{{ page.section_engagements.background.color }})), url('{{ page.section_engagements.background.url | prepend: '/assets/img/' | relative_url }}')">
-        <img class=""
-          src="{{ page.section_engagements.img.src | prepend: '/assets/img/' | relative_url }}"
-          alt="{{ page.section_engagements.img.alt }}" width="207" height="300">
-      </div>
-    </div>
-    <div
-      class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
-      <h3>{{ page.section_engagements.titre | textilize }}</h3>
-      <p class="mx-auto">{{ page.section_engagements.contenu | textilize }}</p>
-    </div>
-  </section>
+  {% include engagements.html engagements=page.section_engagements %}
+
 
 </main>

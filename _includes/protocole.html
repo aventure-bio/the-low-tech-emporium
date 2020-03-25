@@ -1,0 +1,10 @@
+<section id="protocole" class="section invert py-8" style="background-color: var(--{{ include.protocole.background_color }})">
+  <div
+    class="container flex flex-col items-center justify-center ta-center wave--before wave--after">
+    <h2>{{ include.protocole.titre | textilize }}</h2>
+    {% if include.protocole.sous_titre %}
+      <h3>{{ include.protocole.sous_titre | textilize }}</h3>
+    {% endif %}
+    <p class="fz-3">{{ include.protocole.contenu | textilize }}</p>
+  </div>
+</section>

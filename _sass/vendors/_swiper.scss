@@ -62,6 +62,9 @@
   height: 100%;
   position: relative;
   transition-property: transform;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .swiper-slide-invisible-blank {
   visibility: hidden;

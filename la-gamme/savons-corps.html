@@ -1,0 +1,67 @@
+---
+title: Nos disques démaquillants
+description:
+image:
+layout: default
+
+section_protocole:
+  background_color: amande-light
+  titre: Protocole et conseils
+  sous_titre:
+  contenu: Imbibez nos disques en microfibre d’eau chaude ou froide, puis nettoyez doucement votre visage et vos yeux. Inutile d’ajouter un produit démaquillant, l’eau seule suffit sur un maquillage non waterproof ! Après utilisation glissez vos disques démaquillants dans leur filet de lavage en plastique recyclé puis mettez-les en machine avec le reste de votre linge. Tout simplement !
+
+section_conseils:
+- numero: N°1
+  paragraphe_1: Savez-vous qu’il faut s’armer d’un peu de patience et de quelques lavages afin de vous permettre d’enlever la pellicule de silicone contenue dans les produits non naturels ?
+  paragraphe_2: Une fois le silicone éliminé, vous allez retrouver beaucoup de brillance naturelle !
+- numero: N°2
+  paragraphe_1: Savez-vous qu’il n’est pas nécessaire de frotter vos longueurs et vos pointes ?
+  paragraphe_2: C’est la racine qui doit être nettoyée en massant le cuir chevelu!
+section_conseils_background_color: amande-light
+
+titre_category_produit: Nos disques démaquillants
+
+section_gamme:
+  titre: Shampoing cheveux normaux
+  description: 'On vous présente les supers ingrédients naturels qui composent notre
+  shampoing solide cheveux normaux : de l’huile d’argan, de l’huile d’amande douce,
+  de l’huile de tournesol, des agents moussants, de l’argile, du parfum, un antioxydant
+  et un pigment pour lui donner sa jolie couleur verte !'
+  usage: Super usage
+  formule: Les géniales huiles d’<strong>amande douce bio</strong> et <strong>d’argan</strong> présentes dans notre shampoing sont hydratantes, assouplissantes et fortifiantes.
+  titre_garantie: Vos cheveux seront revitalés et fortifiés, tout simplement en pleine santé !
+  description_garantie: Vos cheveux seront revitalés et fortifiés, tout simplement en pleine santé !
+  usage_garantie: Vos cheveux seront revitalés et fortifiés, tout simplement en pleine santé !
+  produits:
+  - color: amande-light
+    background_url: VISUEL_AMANDE-15.jpg
+  - color: amande-light
+    background_url: VISUEL_AMANDE-15.jpg
+  - color: amande-light
+    background_url: VISUEL_AMANDE-15.jpg
+  - color: amande-light
+    background_url: VISUEL_AMANDE-15.jpg
+
+section_ingredients:
+  titre: Découvrez <br>nos ingrédients
+  href: /les-ingredients
+  background:
+    url: AdobeStock_-35-b&w-960w.png
+    color: fruits-exotiques-light
+---
+
+<main class="la-gamme">
+
+  <h1 class="visually-hidden">{{ page.title }}</h1>
+
+  {% include protocole.html protocole=page.section_protocole %}
+
+  {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
+
+  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
+
+  {% include gamme_swiper.html gamme=page.section_gamme %}
+
+  {% include ingredients.html ingredients=page.section_ingredients %}
+
+</main>

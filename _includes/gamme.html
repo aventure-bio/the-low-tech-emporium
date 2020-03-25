@@ -1,0 +1,24 @@
+<section class="section gamme">
+  {% for produit in include.gamme %}
+  <div class="grid-2_md-1 grid-noGutter flex-row-reverse ">
+    <div class="section__text col flex flex-col justify-center produit">
+      <h3 class="produit__titre">{{ produit.titre | textilize }}</h3>
+      <p class="produit__description geomanist">{{ produit.description | textilize }}</p>
+      {% if produit.formule %}
+        <p class="produit__formule geomanist">{{ produit.formule | textilize }}</p>
+      {% endif %}
+      {% if produit.benefices %}
+        <p class="produit__benefices geomanist uppercase">{{ produit.benefices | textilize }}</p>
+      {% endif %}
+      {% if produit.allergenes %}
+        <p class="produit__allergenes geomanist fw-bold"><small>{{ produit.allergenes | textilize }}</small></p>
+      {% endif %}
+    </div>
+    <div class="section__img col" style="background-color: var(--{{ produit.color }})">
+      <div class="h-100"
+        style="background: center / cover no-repeat url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}')">
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
