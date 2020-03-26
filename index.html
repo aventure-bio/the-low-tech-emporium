@@ -88,7 +88,7 @@ section_engagements:
   {% include valeurs.html valeurs=page.section_valeurs %}
 
   <section class="section grid-2_md-1 grid-noGutter gamme">
-    <div class="swiper-container section__text col">
+    <div id="simultaneous-text-swiper" class="swiper-container section__text simultaneous col">
       <div class="swiper-wrapper">
         {% for produit in page.section_gamme %}
         <div
@@ -100,11 +100,11 @@ section_engagements:
         {% endfor %}
       </div>
     </div>
-    <div class="swiper-container section__img col">
+    <div id="simultaneous-img-swiper" class="swiper-container section__img col">
       <div class="swiper-wrapper">
         {% for produit in page.section_gamme %}
         <div class="h100 swiper-slide swiper-slide-style"
-          style="background: center / cover no-repeat var(--{{ produit.background.color }}) url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}')">
+          style="background: center / contain no-repeat var(--{{ produit.background.color }}) url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}')">
         </div>
         {% endfor %}
       </div>

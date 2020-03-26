@@ -3,9 +3,18 @@
   <div class="grid-2_md-1 grid-noGutter flex-row-reverse ">
     <div class="section__text col flex flex-col justify-center produit">
       <h3 class="produit__titre">{{ produit.titre | textilize }}</h3>
-      <p class="produit__description geomanist">{{ produit.description | textilize }}</p>
-      {% if produit.formule %}
-        <p class="produit__formule geomanist">{{ produit.formule | textilize }}</p>
+      <p class="produit__description geomanist">{{ produit.paragraphe1 | textilize }}</p>
+      {% if produit.paragraphe2 %}
+        <p class="geomanist">{{ produit.paragraphe2 | textilize }}</p>
+      {% endif %}
+      {% if produit.paragraphe3 %}
+        <p class="geomanist">{{ produit.paragraphe3 | textilize }}</p>
+      {% endif %}
+      {% if produit.paragraphe4 %}
+        <p class="geomanist">{{ produit.paragraphe4 | textilize }}</p>
+      {% endif %}
+      {% if produit.paragraphe5 %}
+        <p class="geomanist">{{ produit.paragraphe5 | textilize }}</p>
       {% endif %}
       {% if produit.benefices %}
         <p class="produit__benefices geomanist uppercase">{{ produit.benefices | textilize }}</p>
@@ -16,7 +25,7 @@
     </div>
     <div class="section__img col" style="background-color: var(--{{ produit.color }})">
       <div class="h-100"
-        style="background: center / cover no-repeat url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}')">
+        style="background: center / contain no-repeat url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}')">
       </div>
     </div>
   </div>

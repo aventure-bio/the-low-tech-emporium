@@ -14,32 +14,65 @@ if ('serviceWorker' in navigator) {
   // }
 }
 
-var textSwiper = new Swiper('.swiper-container.section__text', {
-  speed: 350,
-  loop: true,
-  autoplay: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
+if (document.getElementById("simple-text-swiper")) {
+  var singleTextSwiper = new Swiper('#simple-text-swiper', {
+    speed: 350,
+    autoplay: true,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next.text-button',
+      prevEl: '.swiper-button-prev.text-button',
+    },
+  });
+  singleTextSwiper.controller.control = singleTextSwiper;
+}
 
-var imgSwiper = new Swiper('.swiper-container.section__img', {
-  speed: 350,
-  effect: 'fade',
-  grabCursor: true,
-  keyboard: true,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  a11y: {
-    prevSlideMessage: 'Produit précédant',
-    nextSlideMessage: 'Produit nuivant',
-    paginationBulletMessage: "Aller au produit {{ index }}",
-  },
-});
+if (document.getElementById("simple-img-swiper")) {
+  var singleImgSwiper = new Swiper('#simple-img-swiper', {
+    speed: 350,
+    autoplay: true,
+    effect: 'fade',
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next.img-button',
+      prevEl: '.swiper-button-prev.img-button',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+  });
+  singleImgSwiper.controller.control = singleImgSwiper;
+}
 
-imgSwiper.controller.control = textSwiper;
-textSwiper.controller.control = imgSwiper;
+if (document.getElementById("simultaneous-text-swiper")) {
+  var simultaneousTextSwiper = new Swiper('#simultaneous-text-swiper', {
+    speed: 350,
+    loop: true,
+    autoplay: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  var simultaneousImgSwiper = new Swiper('#simultaneous-img-swiper', {
+    speed: 350,
+    effect: 'fade',
+    grabCursor: true,
+    keyboard: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    a11y: {
+      prevSlideMessage: 'Produit précédant',
+      nextSlideMessage: 'Produit nuivant',
+      paginationBulletMessage: "Aller au produit {{ index }}",
+    },
+  });
+
+  simultaneousImgSwiper.controller.control = simultaneousTextSwiper;
+  simultaneousTextSwiper.controller.control = simultaneousImgSwiper;
+}

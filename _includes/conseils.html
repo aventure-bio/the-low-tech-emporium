@@ -1,5 +1,5 @@
 <section id="conseils" class="section">
-  <div class="swiper-container section__text">
+  <div id="simple-text-swiper" class="swiper-container section__text">
     <div class="swiper-wrapper">
       {% for conseil in include.conseils %}
       <div class="swiper-slide section__text invert bg--menthe" style="background-color: var(--{{ include.background_color }})">
@@ -18,7 +18,7 @@
       </div>
       {% endfor %}
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev text-button"></div>
+    <div class="swiper-button-next text-button"></div>
   </div>
 </section>

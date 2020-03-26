@@ -1,4 +1,4 @@
-<section id="valeurs" class="section py-8 {{ include.invert }}">
+<section id="valeurs" class="section {{ include.invert }}">
   <div class="container flex flex-col items-center ta-center wave--before">
     <h2>{{ include.valeurs.titre | textilize }}</h2>
     <p class="fz-3 geomanist">{{ include.valeurs.contenu | textilize }}</p>
@@ -12,6 +12,8 @@
       </li>
       {% endfor %}
     </ul>
-    <a href="#" class="btn btn--outline btn--lg">{{ include.valeurs.btn | textilize }}</a>
+    {% if include.valeurs.btn %}
+      <a href="#" class="btn btn--outline btn--lg mb-8">{{ include.valeurs.btn | textilize }}</a>
+    {% endif %}
   </div>
 </section>
