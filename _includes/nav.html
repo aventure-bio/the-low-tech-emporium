@@ -1,7 +1,19 @@
-<nav class="container" role="navigation">
-  <ul class="flex flex-wrap justify-center items-center align-center">
+<nav class="container" itemscope itemtype="https://schema.org/SiteNavigationElement">
+
+	<button aria-expanded="false" aria-controls="menu" aria-labelledby="menu-icon">
+		<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+		  <title id="menu-icon">Menu</title>
+		  <rect x="5" y="9" width="30" height="3"></rect>
+		  <rect x="5" y="19" width="30" height="3"></rect>
+		  <rect x="5" y="29" width="30" height="3"></rect>
+		</svg>
+	</button>
+
+	<div id="menu-overlay" style="display: none;"></div>
+	
+  <ul id="menu" class="flex flex-wrap justify-center items-center align-center" role="menu">
     {% for item in site.data.nav %}
-    <li class="flex fw-bold">
+    <li class="flex fw-bold" role="menuitem">
       <a href="{{ item.link | relative_url }}" class="uppercase{% if item.link == page.url %} active{% endif %}">
       {{ item.name }}
       </a>
