@@ -76,3 +76,74 @@ if (document.getElementById("simultaneous-text-swiper")) {
   simultaneousImgSwiper.controller.control = simultaneousTextSwiper;
   simultaneousTextSwiper.controller.control = simultaneousImgSwiper;
 }
+
+
+// Mobile Nav
+
+var menu = document.getElementById("menu"),
+    navButton = document.querySelector("nav > button"),
+    menuOverlay = document.getElementById("menu-overlay"),
+    breakpoint = 990;
+
+function toggleVisibility(element) {
+  if (element.style.display === "none") {
+    element.style.display = "initial";
+  } else {
+    element.style.display = "none";
+  }
+}
+
+function toggleMobileNav() {
+  var expanded = navButton.getAttribute('aria-expanded') === 'true' || false;
+  navButton.setAttribute('aria-expanded', !expanded);
+  menu.classList.add('transition');
+  if (expanded === false) {
+    // open
+    toggleVisibility(menuOverlay);
+    menu.style.display = "flex";
+    // setTimeout is needed to keep CSS transitions visible
+    setTimeout(function(){ 
+      menuOverlay.classList.toggle('menu-expanded');
+      menu.classList.toggle('menu-expanded');
+    }, 10);
+  }
+  else {
+    // close
+    menuOverlay.classList.toggle('menu-expanded');
+    menu.classList.toggle('menu-expanded');
+    // setTimeout is needed to keep CSS transitions visible
+    setTimeout(function(){ 
+      toggleVisibility(menuOverlay);
+      menu.style.display = "none";
+    }, 400); // transition speed
+  }
+  if (!document.body.classList.contains('no-overflow-y') ) {
+    document.body.classList.add('no-overflow-y');
+  } else {
+    document.body.classList.remove('no-overflow-y');
+  }
+}
+
+// Toggle mobile nav when clicking on the nav button
+navButton.addEventListener('click', function() {
+  toggleMobileNav();
+});
+// Toggle mobile nav when clicking on the background overlay
+menuOverlay.addEventListener('click', function() {
+  toggleMobileNav();
+});
+
+// Toggle nav menu when window is wider than breakpoint (990px)
+window.onresize = function() {
+  if (window.innerWidth >= breakpoint) {
+    document.body.classList.remove('no-overflow-y');
+    menuOverlay.classList.remove('menu-expanded');
+    menuOverlay.style.display = "none";
+    menu.style.display = "flex";
+    menu.classList.remove('menu-expanded');
+    menu.classList.remove('transition');
+    navButton.setAttribute('aria-expanded', false);
+  }
+}
+
+
