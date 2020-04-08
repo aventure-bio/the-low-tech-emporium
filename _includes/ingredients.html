@@ -1,0 +1,14 @@
+<section id="ingredients" class="section relative">
+  <div class="section__img filter--fruits-exotiques">
+    <div class="bg--darken"
+      style="background-image: linear-gradient(var(--{{ include.ingredients.background.color }}), var(--{{ include.ingredients.background.color }})), url('{{ include.ingredients.background.url | prepend: '/assets/img/' | relative_url }}')">
+    </div>
+  </div>
+  <div class="grid-2_md-1 grid-noGutter" style="position:absolute; top:0; left:0; right:0">
+    <div
+      class="section__text col padded flex flex-col justify-center content-center ta-center wave--before wave--after">
+      <h3><a href="{{ include.ingredients.href | relative_url }}">{{ include.ingredients.titre | textilize }}</a>
+      </h3>
+    </div>
+  </div>
+</section>

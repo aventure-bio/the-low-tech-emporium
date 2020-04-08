@@ -1,0 +1,67 @@
+---
+title: Nos disques démaquillants
+description:
+image:
+layout: default
+
+section_protocole:
+  background_color: brand-color
+  titre: Protocole et conseils
+  sous_titre:
+  contenu: Mouillez le savon sous l’eau et frottez-le jusqu’à en obtenir la quantité suffisante pour vous laver l’ensemble du corps. Ce savon très doux est recommandé pour un usage corporel.
+
+section_conseils:
+- numero: N°1
+  paragraphe_1: Savez-vous qu’un savon solide est plus hygiénique qu’un savon liquide ?
+  paragraphe_2: Sous forme solide les savons ne contiennent pas d’eau, les bactéries ne se développent donc pas. Attention tout de même à bien laisser sécher son pain de savon sur un porte-savon aéré.
+- numero: N°2
+  paragraphe_1: Savez-vous que vous pouvez vous servir des petits morceaux secs de savons restants pour parfumer vos tiroirs et armoires de linge ?
+  paragraphe_2:
+section_conseils_background_color: amande-savon
+
+
+titre_category_produit: Savon Corps saponifié à froid
+
+section_gamme:
+  titre: Savon corps saponifié à froid
+  paragraphe1: 'La saponification à froid, ou SAF, est une méthode artisanale et ancestrale de fabrication de savon. C’est une réaction chimique entre des huile végétales et une base forte de soude. Le savon créé par ce processus sera doux et hydratant pour l’épiderme de toutes les peaux même sensibles.'
+  paragraphe2: La fabrication de nos savons à froid, est économe en énergie et permet de leur donner un surgraissage bon pour la peau.
+  paragraphe3: 'Nous avons créé pour vous un cocktail d’huiles végétales composé <strong>d’huile de tournesol</strong> pour ses propriétés adoucissantes, <strong>d’huile de coco</strong> réparatrice et <strong>d’huile de colza</strong> apaisante. Nous avons associé à ce mélange du <strong>beurre de karité</strong> nourrissant et apaisant et des délicieux parfums pour faire de votre douche un moment des plus agréables, au choix : <strong>à l’amande, à la lavande, à la vanille ou à la menthe</strong> !'
+  paragraphe4:
+  paragraphe5:
+  titre_garantie:
+  description_garantie:
+  usage_garantie:
+  produits:
+  - color: amande-savon-light
+    background_url: SAVON_AMANDE.png
+  - color: lavande-savon-light
+    background_url: SAVON_LAVANDE.png
+  - color: menthe-savon-light
+    background_url: SAVON_MENTHE.png
+  - color: vanille-savon-light
+    background_url: SAVON_VANILLE.png
+
+section_ingredients:
+  titre: Découvrez <br>nos ingrédients
+  href: /les-ingredients
+  background:
+    url: AdobeStock_-35-b&w-960w.png
+    color: fruits-exotiques-light
+---
+
+<main class="la-gamme">
+
+  <h1 class="visually-hidden">{{ page.title }}</h1>
+
+  {% include protocole.html protocole=page.section_protocole %}
+
+  {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
+
+  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
+
+  {% include gamme_swiper.html gamme=page.section_gamme %}
+
+  {% include ingredients.html ingredients=page.section_ingredients %}
+
+</main>

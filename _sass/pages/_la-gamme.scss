@@ -52,7 +52,7 @@
       }
     }
   }
-  #gamme {
+  .gamme {
     .section__text {
       padding: 7.5%;
       @media (min-width: $breakpoint-md) {
@@ -63,7 +63,7 @@
       }
     }
     > [class^="grid"]:nth-child(2n) {
-      flex-direction: row;
+      flex-direction: row-reverse;
     }
     .produit {
       font-size: 18px;
@@ -78,6 +78,20 @@
     }
     .produit__allergenes {
       font-size: 12px;
+    }
+  }
+  #ingredients {
+    > div {
+      min-height: 450px;
+    }
+    h3 {
+      max-width: 10em;
+      margin: 0 auto;
+    }
+    .section__img {
+      div {
+        padding-top: 450px;
+      }
     }
   }
 }

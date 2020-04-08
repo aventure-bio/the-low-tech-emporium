@@ -3,9 +3,9 @@
 // -----------------------------------------------------------------------------
 
 #newsletter {
-	padding: 100px 50px;
+	padding: 0px 50px 50px 50px;
 	@media (max-width: $breakpoint-md) {
-		padding: 50px 7.5% 100px;
+		padding: 0px 50px 50px 50px;
 	}
 	label {
 		display: block;

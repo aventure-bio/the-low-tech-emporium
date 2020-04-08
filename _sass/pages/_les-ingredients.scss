@@ -13,7 +13,7 @@
     .ingredient {
       flex-basis: 100%;
       width: 100%;
-      padding: 100px 7.5%;
+      padding: 50px;
       border-bottom: 1px solid #ebebeb;
       &:last-child {
         border-left: 1px solid #ebebeb;
@@ -30,7 +30,7 @@
       @media (min-width: $breakpoint-md) {
         flex-basis: 33.333%;
         width: 33.333%;
-        padding: 120px 50px;
+        padding: 50px 50px;
         &:nth-child(2n) {
           border-left: none;
         }

@@ -10,14 +10,31 @@
 	</button>
 
 	<div id="menu-overlay" style="display: none;"></div>
-	
+
   <ul id="menu" class="flex flex-wrap justify-center items-center align-center" role="menu">
     {% for item in site.data.nav %}
-    <li class="flex fw-bold" role="menuitem">
-      <a href="{{ item.link | relative_url }}" class="uppercase{% if item.link == page.url %} active{% endif %}">
-      {{ item.name }}
-      </a>
-    </li>
+      {% if item.subfolderitems %}
+        <li class="flex fw-bold dropdown" role="menuitem">
+          <a href="{{ item.link | relative_url }}" class="uppercase">
+            {{ item.name }}
+          </a>
+          <ul class="dropdown-content">
+            {% for entry in item.subfolderitems %}
+            <li class="small">
+              <a href="{{ entry.link | relative_url }}">
+                > {{ entry.name }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% else %}
+        <li class="flex fw-bold first-level" role="menuitem">
+          <a href="{{ item.link | relative_url }}" class="uppercase{% if item.link == page.url %} active{% endif %}">
+          {{ item.name }}
+          </a>
+        </li>
+      {% endif %}
     {% endfor %}
   </ul>
 </nav>

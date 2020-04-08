@@ -85,7 +85,7 @@
 
 // Orders
   &[#{$gl-attributeName}*="-reverse"]{
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
   &[#{$gl-attributeName}*="-column"] {
     flex-direction: column;

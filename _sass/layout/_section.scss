@@ -8,9 +8,6 @@
  */
 main {
 	.section {
-		@media (min-width: $breakpoint-md) {
-			min-height: 593px;
-		}
 		.section__text {
 			.swiper-slide > * {
 				padding-left: $space-8;

@@ -1,0 +1,40 @@
+<section class="section gamme">
+  <div class="grid-2_md-1 grid-noGutter flex-row-reverse">
+    <div class="section__text col flex flex-col justify-center produit">
+      <h3 class="produit__titre">{{ include.gamme.titre | textilize }}</h3>
+      <p class="produit__description geomanist">{{ include.gamme.paragraphe1 | textilize }}</p>
+      {% if include.gamme.paragraphe2 %}
+        <p class="geomanist">{{ include.gamme.paragraphe2 | textilize }}</p>
+      {% endif %}
+      {% if include.gamme.paragraphe3 %}
+        <p class="geomanist">{{ include.gamme.paragraphe3 | textilize }}</p><br>
+      {% endif %}
+      {% if include.gamme.paragraphe4 %}
+        <p class="geomanist">{{ include.gamme.paragraphe4 | textilize }}</p>
+      {% endif %}
+      {% if include.gamme.paragraphe5 %}
+        <p class="geomanist">{{ include.gamme.paragraphe5 | textilize }}</p><br>
+      {% endif %}
+      {% if include.gamme.titre_garantie %}
+        <p class="produit__titre_garantie small geomanist">
+          <span class="uppercase">{{ include.gamme.titre_garantie | textilize }}</span><br>
+          <span>{{ include.gamme.description_garantie | textilize }}</span>
+        </p>
+      {% endif %}
+      {% if include.gamme.usage_garantie %}
+        <p class="produit__usage_garantie small geomanist">{{ include.gamme.usage_garantie | textilize }}</p>
+      {% endif %}
+    </div>
+    <div id="simple-img-swiper" class="swiper-container section__img col">
+      <div class="swiper-wrapper">
+        {% for produit in page.section_gamme.produits %}
+          <div class="swiper-slide" style="background: center / contain no-repeat var(--{{ produit.color }}) url('{{ produit.background_url | prepend: '/assets/img/' | relative_url }}')">
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-button-prev img-button"></div>
+      <div class="swiper-button-next img-button"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>

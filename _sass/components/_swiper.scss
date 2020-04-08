@@ -20,18 +20,18 @@
 		color: white;
 	}
 }
-.swiper-button-prev {
+.swiper-button-prev-text {
 	left: 50px;
 }
-.swiper-button-next {
+.swiper-button-next-text {
 	right: 50px;
 }
 
 @media (max-width: $breakpoint-md) {
-  .swiper-button-prev {
-    left: 5%;
+  .swiper-button-prev-img {
+    left: 50px;
   }
-  .swiper-button-next {
-    right: 5%;
+  .swiper-button-next-img {
+    right: 50px;
   }
 }

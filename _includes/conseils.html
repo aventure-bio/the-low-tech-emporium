@@ -1,0 +1,24 @@
+<section id="conseils" class="section">
+  <div id="simple-text-swiper" class="swiper-container section__text">
+    <div class="swiper-wrapper">
+      {% for conseil in include.conseils %}
+      <div class="swiper-slide section__text invert bg--menthe" style="background-color: var(--{{ include.background_color }})">
+        <div class="py-8 mx-8 w-80">
+          <div
+            class="grid-2_md-1 grid-noGutter flex items-center justify-center content-center conseil">
+            <h3 class="col ta-center">{{ conseil.numero | textilize }}</h3>
+            <div class="col flex flex-col pb-6">
+              <p class="fz-3 geomanist">{{ conseil.paragraphe_1 | textilize }}</p>
+              {% if conseil.paragraphe_2 %}
+                <p class="fz-3 fw-bold">{{ conseil.paragraphe_2 | textilize }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-button-prev text-button"></div>
+    <div class="swiper-button-next text-button"></div>
+  </div>
+</section>

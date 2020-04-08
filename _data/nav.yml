@@ -1,9 +1,24 @@
 - link: /
-  name: 
+  name:
 - link: /nos-valeurs
   name: Nos valeurs
-- link: /la-gamme
-  name: La gamme
+- name: La gamme
+  link: /la-gamme/shampoings-solides
+  subfolderitems:
+    - name: Shampoings solides
+      link: /la-gamme/shampoings-solides
+    - name: Savons pour le corps
+      link: /la-gamme/savons-corps
+    - name: Déodorants
+      link: /la-gamme/deodorants
+    - name: Nettoyants visages
+      link: /la-gamme/nettoyants-visages
+    - name: Soins capillaires
+      link: /la-gamme/soins-capillaires
+    - name: Oriculis
+      link: /la-gamme/oriculis
+    - name: Disques démaquillants
+      link: /la-gamme/disques-demaquillants
 - link: /les-ingredients
   name: Les ingrédients
 - link: /la-pollution-plastique

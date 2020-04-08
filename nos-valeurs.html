@@ -106,25 +106,9 @@ section_engagements:
     </div>
   </section>
 
+  {% include valeurs.html valeurs=page.section_valeurs invert="invert" %}
 
-  <section id="valeurs" class="section py-8 invert">
-    <div class="container flex flex-col items-center ta-center wave--before">
-      <h2>{{ page.section_valeurs.titre | textilize }}</h2>
-      <p class="fz-3 geomanist">{{ page.section_valeurs.contenu | textilize }}</p>
-      <ul class="features grid-4">
-        {% for feature in site.data.features %}
-        <li class="col">
-          <figure>
-            {{ feature.svg }}
-            <figcaption class="fw-bold">{{ feature.titre | textilize }}</figcaption>
-          </figure>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
-
-  <section id="labels" class="section py-8">
+  <section id="labels" class="section">
     <div class="container flex flex-col items-center ta-center wave--before">
       <h3>{{ page.section_labels.titre | textilize }}</h3>
       <ul class="features grid-3">
@@ -139,19 +123,6 @@ section_engagements:
     </div>
   </section>
 
-  <section id="engagements" class="section grid-2_md-1 grid-noGutter">
-    <div class="section__img col filter--menthe">
-      <div class="padded h-100 bg--darken flex justify-center items-center"
-        style="background-image: linear-gradient(var(--{{ page.section_engagements.background.color }}), var(--{{ page.section_engagements.background.color }})), url('{{ page.section_engagements.background.url | prepend: '/assets/img/' | relative_url }}')">
-        <img class="" src="{{ page.section_engagements.img.src | prepend: '/assets/img/' | relative_url }}"
-          alt="{{ page.section_engagements.img.alt }}" width="207" height="300">
-      </div>
-    </div>
-    <div
-      class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
-      <h3>{{ page.section_engagements.titre | textilize }}</h3>
-      <p class="mx-auto">{{ page.section_engagements.contenu | textilize }}</p>
-    </div>
-  </section>
+  {% include engagements.html engagements=page.section_engagements %}
 
 </main>

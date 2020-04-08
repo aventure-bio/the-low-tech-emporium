@@ -29,7 +29,7 @@
 		display: none;
 	}
 	#hero {
-		img { 
+		img {
 			height: 640px;
 		}
 	}
@@ -40,7 +40,24 @@
 		background: white;
 		z-index: 99;
 		transition: all 0.2s ease;
-		will-change: font-size, opacity, top;
+    will-change: font-size, opacity, top;
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      list-style: none;
+      background-color: #f9f9f9;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      z-index: 2;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 		#menu {
 			margin: auto;
 			padding: 0;
@@ -67,7 +84,17 @@
 				&:last-child {
 					padding-right: 0;
 				}
-			}
+      }
+      .first-level {
+        &:first-child {
+          display: none;
+          & > a {
+            background: center / contain no-repeat url("../img/TGE-icon.png");
+            width: 70px;
+            height: 67.5px;
+          }
+        }
+      }
 		}
 		&.fixed {
 			position: fixed;
@@ -82,7 +109,7 @@
 					top: 0px;
 					opacity: 1;
 				}
-			} 
+			}
 		}
 	}
 }

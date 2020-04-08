@@ -3,15 +3,26 @@
 // -------------------------------------------------------------------------------
 
 .home {
-  h2 {
-    margin-top: 2em;
-  }
-  #gamme {
+  .gamme {
     h3 {
       margin: 0;
     }
     p {
       font-size: 22px;
+    }
+  }
+  #ingredients {
+    > div {
+      min-height: 450px;
+    }
+    h3 {
+      max-width: 10em;
+      margin: 0 auto;
+    }
+    .section__img {
+      div {
+        padding-top: 450px;
+      }
     }
   }
 }
