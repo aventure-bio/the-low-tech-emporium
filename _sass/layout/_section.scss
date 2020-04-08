@@ -17,9 +17,19 @@ main {
 					padding-right: 7.5%;
 				}
 			}
+			min-height: 593px;
+			@media (max-width: $breakpoint-md) {
+			  min-height: 62.5vw;
+			}
+			@media (max-width: $breakpoint-sm) {
+			  min-height: 75vw;
+			}
+			@media (max-width: $breakpoint-xs) {
+			  min-height: 100vw;
+			}
 		}
 		.section__img {
-		  min-height: 280px;
+		  min-height: 593px;
 		  background-size: cover;
 		  background-repeat: no-repeat;
 		  background-position: center;

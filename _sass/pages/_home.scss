@@ -4,6 +4,9 @@
 
 .home {
   .gamme {
+    .section__text {
+      min-height: 593px;
+    }
     h3 {
       margin: 0;
     }
@@ -12,17 +15,9 @@
     }
   }
   #ingredients {
-    > div {
-      min-height: 450px;
-    }
     h3 {
       max-width: 10em;
       margin: 0 auto;
-    }
-    .section__img {
-      div {
-        padding-top: 450px;
-      }
     }
   }
 }

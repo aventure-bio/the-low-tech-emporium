@@ -81,17 +81,15 @@
     }
   }
   #ingredients {
-    > div {
-      min-height: 450px;
-    }
     h3 {
       max-width: 10em;
       margin: 0 auto;
     }
-    .section__img {
-      div {
-        padding-top: 450px;
-      }
-    }
+  }
+}
+
+#masque-capilaire-solide .gamme > div {
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row-reverse !important;
   }
 }
