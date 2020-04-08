@@ -104,6 +104,8 @@
   color: #fff;
 }
 .brand-color        { color: var(--menthe) }
+.bleu             { color: var(--bleu) }
+.bleu-light       { color: var(--bleu-light) }
 .menthe             { color: var(--menthe) }
 .menthe-light       { color: var(--menthe-light) }
 .amande             { color: var(--amande) }
@@ -116,6 +118,8 @@
 .lavande-light      { color: var(--lavande-light) }
 
 .bg--brand-color        { background-color: var(--menthe) }
+.bg--bleu             { background-color: var(--bleu) }
+.bg--bleu-light       { background-color: var(--bleu-light) }
 .bg--menthe             { background-color: var(--menthe) }
 .bg--menthe-light       { background-color: var(--menthe-light) }
 .bg--amande             { background-color: var(--amande) }
@@ -199,6 +203,12 @@
 .items-center    { align-items: center; }
 .items-end       { align-items: flex-end; }
 .items-baseline  { align-items: baseline; }
+
+.self-auto    { align-self: auto; }
+.self-start   { align-self: flex-start; }
+.self-center  { align-self: center; }
+.self-end     { align-self: flex-end; }
+.self-stretch { align-self: stretch; }
 
 .flex-shrink    { flex-shrink: 1; }
 .flex-shrink-0  { flex-shrink: 0; }
