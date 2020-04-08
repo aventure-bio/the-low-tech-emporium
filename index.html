@@ -15,32 +15,32 @@ section_gamme:
   descriptif: Ils retrouveront douceur souplesse et brillance !
   color: vanille
   background:
-    url: VISUEL_vanille.jpg
+    url: SHAMPOING_SOLIDE_VANILLE.png
 - titre: Détox
   descriptif: Vos cheveux et votre cuir chevelu seront assainis et frais !
   color: menthe
   background:
-    url: VISUEL_menthe-12.jpg
+    url: SHAMPOING_SOLIDE_MENTHE.png
 - titre: Cuirs chevelus sensibles
   descriptif: Les cuirs chevelus sensibles seront zen !
   color: lavande
   background:
-    url: VISUEL_LAVANDE-13.jpg
+    url: SHAMPOING_SOLIDE_LAVANDE.png
 - titre: Cheveux gras
   descriptif: Vos cheveux regraissent moins vite !
   color: pamplemousse
   background:
-    url: VISUEL_PAMPLEMOUSSE-14.jpg
+    url: SHAMPOING_SOLIDE_PAMPLEMOUSSE.png
 - titre: Cheveux normaux
   descriptif: Vos cheveux seront revitalisés et fortifiés, tout simplement en pleine santé !
   color: amande
   background:
-    url: VISUEL_AMANDE-15.jpg
+    url: SHAMPOING_SOLIDE_AMANDE.png
 - titre: Familial
   descriptif: Tous les cheveux de la famille seront forts et brillants !
   color: fruits-exotiques
   background:
-    url: VISUEL_FE.jpg
+    url: SHAMPOING_SOLIDE_EXOTIQUES.png
 section_made_in_france:
   titre: Fabriqué en France
   contenu: Tous nos shampoings sont fabriqués à Nice.
@@ -58,7 +58,7 @@ section_engagements:
   contenu: Au cœur du projet, The Green Emporium s’engage avec Surfrider Foundation Europe, on vous explique tout <a href="{{ '/la-pollution-plastique' | relative_url }}">ici</a>
   background:
     url: AdobeStock_-1-b&w-960w.png
-    color: menthe-light
+    color: bleu
   img:
     src: logo-surfrider-foundation-europe.svg
     alt: Nice
@@ -77,9 +77,9 @@ section_engagements:
     <div class="container flex flex-col items-center ta-center wave--before">
       <h2>{{ page.section_valeurs.titre | textilize }}</h2>
       <p class="fz-3 geomanist">{{ page.section_valeurs.contenu | textilize }}</p>
-      <ul class="features grid-4">
+      <ul class="features grid">
         {% for feature in site.data.features %}
-        <li class="col">
+        <li class="col-3_sm-6">
           <figure>
             {{ feature.svg }}
             <figcaption class="fw-bold">{{ feature.titre | textilize }}</figcaption>
@@ -98,8 +98,8 @@ section_engagements:
         <div
           class="swiper-slide section__text invert flex flex-col justify-center ta-center wave--before wave--after wave--white"
           style="background-color: var(--{{ produit.color }})">
-          <h3 class="px-8">{{ produit.titre | textilize }}</h3>
-          <p class="px-8 mx-auto">{{ produit.descriptif | textilize }}</p>
+          <h3 class="">{{ produit.titre | textilize }}</h3>
+          <p class="mx-auto">{{ produit.descriptif | textilize }}</p>
         </div>
         {% endfor %}
       </div>
@@ -108,7 +108,7 @@ section_engagements:
     <div class="swiper-container section__img col">
       <div class="swiper-wrapper">
         {% for produit in page.section_gamme %}
-        <div class="swiper-slide swiper-slide-style" style="background: center / cover no-repeat url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}')"></div>
+        <div class="swiper-slide swiper-slide-style" style="background: center / cover no-repeat url('{{ produit.background.url | prepend: '/assets/img/' | relative_url }}'), linear-gradient(var(--{{ produit.color }}-light), var(--{{ produit.color }}-light))"></div>
         {% endfor %}
       </div>
       <div class="swiper-pagination"></div>
@@ -145,16 +145,16 @@ section_engagements:
   </section>
 
   <section id="engagements" class="section grid-2_md-1 grid-noGutter">
-    <div class="section__img col filter--menthe">
+    <div class="section__img col filter--{{ page.section_engagements.background.color }}">
       <div class="padded h-100 bg--darken flex justify-center items-center"
-        style="background-image: linear-gradient(var(--{{ page.section_engagements.background.color }}), var(--{{ page.section_engagements.background.color }})), url('{{ page.section_engagements.background.url | prepend: '/assets/img/' | relative_url }}')">
+        style="background-image: linear-gradient(var(--{{ page.section_engagements.background.color }}-light), var(--{{ page.section_engagements.background.color }}-light)), url('{{ page.section_engagements.background.url | prepend: '/assets/img/' | relative_url }}')">
         <img class=""
           src="{{ page.section_engagements.img.src | prepend: '/assets/img/' | relative_url }}"
           alt="{{ page.section_engagements.img.alt }}" width="207" height="300">
       </div>
     </div>
     <div
-      class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
+      class="section__text col padded invert bg--{{ page.section_engagements.background.color }} flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
       <h3>{{ page.section_engagements.titre | textilize }}</h3>
       <p class="mx-auto">{{ page.section_engagements.contenu | textilize }}</p>
     </div>
