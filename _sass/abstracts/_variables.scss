@@ -40,16 +40,18 @@ $space-8: $space-7 * $space-scale; // 5.063rem (81px)
 :root {
   --background: #fff;
   --brand-color: hsla(214, 100%, 16%, 1);
-  --menthe: hsla(213, 75%, 52%, 1);
-  --menthe-light: #CCE0F8;
-  --amande: hsla(147, 58%, 71%, 1);
-  --amande-light: #C4EFD7;
-  --vanille: hsla(42, 100%, 64%, 1);
-  --vanille-light: #FFF2D3;
-  --fruits-exotiques: hsla(20, 100%, 71%, 1);
-  --fruits-exotiques-light: #FFE8DC;
-  --pamplemousse: hsla(354, 96%, 64%, 1);
-  --pamplemousse-light: #FED4D8;
+  --bleu: hsla(212.8, 75.3%, 52.4%, 1);
+  --bleu-light: #CCE0F8;
+  --menthe: hsla(187.5, 75%, 43.9%, 1);
+  --menthe-light: #ABE2EB;
+  --amande: hsla(164.6, 56.5%, 62.2%, 1);
+  --amande-light: #CAF0E2;
+  --vanille: hsla(42.2, 100%, 63.7%, 1);
+  --vanille-light: #FFF4DD;
+  --fruits-exotiques: hsla(12.6, 84%, 75.5%, 1);
+  --fruits-exotiques-light: #FCDFD5;
+  --pamplemousse: hsla(4, 86.5%, 62.4%, 1);
+  --pamplemousse-light: #FDE3DA;
   --lavande: hsla(260, 47%, 80%, 1);
   --lavande-light: #F1EDF9;
   --camomille-light: #FEF5C3;
@@ -100,7 +102,8 @@ $breakpoint-xs: 480px;
 $breakpoint-sm: 768px;
 $breakpoint-md: 990px;
 $breakpoint-lg: 1280px;
-
+$breakpoint-xl: 1440px;
+$breakpoint-xxl: 1600px;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

@@ -51,6 +51,7 @@ section_gamme:
     color: fruits-exotiques-light
     url: SHAMPOING_SOLIDE_EXOTIQUES.png
 
+
 section_made_in_france:
   titre: Fabriqué en France
   contenu: Tous nos shampoings sont fabriqués à Nice.
@@ -70,7 +71,7 @@ section_engagements:
   contenu: Au cœur du projet, The Green Emporium s’engage avec Surfrider Foundation Europe, on vous explique tout <a href="{{ '/la-pollution-plastique' | relative_url }}">ici</a>
   background:
     url: AdobeStock_-1-b&w-960w.png
-    color: menthe-light
+    color: bleu
   img:
     src: logo-surfrider-foundation-europe.svg
     alt: Nice
@@ -94,8 +95,8 @@ section_engagements:
         <div
           class="swiper-slide section__text invert flex flex-col justify-center ta-center wave--before wave--after wave--white"
           style="background-color: var(--{{ produit.color }})">
-          <h3 class="px-8">{{ produit.titre | textilize }}</h3>
-          <p class="px-8 mx-auto">{{ produit.descriptif | textilize }}</p>
+          <h3 class="">{{ produit.titre | textilize }}</h3>
+          <p class="mx-auto">{{ produit.descriptif | textilize }}</p>
         </div>
         {% endfor %}
       </div>
@@ -128,6 +129,5 @@ section_engagements:
   {% include ingredients.html ingredients=page.section_ingredients %}
 
   {% include engagements.html engagements=page.section_engagements %}
-
 
 </main>

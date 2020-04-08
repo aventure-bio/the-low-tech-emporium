@@ -8,12 +8,32 @@
  */
 main {
 	.section {
-		// min-height: 593px;
+		.section__text {
+			.swiper-slide > * {
+				padding-left: $space-8;
+				padding-right: $space-8;
+				@media (max-width: $breakpoint-md) {
+					padding-left: 7.5%;
+					padding-right: 7.5%;
+				}
+			}
+		}
 		.section__img {
 		  min-height: 280px;
 		  background-size: cover;
 		  background-repeat: no-repeat;
 		  background-position: center;
+		  @media (max-width: $breakpoint-md) {
+		    min-height: 62.5vw;
+		  }
+		  @media (max-width: $breakpoint-sm) {
+		    min-height: 75vw;
+		    background-size: 125% !important;
+		  }
+		  @media (max-width: $breakpoint-xs) {
+		    min-height: 100vw;
+		    background-size: 150% !important;
+		  }
 		}
 	}
 }

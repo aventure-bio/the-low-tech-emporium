@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the ingredients component.
+// -----------------------------------------------------------------------------
+
+#ingredients {
+  > div {
+    min-height: 593px;
+  }
+  h3 {
+    max-width: 10em;
+    margin: 0 auto;
+  }
+  .section__img {
+    div {
+      padding-top: 593px;
+    }
+  }
+}

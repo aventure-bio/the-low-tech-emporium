@@ -27,9 +27,11 @@
 	right: 50px;
 }
 
-.swiper-button-prev-img {
-	left: 50px;
-}
-.swiper-button-next-img {
-	right: 50px;
+@media (max-width: $breakpoint-md) {
+  .swiper-button-prev-img {
+    left: 50px;
+  }
+  .swiper-button-next-img {
+    right: 50px;
+  }
 }
