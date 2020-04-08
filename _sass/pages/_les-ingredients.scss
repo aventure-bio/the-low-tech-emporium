@@ -4,22 +4,36 @@
 
 .les-ingredients {
   #nos-ingredients {
-    min-height: 440px;
+    min-height: 320px;
+    @media (min-width: $breakpoint-md) {
+      min-height: 410px;
+    }
   }
   #ingredients {
     .ingredient {
       flex-basis: 100%;
       width: 100%;
-      padding: 120px 50px;
+      padding: 100px 7.5%;
       border-bottom: 1px solid #ebebeb;
       &:last-child {
         border-left: 1px solid #ebebeb;
         border-right: 1px solid #ebebeb;
         border-bottom: 0;
       }
+      @media (min-width: $breakpoint-sm) {
+        flex-basis: 50%;
+        width: 50%;
+        &:nth-child(2n) {
+          border-left: 1px solid #ebebeb;
+        }
+      }
       @media (min-width: $breakpoint-md) {
         flex-basis: 33.333%;
         width: 33.333%;
+        padding: 120px 50px;
+        &:nth-child(2n) {
+          border-left: none;
+        }
         &:nth-child(3n-1) {
           border-left: 1px solid #ebebeb;
           border-right: 1px solid #ebebeb;

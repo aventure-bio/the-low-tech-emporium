@@ -16,3 +16,12 @@
 .padded {
 	padding: 50px !important;
 }
+
+@media (max-width: $breakpoint-md) {
+	.container {
+		padding: 0px 7.5%;
+	}
+	.padded {
+		padding: 7.5% !important;
+	}
+}

@@ -4,11 +4,28 @@
 
 .la-gamme {
   #conseils {
-    min-height: 410px;
+    @media (min-width: $breakpoint-md) {
+      min-height: 410px;
+    }
     .swiper-slide {
-      height: 410px;
+      height: auto;
+      > div {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+      @media (min-width: $breakpoint-md) {
+        align-items: center;
+        > div {
+          margin-left: $space-8;
+          margin-right: $space-8;
+        }
+      }
       p {
         max-width: 34rem;
+        font-size: $font-size-3;
+        @media (max-width: $breakpoint-sm) {
+          font-size: 18px;
+        }
       }
     }
     h3 {
@@ -16,16 +33,31 @@
       line-height: 1;
       margin: 0;
       @media (min-width: $breakpoint-md) {
-        font-size: 175px,
+        font-size: 175px;
+        text-align: center;
+        padding-top: 0.15em;
+        padding-right: 50px;
+      }
+      @media (min-width: $breakpoint-lg) {
+        font-size: 20vw;
+      }
+      @media (min-width: $breakpoint-xxl) {
+        font-size: 400px;
       }
     }
     .conseil p:nth-child(1) {
       font-size: 24px;
+      @media (max-width: $breakpoint-sm) {
+        font-size: 18px;
+      }
     }
   }
   #gamme {
     .section__text {
-      padding: 5%;
+      padding: 7.5%;
+      @media (min-width: $breakpoint-md) {
+        padding: 5%;
+      }
       p {
         max-width: none;
       }
@@ -46,20 +78,6 @@
     }
     .produit__allergenes {
       font-size: 12px;
-    }
-  }
-  #ingredients {
-    > div {
-      min-height: 593px;
-    }
-    h3 {
-      max-width: 10em;
-      margin: 0 auto;
-    }
-    .section__img {
-      div {
-        padding-top: 593px;
-      }
     }
   }
 }

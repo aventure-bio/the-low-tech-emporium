@@ -26,3 +26,12 @@
 .swiper-button-next {
 	right: 50px;
 }
+
+@media (max-width: $breakpoint-md) {
+  .swiper-button-prev {
+    left: 5%;
+  }
+  .swiper-button-next {
+    right: 5%;
+  }
+}

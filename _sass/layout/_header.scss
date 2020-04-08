@@ -13,6 +13,21 @@
 		margin: auto;
 		max-width: 330px;
 	}
+	button {
+		position: fixed;
+		top: 50px;
+		right: 50px;
+		box-sizing: content-box;
+		background: none;
+		padding: 0;
+		width: 40px;
+		height: 40px;
+		border: none;
+		cursor: pointer;
+		color: var(--brand-color);
+		z-index: 9999;
+		display: none;
+	}
 	#hero {
 		img { 
 			height: 640px;
@@ -22,21 +37,167 @@
 		height: 50px;
 		line-height: 50px;
 		font-size: 18px;
-		ul {
+		background: white;
+		z-index: 99;
+		transition: all 0.2s ease;
+		will-change: font-size, opacity, top;
+		#menu {
 			margin: auto;
 			padding: 0;
 			list-style: none;
 			li {
 				padding: 0 10px;
 				&:first-child {
-					display: none;
+					transition: all 0.2s ease;
+					position: absolute;
+					top: -320px;
+					left: 0px;
+					opacity: 0;
 					& > a {
-						background: center / contain no-repeat url("../img/TGE-icon.png");
-						width: 70px;
-						height: 67.5px; 
-					}
+						display: block;
+					 	background: center / contain no-repeat url("../img/TGE-icon.png");
+					 	width: 70px;
+					 	height: 67.5px;
+					 	margin: 10px;
+				 }
+				}
+				&:nth-child(2) {
+					padding-left: 0;
+				}
+				&:last-child {
+					padding-right: 0;
 				}
 			}
+		}
+		&.fixed {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			font-size: 20px;
+			height: 90px;
+			#menu {
+				height: 100%;
+				li:first-child {
+					top: 0px;
+					opacity: 1;
+				}
+			} 
+		}
+	}
+}
+
+@media (max-width: $breakpoint-lg) {
+	#header {
+		nav.fixed {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-md) {
+	#header {
+		height: 178px;
+		justify-content: flex-start;
+		#top {
+			font-size: 18px;
+		}
+		#logo {
+			margin: 20px 0;
+			max-height: 100px;
+		}
+		button {
+			display: block;
+		}
+		nav {
+			position: inherit;
+			&.fixed {
+				position: initial;
+			}
+			#menu {
+				background: white;
+				flex-direction: column;
+				align-items: center;
+				align-content: flex-start;
+				text-align: left;
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				height: 100vh;
+				width: 320px;
+				font-size: 16px;
+				z-index: 999;
+				-webkit-transform: translateX(100%);
+				transform: translateX(100%);
+				opacity: 0;
+				display: none;
+				transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+				will-change: transform, opacity;
+				li {
+					width: 100%;
+					padding: 0;
+					line-height: 1.3em;
+					border-bottom: 1px solid #ebebeb;
+					a {
+						width: 100%;
+						padding: 15px 50px !important;
+					}
+					&:first-child {
+						position: initial;
+						height: 140px;
+						align-items: center;
+						justify-content: flex-start;
+						opacity: 1 !important;
+						a {
+							margin: 0 0 0 50px;
+							padding: 0 !important;
+							width: 100%;
+							background-position: left;
+						}
+					}
+					&:hover, &:focus, &:active {
+						background: #f8f8f8;
+					}
+				}
+				&.menu-expanded {
+					-webkit-transform: translateX(0%);
+					transform: translateX(0%);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+#menu-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.3);
+	z-index: 998;
+	opacity: 0;
+	transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+	will-change: opacity;
+	&.menu-expanded {
+		opacity: 1;
+	}
+}
+
+@media (max-width: $breakpoint-sm) {
+	#header {
+		#top {
+			font-size: 2.4vw;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-xs) {
+	#header {
+		#top {
+			height: 30px;
 		}
 	}
 }
