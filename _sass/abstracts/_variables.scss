@@ -39,20 +39,20 @@ $space-8: $space-7 * $space-scale; // 5.063rem (81px)
 
 :root {
   --background: #fff;
-  --brand-color: hsla(214, 100%, 16%, 1);
-  --bleu: hsla(212.8, 75.3%, 52.4%, 1);
+  --brand-color: #002554;
+  --bleu: #2A7DE1;
   --bleu-light: #CCE0F8;
-  --menthe: hsla(187.5, 75%, 43.9%, 1);
-  --menthe-light: #ABE2EB;
-  --amande: hsla(164.6, 56.5%, 62.2%, 1);
+  --menthe: #1CAFC4;
+  --menthe-light: #D9ECF2;
+  --amande: #68D5B9;
   --amande-light: #CAF0E2;
-  --vanille: hsla(42.2, 100%, 63.7%, 1);
+  --vanille: #FFC846;
   --vanille-light: #FFF4DD;
-  --fruits-exotiques: hsla(12.6, 84%, 75.5%, 1);
+  --fruits-exotiques: #F5A28C;
   --fruits-exotiques-light: #FCDFD5;
-  --pamplemousse: hsla(4, 86.5%, 62.4%, 1);
+  --pamplemousse: #F2574C;
   --pamplemousse-light: #FDE3DA;
-  --lavande: hsla(260, 47%, 80%, 1);
+  --lavande: #CE9CCD;
   --lavande-light: #F1EDF9;
   --camomille-light: #FEF5C3;
   --ylang: #C70066;
@@ -64,6 +64,7 @@ $space-8: $space-7 * $space-scale; // 5.063rem (81px)
   --tiare: #93BADB;
   --tiare-light: #D5E6FA;
   --rose-disques: #FD758E;
+  --rose-disques-light: #FFEDF1;
   --jaune-oriculis: #FFC846;
   --jaune-oriculis-light: #F7E09C;
   --rouge-oriculis-light: #F4A79D;
