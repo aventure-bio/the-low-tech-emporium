@@ -42,6 +42,17 @@
 
 
 /**
+ * Overflow
+ */
+.overflow-y {
+  overflow-y: auto;
+}
+.no-overflow-y {
+  overflow-y: hidden;
+}
+
+
+/**
  * Size
  */
 .w-100   { width: 100%   }
@@ -105,8 +116,8 @@
   color: #fff;
 }
 .brand-color        { color: var(--menthe) }
-.bleu             { color: var(--bleu) }
-.bleu-light       { color: var(--bleu-light) }
+.bleu               { color: var(--bleu) }
+.bleu-light         { color: var(--bleu-light) }
 .menthe             { color: var(--menthe) }
 .menthe-light       { color: var(--menthe-light) }
 .amande             { color: var(--amande) }
@@ -119,8 +130,8 @@
 .lavande-light      { color: var(--lavande-light) }
 
 .bg--brand-color        { background-color: var(--menthe) }
-.bg--bleu             { background-color: var(--bleu) }
-.bg--bleu-light       { background-color: var(--bleu-light) }
+.bg--bleu               { background-color: var(--bleu) }
+.bg--bleu-light         { background-color: var(--bleu-light) }
 .bg--menthe             { background-color: var(--menthe) }
 .bg--menthe-light       { background-color: var(--menthe-light) }
 .bg--amande             { background-color: var(--amande) }
