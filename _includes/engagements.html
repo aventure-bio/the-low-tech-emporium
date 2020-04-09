@@ -1,5 +1,5 @@
 <section id="engagements" class="section grid-2_md-1 grid-noGutter">
-  <div class="section__img col filter--menthe">
+  <div class="section__img col filter--bleu">
     <div class="padded h-100 bg--darken flex justify-center items-center"
       style="background-image: linear-gradient(var(--{{ include.engagements.background.color }}), var(--{{ include.engagements.background.color }})), url('{{ include.engagements.background.url | prepend: '/assets/img/' | relative_url }}')">
       <img class="" src="{{ include.engagements.img.src | prepend: '/assets/img/' | relative_url }}"
@@ -7,7 +7,7 @@
     </div>
   </div>
   <div
-    class="section__text col padded invert bg--menthe flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
+    class="section__text col padded invert bg--bleu flex flex-col justify-center content-center ta-center wave--before wave--after wave--white">
     <h3>{{ include.engagements.titre | textilize }}</h3>
     <p class="mx-auto">{{ include.engagements.contenu | textilize }}</p>
   </div>

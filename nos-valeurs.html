@@ -12,7 +12,7 @@ section_histoire:
 section_chiffres:
   titre: En chiffres
   chiffres:
-  - chiffre: 9 ans
+  - chiffre: 9&#8239;ans
     details: d’expérience
   - chiffre: 38
     details: salariés
@@ -27,7 +27,7 @@ section_origine:
   img:
     src: TGE-logo.svg
     alt: Logo The Green Emporium
-  contenu: Laëtitia a découvert le film « Mr Magorium’s Wonder Emporium » dans lequel « Emporium » fait référence à un fantastique magasin de jouets. Quelques années plus tard, elle reprend ce nom pour offrir des solutions écologiques à nos supermarchés.
+  contenu: Laëtitia a découvert le film «&#8239;Mr Magorium’s Wonder Emporium&#8239;» dans lequel «&#8239;Emporium&#8239;» fait référence à un fantastique magasin de jouets. Quelques années plus tard, elle reprend ce nom pour offrir des solutions écologiques à nos supermarchés.
 section_valeurs:
   titre: Nos valeurs
   contenu: L’engagement de The Green Emporium est d’offrir les meilleures alternatives aux produits du quotidien tout en réduisant le plus possible l’impact écologique sur la planète et les animaux. Nos shampoings solides permettent d’éliminer les flacons en plastique et d’utiliser la juste dose de produit tout en respectant le cuir chevelu grâce à des formules véganes et naturelles. La fabrication est 100% française.
@@ -48,7 +48,7 @@ section_engagements:
   contenu: Au cœur du projet, The Green Emporium s’engage avec Surfrider Foundation Europe, on vous explique tout <a href="{{ '/la-pollution-plastique' | relative_url }}">ici</a>
   background:
     url: AdobeStock_-1-b&w-960w.png
-    color: blue-light
+    color: bleu-light
   img:
     src: logo-surfrider-foundation-europe.svg
     alt: Nice
@@ -65,7 +65,7 @@ section_engagements:
         alt="{{ page.section_histoire.img.alt }}">
     </div>
     <div
-      class="container bg--amande-light col-8_sm-12 flex flex-col items-center justify-center ta-center wave--before wave--after">
+      class="container bg--whale bg--amande-light col-8_sm-12 flex flex-col items-center justify-center ta-center wave--before wave--after">
       <div class="mx-8">
         <h3>{{ page.section_histoire.titre | textilize }}</h3>
         <p class="fz-3">{{ page.section_histoire.contenu | textilize }}</p>
@@ -75,7 +75,7 @@ section_engagements:
 
   <section id="chiffres" class="section py-8">
     <div class="container flex flex-col items-center ta-center">
-      <h2 class="menthe">{{ page.section_chiffres.titre | textilize }}</h2>
+      <h2 class="bleu">{{ page.section_chiffres.titre | textilize }}</h2>
       <div class="grid-3_md-1 items-end">
         {% for produit in page.section_chiffres.chiffres %}
         <div class="col uppercase fw-bold wave--after">
@@ -90,9 +90,12 @@ section_engagements:
   <section id="video" class="section bg--amande-light py-8">
     <div class="container flex flex-col items-center justify-center">
       <figure>
-        <a href="{{ page.section_video.url }}" target='_blank'><img
+        <a href="{{ page.section_video.url }}" target='_blank'>
+          <img
             src="{{ page.section_video.img.src | prepend: '/assets/img/' | relative_url }}"
-            alt="{{ page.section_video.img.alt }}"></a>
+            alt="{{ page.section_video.img.alt }}">
+          <svg id="play" aria-label="Play" xmlns="http://www.w3.org/2000/svg" width="122" height="122" viewBox="0 0 122 122"><defs><style>.a,.b{fill:#fff;}.a{opacity:0.44;}</style></defs><g transform="translate(-335.75 -256.25)"><circle class="a" cx="61" cy="61" r="61" transform="translate(335.75 256.25)"/><path class="b" d="M387,298.75l31,19-31,18Z"/></g></svg>
+        </a>
       </figure>
     </div>
   </section>
