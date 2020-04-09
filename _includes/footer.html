@@ -23,6 +23,9 @@
   <!--End mc_embed_signup-->
 </section>
 
+{% include modal_contact.html %}
+{% include modal_service_client.html %}
+
 <footer id="footer" class="container padded invert bg--whale grid-5_md-2_xs-1 items-start">
   <div class="col flex justify-center">
     <img src="{{ '/assets/img/TGE-icon-white.png' | relative_url }}" alt="Logo The Green Emporium"
@@ -40,9 +43,11 @@
   <nav class="col">
     <ul>
       <li><a href="{{ '/confidentialite' | relative_url }}">Politique de confidentialité</a></li>
-      <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
-      <li><a href="{{ '/service-client' | relative_url }}">Serive client</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#service-client">Service client</a></li>
     </ul>
+
+    <p class="fz-1 mt-4">Ce site «&#8239;<span lang="en">low-tech</span>&#8239;» a été pensé selon une démarche d’éco-conception visant notemment à réduire au maximum le poids de ses pages. <a href="{{ '/low-tech' | relative_url }}">En savoir plus</a></p>
   </nav>
 
   <div class="col fw-book">
