@@ -42,6 +42,9 @@ h1, h2, h3, h4,
 .uppercase {
 	text-transform: uppercase;
 }
+.subtitle {
+	text-transform: initial;
+}
 
 p {
 	line-height: 1.5; // (24px)
@@ -67,6 +70,11 @@ ul, li {
 .fz-4, .fz-4 > * { font-size: $font-size-4 !important; }
 .fz-5, .fz-5 > * { font-size: $font-size-5 !important; }
 
+
+.underline,
+.text-container a {
+	text-decoration: underline !important;
+}
 
 /**
  * Selection
