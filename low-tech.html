@@ -1,0 +1,27 @@
+---
+title: Qu’est-ce qu’un site «&#8239;low-tech&#8239;»&#8239;?
+description:
+image:
+layout: default
+sections:
+  - sous_titre: Page en cours de rédaction
+    contenu: Cette page acceuillera sous peu un article décrivant tout le processus de refonte de notre site web réalisée en partenariat avec <a href="https://www.aventure.bio/" target="_blank">Aventure Bio</a> et <a href="https://timothee.goguely.com/" target="_blank">Timothée Goguely</a>.
+
+---
+
+<main class="nos-valeurs pb-8">
+  
+  <div class="container">
+
+    <h1 class="mt-8">{{ page.title }}</h1>
+    
+    {% for section in page.sections %}
+    <section class="section py-4 text-container">
+      <h2 class="subtitle">{{ section.sous_titre | textilize }}</h2>
+      <p>{{ section.contenu | textilize }}</p>
+    </section>
+    {% endfor %}
+
+  </div>
+
+</main>
