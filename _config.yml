@@ -26,6 +26,7 @@ sass:
 jekyll_admin:
   hidden_links:
     - staticfiles
+    - posts
 
 jekyll-minifier:
   uglifier_args:
