@@ -161,17 +161,40 @@ window.addEventListener('scroll', function(e) {
           elementToHide.classList.remove("hide");
           header.classList.remove("scrolled");
           menu.classList.remove("scrolled");
-          console.log('show');  
         }
       } else {
         if (!collapsed) {
           elementToHide.classList.add("hide");
           header.classList.add("scrolled");
           menu.classList.add("scrolled");
-          console.log('hide');
         }
       }
     };
   }
   prevScrollY = currentScrollY;
 });
+
+
+// Filter list function
+function filterList() {
+  // Declare variables
+  var input, filter, ul, li, a, p, i;
+  input = document.getElementById('filter');
+  filter = input.value.toUpperCase();
+  ul = document.querySelector(".magasins");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    p = li[i].getElementsByTagName("p")[0];
+    var aTxtValue = a.textContent || a.innerText;
+    var pTxtValue = p.textContent || p.innerText;
+    var txtValue = aTxtValue + pTxtValue;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}

@@ -10,7 +10,7 @@ section_magasins:
   adresse: 123 place de République, 75011 Paris
   url: https://exemple.com
 - nom: Super magasin 2
-  adresse: 45 quai de la gare, Lyon
+  adresse: 45 quai de la gare, 69001 Lyon
   url: https://exemple.com
 ---
 
@@ -24,6 +24,10 @@ section_magasins:
   </section>
 	
   <section id="magasins" class="section flex flex-col justify-center mx-auto py-8 px-6">
+    
+    <label for="filter" class="visually-hidden">Rechercher</label>
+    <input type="text" class="pl-6 pr-7 py-4" id="filter" onkeyup="filterList()" placeholder="Rechercher un magasin…">
+
     <ul class="magasins no-list-style">
       {% for magasin in page.section_magasins %}
       <li class="magasin px-6 py-5 b-1s">
