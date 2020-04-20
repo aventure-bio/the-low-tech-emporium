@@ -145,33 +145,31 @@ window.onresize = function() {
 
 // Update header on scroll
 var triggerY = 225; // #header height - #menu.scrolled height
-var prevScrollY = 0;
 var elementsToHide = document.querySelectorAll("#header > div");
 var header = document.querySelector("#header");
 var menu = document.querySelector("#menu");
 
 window.addEventListener('scroll', function(e) {
-  var currentScrollY = window.scrollY;
   var collapsed = header.classList.contains("scrolled");
-  if (currentScrollY > triggerY) {
-    for (var i = elementsToHide.length - 1; i >= 0; i--) {
-      var elementToHide = elementsToHide[i];
-      if (prevScrollY > currentScrollY) {
-        if (collapsed) {
-          elementToHide.classList.remove("hide");
-          header.classList.remove("scrolled");
-          menu.classList.remove("scrolled");
-        }
-      } else {
-        if (!collapsed) {
-          elementToHide.classList.add("hide");
-          header.classList.add("scrolled");
-          menu.classList.add("scrolled");
-        }
-      }
-    };
+  if (window.scrollY < triggerY) {
+    // normal
+    if (collapsed) {
+      for (var i = elementsToHide.length - 1; i >= 0; i--) {
+        elementsToHide[i].classList.remove("hide");
+      };
+      header.classList.remove("scrolled");
+      menu.classList.remove("scrolled");
+    }
+  } else {
+    // collapsed
+    if (!collapsed) {
+      for (var i = elementsToHide.length - 1; i >= 0; i--) {
+        elementsToHide[i].classList.add("hide");
+      };
+      header.classList.add("scrolled");
+      menu.classList.add("scrolled");
+    }
   }
-  prevScrollY = currentScrollY;
 });
 
 
