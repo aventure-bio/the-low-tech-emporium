@@ -2,14 +2,36 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
+body {
+	margin-top: 315px;  // same than #header height
+}
 
 #header {
 	height: 315px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	-webkit-transition: margin-top 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+	transition: margin-top 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+	will-change: margin-top;
 	#top {
 		font-size: 21px;
 		height: 54px;
 		line-height: 1.5;
 		padding-top: 2px;
+		z-index: 100;
+	}
+	#top,
+	#logo-container {
+		-webkit-transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+		transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+		will-change: transform, opacity;
+		opacity: 1;
+	}
+	#logo-container {
+		flex: 1;
 	}
 	#logo {
 		margin: auto;
@@ -29,6 +51,9 @@
 		color: var(--brand-color);
 		z-index: 9999;
 		display: none;
+		-webkit-transition: top 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+		transition: top 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+		will-change: top;
 	}
 	#hero {
 		img {
@@ -39,8 +64,7 @@
 		height: 50px;
 		line-height: 50px;
 		font-size: 18px;
-		background: white;
-		z-index: 99;
+		z-index: 100;
 		transition: all 0.2s ease;
     will-change: font-size, opacity, top;
     .dropdown {
@@ -69,13 +93,17 @@
 			margin: auto;
 			padding: 0;
 			list-style: none;
+			-webkit-transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+			transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+			will-change: transform;
 			> li {
 				padding: 0 10px;
 				&:first-child {
-					transition: all 0.2s ease;
+					-webkit-transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+					transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);;
 					position: absolute;
-					top: -320px;
-					left: 0px;
+					top: -90px;
+					left: -50px;
 					opacity: 0;
 					& > a {
 						display: block;
@@ -94,7 +122,7 @@
       }
       .first-level {
         &:first-child {
-          display: none;
+          // display: none;
           & > a {
             background: center / contain no-repeat url("../img/TGE-icon.png");
             width: 70px;
@@ -130,9 +158,18 @@
 }
 
 @media (max-width: $breakpoint-md) {
+	body {
+		margin-top: 178px; // same than #header height
+	}
 	#header {
 		height: 178px;
 		justify-content: flex-start;
+		&.scrolled {
+			margin-top: -38px;
+			nav button {
+				top: 22px;
+			}
+		}
 		#top {
 			font-size: 18px;
 			line-height: 36px;
@@ -261,6 +298,9 @@
 }
 
 @media (max-width: $breakpoint-sm) {
+	body {
+		margin-top: 120px;  // same than #header height
+	}
 	#header {
 		height: 120px;
 		#top {
@@ -275,8 +315,26 @@
 	}
 }
 
-@media (max-width: $breakpoint-xs) {
-	#header {
-
+@media (min-width: 769px) { // $breakpoint-md + 1
+	#header.scrolled {
+		margin-top: -225px;
+		#top.hide,
+		#logo-container.hide {
+			transform: translateY(-54px);
+			opacity: 0;
+		}
+		nav {
+			height: 90px;
+			#menu {
+				height: 100%;
+				-webkit-transform: translateX(40px);
+				transform: translateX(40px);
+				.first-level:first-child {
+					top: 0px;
+					left: -90px;
+					opacity: 1;
+				}
+			}
+		}
 	}
 }
