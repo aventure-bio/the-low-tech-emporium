@@ -1,7 +1,4 @@
----
----
-
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // if (navigator.serviceWorker.controller) {
   //   console.log("An active service worker found, no need to register");
   // } else {
@@ -20,25 +17,25 @@ if (document.getElementById("simple-text-swiper")) {
     autoplay: true,
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next.text-button',
-      prevEl: '.swiper-button-prev.text-button',
+      nextEl: ".swiper-button-next.text-button",
+      prevEl: ".swiper-button-prev.text-button",
     },
   });
   singleTextSwiper.controller.control = singleTextSwiper;
 }
 
 if (document.getElementById("simple-img-swiper")) {
-  var singleImgSwiper = new Swiper('#simple-img-swiper', {
+  var singleImgSwiper = new Swiper("#simple-img-swiper", {
     speed: 350,
     autoplay: true,
-    effect: 'fade',
+    effect: "fade",
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next.img-button',
-      prevEl: '.swiper-button-prev.img-button',
+      nextEl: ".swiper-button-next.img-button",
+      prevEl: ".swiper-button-prev.img-button",
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true
     },
   });
@@ -46,29 +43,29 @@ if (document.getElementById("simple-img-swiper")) {
 }
 
 if (document.getElementById("simultaneous-text-swiper")) {
-  var simultaneousTextSwiper = new Swiper('#simultaneous-text-swiper', {
+  var simultaneousTextSwiper = new Swiper("#simultaneous-text-swiper", {
     speed: 350,
     loop: true,
     autoplay: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 
-  var simultaneousImgSwiper = new Swiper('#simultaneous-img-swiper', {
+  var simultaneousImgSwiper = new Swiper("#simultaneous-img-swiper", {
     speed: 350,
-    effect: 'fade',
+    effect: "fade",
     grabCursor: true,
     keyboard: true,
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true
     },
     a11y: {
-      prevSlideMessage: 'Produit précédant',
-      nextSlideMessage: 'Produit nuivant',
+      prevSlideMessage: "Produit précédant",
+      nextSlideMessage: "Produit nuivant",
       paginationBulletMessage: "Aller au produit {{ index }}",
     },
   });
@@ -94,56 +91,87 @@ function toggleVisibility(element) {
 }
 
 function toggleMobileNav() {
-  var expanded = navButton.getAttribute('aria-expanded') === 'true' || false;
-  navButton.setAttribute('aria-expanded', !expanded);
-  menu.classList.add('transition');
+  var expanded = navButton.getAttribute("aria-expanded") === "true" || false;
+  navButton.setAttribute("aria-expanded", !expanded);
+  menu.classList.add("transition");
   if (expanded === false) {
     // open
     toggleVisibility(menuOverlay);
     menu.style.display = "flex";
     // setTimeout is needed to keep CSS transitions visible
     setTimeout(function(){ 
-      menuOverlay.classList.toggle('menu-expanded');
-      menu.classList.toggle('menu-expanded');
+      menuOverlay.classList.toggle("menu-expanded");
+      menu.classList.toggle("menu-expanded");
     }, 10);
   }
   else {
     // close
-    menuOverlay.classList.toggle('menu-expanded');
-    menu.classList.toggle('menu-expanded');
+    menuOverlay.classList.toggle("menu-expanded");
+    menu.classList.toggle("menu-expanded");
     // setTimeout is needed to keep CSS transitions visible
     setTimeout(function(){ 
       toggleVisibility(menuOverlay);
       menu.style.display = "none";
     }, 400); // transition speed
   }
-  if (!document.body.classList.contains('no-overflow-y') ) {
-    document.body.classList.add('no-overflow-y');
+  if (!document.body.classList.contains("no-overflow-y") ) {
+    document.body.classList.add("no-overflow-y");
   } else {
-    document.body.classList.remove('no-overflow-y');
+    document.body.classList.remove("no-overflow-y");
   }
 }
 
 // Toggle mobile nav when clicking on the nav button
-navButton.addEventListener('click', function() {
+navButton.addEventListener("click", function() {
   toggleMobileNav();
 });
 // Toggle mobile nav when clicking on the background overlay
-menuOverlay.addEventListener('click', function() {
+menuOverlay.addEventListener("click", function() {
   toggleMobileNav();
 });
 
 // Toggle nav menu when window is wider than breakpoint (990px)
 window.onresize = function() {
   if (window.innerWidth >= breakpoint) {
-    document.body.classList.remove('no-overflow-y');
-    menuOverlay.classList.remove('menu-expanded');
+    document.body.classList.remove("no-overflow-y");
+    menuOverlay.classList.remove("menu-expanded");
     menuOverlay.style.display = "none";
     menu.style.display = "flex";
-    menu.classList.remove('menu-expanded');
-    menu.classList.remove('transition');
-    navButton.setAttribute('aria-expanded', false);
+    menu.classList.remove("menu-expanded");
+    menu.classList.remove("transition");
+    navButton.setAttribute("aria-expanded", false);
   }
 }
 
+// Update header on scroll
+var triggerY = 225; // #header height - #menu.scrolled height
+var prevScrollY = 0;
+var elementsToHide = document.querySelectorAll("#header > div");
+var header = document.querySelector("#header");
+var menu = document.querySelector("#menu");
 
+window.addEventListener('scroll', function(e) {
+  var currentScrollY = window.scrollY;
+  var collapsed = header.classList.contains("scrolled");
+  if (currentScrollY > triggerY) {
+    for (var i = elementsToHide.length - 1; i >= 0; i--) {
+      var elementToHide = elementsToHide[i];
+      if (prevScrollY > currentScrollY) {
+        if (collapsed) {
+          elementToHide.classList.remove("hide");
+          header.classList.remove("scrolled");
+          menu.classList.remove("scrolled");
+          console.log('show');  
+        }
+      } else {
+        if (!collapsed) {
+          elementToHide.classList.add("hide");
+          header.classList.add("scrolled");
+          menu.classList.add("scrolled");
+          console.log('hide');
+        }
+      }
+    };
+  }
+  prevScrollY = currentScrollY;
+});
