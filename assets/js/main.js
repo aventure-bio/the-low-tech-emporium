@@ -1,3 +1,6 @@
+---
+---
+
 if ("serviceWorker" in navigator) {
   // if (navigator.serviceWorker.controller) {
   //   console.log("An active service worker found, no need to register");
@@ -20,6 +23,11 @@ if (document.getElementById("simple-text-swiper")) {
       nextEl: ".swiper-button-next.text-button",
       prevEl: ".swiper-button-prev.text-button",
     },
+    a11y: {
+      prevSlideMessage: "Produit précédent",
+      nextSlideMessage: "Produit suivant",
+      paginationBulletMessage: "Aller au produit {{index}}",
+    },
   });
   singleTextSwiper.controller.control = singleTextSwiper;
 }
@@ -38,6 +46,11 @@ if (document.getElementById("simple-img-swiper")) {
       el: ".swiper-pagination",
       clickable: true
     },
+    a11y: {
+      prevSlideMessage: "Produit précédent",
+      nextSlideMessage: "Produit suivant",
+      paginationBulletMessage: "Aller au produit {{index}}",
+    },
   });
   singleImgSwiper.controller.control = singleImgSwiper;
 }
@@ -50,6 +63,11 @@ if (document.getElementById("simultaneous-text-swiper")) {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    a11y: {
+      prevSlideMessage: "Produit précédent",
+      nextSlideMessage: "Produit suivant",
+      paginationBulletMessage: "Aller au produit {{index}}",
     },
   });
 
@@ -64,9 +82,9 @@ if (document.getElementById("simultaneous-text-swiper")) {
       clickable: true
     },
     a11y: {
-      prevSlideMessage: "Produit précédant",
-      nextSlideMessage: "Produit nuivant",
-      paginationBulletMessage: "Aller au produit {{ index }}",
+      prevSlideMessage: "Produit précédent",
+      nextSlideMessage: "Produit suivant",
+      paginationBulletMessage: "Aller au produit {{index}}",
     },
   });
 
@@ -99,7 +117,7 @@ function toggleMobileNav() {
     toggleVisibility(menuOverlay);
     menu.style.display = "flex";
     // setTimeout is needed to keep CSS transitions visible
-    setTimeout(function(){ 
+    setTimeout(function(){
       menuOverlay.classList.toggle("menu-expanded");
       menu.classList.toggle("menu-expanded");
     }, 10);
@@ -109,7 +127,7 @@ function toggleMobileNav() {
     menuOverlay.classList.toggle("menu-expanded");
     menu.classList.toggle("menu-expanded");
     // setTimeout is needed to keep CSS transitions visible
-    setTimeout(function(){ 
+    setTimeout(function(){
       toggleVisibility(menuOverlay);
       menu.style.display = "none";
     }, 400); // transition speed
