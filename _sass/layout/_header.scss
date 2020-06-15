@@ -169,6 +169,9 @@ body {
 			nav button {
 				top: 22px;
 			}
+			nav #menu > li:nth-child(2) {
+				margin-top: 89px;
+			}
 		}
 		#top {
 			font-size: 18px;
@@ -196,6 +199,8 @@ body {
 				flex-direction: column;
 				align-items: center;
 				align-content: flex-start;
+				justify-content: flex-start;
+				overflow-y: auto;
 				text-align: left;
 				position: fixed;
 				top: 0;
@@ -216,7 +221,8 @@ body {
 					border-bottom: 1px solid #ebebeb;
 					a {
 						width: 100%;
-						padding: 10px 50px !important;
+						padding: 11px 25px 9px 50px !important;
+						max-height: 39px;
 					}
 					&:first-child {
 						position: initial;
@@ -234,6 +240,20 @@ body {
 					&:hover, &:focus, &:active {
 						background: #f8f8f8;
 					}
+				}
+				> li:first-child {
+					position: fixed;
+					top: 32px;
+					left: 0 !important;
+					background-color: white;
+					z-index: 999;
+					a {
+						max-height: 140px;
+					}
+				}
+				> li:nth-child(2) {
+					border-top: 1px solid #ebebeb;
+					margin-top: 121px;
 				}
 				&.menu-expanded {
 					-webkit-transform: translateX(0%);
@@ -254,7 +274,7 @@ body {
 					  flex-direction: column;
 					  position: relative;
 						width: 100%;
-						box-shadow: 0 0 0 0;
+						box-shadow: none;
 						padding: 0;
 					  .dropdown-item {
 					  	border-top: 1px solid #ebebeb;
@@ -270,6 +290,12 @@ body {
 					  	}
 					  }
 					}
+				}
+				&:after {
+					display: block;
+					content: "";
+					min-height: 40px;
+					width: 100%;
 				}
 			}
 		}
@@ -311,6 +337,12 @@ body {
 		}
 		button {
 			top: 60px;
+		}
+		nav #menu > li:first-child {
+			top: 12px;
+		}
+		nav #menu > li:nth-child(2) {
+			margin-top: 101px;
 		}
 	}
 }

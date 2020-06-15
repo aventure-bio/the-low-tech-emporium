@@ -80,10 +80,10 @@ section_engagements:
 
   <h1 class="visually-hidden">{{ site.title }}</h1>
 
-  <div id="hero">
+  <header id="hero">
     <img class="w-100" src="{{ page.hero.img.src | prepend: '/assets/img/' | relative_url }}"
       alt="{{ page.hero.img.alt }}">
-  </div>
+  </header>
 
   {% include valeurs.html valeurs=page.section_valeurs %}
 
