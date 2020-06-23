@@ -6,16 +6,16 @@
 	list-style: none;
 	margin: 4rem auto;
 	li {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		@include flexbox();
+		@include flex-direction(column);
+		@include align-items(center);
 		font-size: 16px;
 		text-transform: uppercase;
 		figure {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
+			@include flexbox();
+			@include flex-direction(column);
+			@include justify-content(center);
+			@include align-items(center);
 			text-align: center;
 			svg {
 				width : 100%;
