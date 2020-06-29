@@ -72,7 +72,7 @@ if (document.getElementById("simultaneous-text-swiper")) {
   });
 
   var simultaneousImgSwiper = new Swiper("#simultaneous-img-swiper", {
-    speed: 350,
+    speed: 500,
     effect: "fade",
     grabCursor: true,
     keyboard: true,
