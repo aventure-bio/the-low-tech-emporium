@@ -16,8 +16,8 @@ if ("serviceWorker" in navigator) {
 
 if (document.getElementById("simple-text-swiper")) {
   var singleTextSwiper = new Swiper('#simple-text-swiper', {
-    speed: 500,
-    autoplay: true,
+    speed: 350,
+    autoplay: { delay: 6000 },
     loop: true,
     navigation: {
       nextEl: ".swiper-button-next.text-button",
@@ -34,8 +34,8 @@ if (document.getElementById("simple-text-swiper")) {
 
 if (document.getElementById("simple-img-swiper")) {
   var singleImgSwiper = new Swiper("#simple-img-swiper", {
-    speed: 500,
-    autoplay: true,
+    speed: 350,
+    autoplay: { delay: 6000 },
     effect: "fade",
     loop: true,
     navigation: {
@@ -57,9 +57,9 @@ if (document.getElementById("simple-img-swiper")) {
 
 if (document.getElementById("simultaneous-text-swiper")) {
   var simultaneousTextSwiper = new Swiper("#simultaneous-text-swiper", {
-    speed: 500,
+    speed: 350,
     loop: true,
-    autoplay: true,
+    autoplay: { delay: 6000 },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -72,7 +72,7 @@ if (document.getElementById("simultaneous-text-swiper")) {
   });
 
   var simultaneousImgSwiper = new Swiper("#simultaneous-img-swiper", {
-    speed: 500,
+    speed: 350,
     effect: "fade",
     grabCursor: true,
     keyboard: true,
