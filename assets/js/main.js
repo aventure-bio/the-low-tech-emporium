@@ -16,7 +16,7 @@ if ("serviceWorker" in navigator) {
 
 if (document.getElementById("simple-text-swiper")) {
   var singleTextSwiper = new Swiper('#simple-text-swiper', {
-    speed: 350,
+    speed: 500,
     autoplay: true,
     loop: true,
     navigation: {
@@ -34,7 +34,7 @@ if (document.getElementById("simple-text-swiper")) {
 
 if (document.getElementById("simple-img-swiper")) {
   var singleImgSwiper = new Swiper("#simple-img-swiper", {
-    speed: 350,
+    speed: 500,
     autoplay: true,
     effect: "fade",
     loop: true,
@@ -57,7 +57,7 @@ if (document.getElementById("simple-img-swiper")) {
 
 if (document.getElementById("simultaneous-text-swiper")) {
   var simultaneousTextSwiper = new Swiper("#simultaneous-text-swiper", {
-    speed: 350,
+    speed: 500,
     loop: true,
     autoplay: true,
     navigation: {
