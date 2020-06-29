@@ -31,7 +31,7 @@ body {
 		opacity: 1;
 	}
 	#logo-container {
-		flex: 1;
+		@include flex(1);
 	}
 	#logo {
 		margin: auto;
@@ -163,7 +163,7 @@ body {
 	}
 	#header {
 		height: 178px;
-		justify-content: flex-start;
+		@include justify-content(flex-start);
 		&.scrolled {
 			margin-top: -38px;
 			nav button {
@@ -196,10 +196,10 @@ body {
 			}
 			#menu {
 				background: white;
-				flex-direction: column;
-				align-items: center;
-				align-content: flex-start;
-				justify-content: flex-start;
+				@include flex-direction(column);
+				@include align-items(center);
+				@include align-content(flex-start);
+				@include justify-content(flex-start);
 				overflow-y: auto;
 				text-align: left;
 				position: fixed;
@@ -227,8 +227,8 @@ body {
 					&:first-child {
 						position: initial;
 						height: 140px;
-						align-items: center;
-						justify-content: flex-start;
+						@include align-items(center);
+						@include justify-content(flex-start);
 						opacity: 1 !important;
 						a {
 							margin: 0 0 0 50px;
@@ -263,15 +263,15 @@ body {
 					overflow-x: hidden;
 					padding: 50px 0;
 					.dropdown {
-						display: flex;
-						flex-direction: column;
+						@include flexbox();
+						@include flex-direction(column);
 						a {
 							padding: 10px 50px !important;
 						}
 					}
 					.dropdown-content {
-					  display: flex;
-					  flex-direction: column;
+					  @include flexbox();
+						@include flex-direction(column);
 					  position: relative;
 						width: 100%;
 						box-shadow: none;

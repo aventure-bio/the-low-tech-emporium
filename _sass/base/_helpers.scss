@@ -185,46 +185,46 @@
   display: inline-flex;
 }
 .flex {
-  display: flex;
+  @include flexbox();
 }
 
 /**
  * Flexbox
  */
-.flex-row          { flex-direction: row; }
-.flex-row-reverse  { flex-direction: row-reverse; }
-.flex-col          { flex-direction: column; }
-.flex-col-reverse  { flex-direction: column-reverse; }
+.flex-row          { @include flex-direction(row); }
+.flex-row-reverse  { @include flex-direction(row-reverse); }
+.flex-col          { @include flex-direction(column); }
+.flex-col-reverse  { @include flex-direction(column-reverse); }
 
-.flex-wrap         { flex-wrap: wrap; }
-.flex-wrap-reverse { flex-wrap: wrap-reverse; }
+.flex-wrap         { @include flex-wrap(wrap); }
+.flex-wrap-reverse { @include flex-wrap(wrap-reverse); }
 
-.justify-start   { justify-content: flex-start; }
-.justify-center  { justify-content: center; }
-.justify-end     { justify-content: flex-end; }
-.justify-between { justify-content: space-between; }
-.justify-around  { justify-content: space-around; }
+.justify-start   { @include justify-content(flex-start); }
+.justify-center  { @include justify-content(center); }
+.justify-end     { @include justify-content(flex-end); }
+.justify-between { @include justify-content(space-between); }
+.justify-around  { @include justify-content(space-around); }
 
-.content-start   { align-content: flex-start; }
-.content-center  { align-content: center; }
-.content-end     { align-content: flex-end; }
-.content-between { align-content: space-between; }
-.content-around  { align-content: space-around; }
+.content-start   { @include align-content(flex-start); }
+.content-center  { @include align-content(center); }
+.content-end     { @include align-content(flex-end); }
+.content-between { @include align-content(space-between); }
+.content-around  { @include align-content(space-around); }
 
-.items-stretch   { align-items: stretch; }
-.items-start     { align-items: flex-start; }
-.items-center    { align-items: center; }
-.items-end       { align-items: flex-end; }
-.items-baseline  { align-items: baseline; }
+.items-stretch   { @include align-items(stretch); }
+.items-start     { @include align-items(flex-start); }
+.items-center    { @include align-items(center); }
+.items-end       { @include align-items(flex-end); }
+.items-baseline  { @include align-items(baseline); }
 
-.self-auto    { align-self: auto; }
-.self-start   { align-self: flex-start; }
-.self-center  { align-self: center; }
-.self-end     { align-self: flex-end; }
-.self-stretch { align-self: stretch; }
+.self-auto    { @include align-self(auto); }
+.self-start   { @include align-self(flex-start); }
+.self-center  { @include align-self(center); }
+.self-end     { @include align-self(flex-end); }
+.self-stretch { @include align-self(stretch); }
 
-.flex-shrink    { flex-shrink: 1; }
-.flex-shrink-0  { flex-shrink: 0; }
+.flex-shrink    { @include flex-shrink(1); }
+.flex-shrink-0  { @include flex-shrink(0); }
 
 
 /**
