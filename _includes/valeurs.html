@@ -7,7 +7,7 @@
       <li class="col">
         <figure>
           {{ feature.svg }}
-          <figcaption class="fw-bold">{{ feature.titre | textilize }}</figcaption>
+          <figcaption class="fw-bold">{{ feature.titre[page.lang] | textilize }}</figcaption>
         </figure>
       </li>
       {% endfor %}

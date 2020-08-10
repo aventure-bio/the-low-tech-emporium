@@ -1,5 +1,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
+{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+{% for page in pages %}
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+{% endfor %}
 <!-- Webfonts -->
 <link rel="preload" href="{{ '/assets/fonts/NeutraText-BookAlt.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ '/assets/fonts/NeutraText-BoldAlt.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>

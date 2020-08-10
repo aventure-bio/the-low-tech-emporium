@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ page.lang }}">
 
 <head>
   {% include head.html %}
@@ -9,7 +9,7 @@
   {% include header.html %}
   {{ content }}
   {% include footer.html %}
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="{{ 'assets/js/main.js' | relative_url }}"></script>
 </body>
 
