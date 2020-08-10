@@ -4,7 +4,6 @@ source "https://rubygems.org"
 
 group :jekyll_plugins do
   gem 'jekyll-admin', "~> 0.9"
-  gem 'jekyll-sitemap', "~> 1.4"
   gem 'jekyll-seo-tag', "~> 2.6", ">= 2.6.1"
   gem 'jekyll_picture_tag', '~> 1.8'
   gem 'jekyll-minifier', '~> 0.1.10'
