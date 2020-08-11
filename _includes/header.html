@@ -1,9 +1,8 @@
 <header id="header" role="banner" class="flex flex-col justify-between bg--white">
-  <div id="top"
-    class="container invert uppercase fw-bold ta-center flex justify-center items-center">{{ site.data.translations.tagline[page.lang]}}</div>
+  <div id="top" class="container invert uppercase fw-bold ta-center flex justify-center items-center">{{ site.data.translations.tagline[page.lang]}}</div>
   <div id="logo-container" class="container flex flex-col justify-center bg--white">
-    <a href="{{ '/' | relative_url }}"><img id="logo" src="{{ '/assets/img/TGE-logo.svg' | relative_url }}"
-        alt="Logo The Green Emporium"></a>
+    <a href="{{ '/' | relative_url }}"><img id="logo" src="{{ '/assets/img/TGE-logo.svg' | relative_url }}" alt="Logo The Green Emporium"></a>
   </div>
   {% include nav.html %}
+  {% include languages.html %}
 </header>
