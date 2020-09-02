@@ -7,10 +7,10 @@
       method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
       class="validate wave--before" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
-        <label for="mce-EMAIL" class="uppercase ta-center fw-bold clearfix">Rejoignez-nous&#8239;! <br><span class="fw-book" id="zerodechet">#ZeroDechet</span></label>
+        <label for="mce-EMAIL" class="uppercase ta-center fw-bold clearfix">{{ site.data.translations.join_us[page.lang] }} <br><span class="fw-book" id="zerodechet">#{{ site.data.translations.zerowaste[page.lang] }}</span></label>
         <div id="newsletter-inputs" class="flex align-baseline justify-center">
           <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
-            placeholder="INSCRIVEZ-VOUS À NOTRE NEWSLETTER !" required>
+            placeholder="{{ site.data.translations.sign_up_newsletter[page.lang] }}" required>
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
               name="b_c87cf1d1889365ec6da6b477b_8d8cbd6c28" tabindex="-1" value=""></div>
@@ -34,7 +34,7 @@
 
   <nav class="col">
     <ul>
-      {% for item in site.data.footer_links %}
+      {% for item in site.data.footer_links[page.lang] %}
       <li><a href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
       {% endfor %}
     </ul>
@@ -42,12 +42,12 @@
 
   <nav class="col">
     <ul>
-      <li><a href="{{ '/confidentialite' | relative_url }}">Politique de confidentialité</a></li>
+      <li><a href="{{ '/confidentialite' | relative_url }}">{{ site.data.translations.privacy_policy[page.lang] }}</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#service-client">Service client</a></li>
+      <li><a href="#service-client">{{ site.data.translations.customer_service[page.lang] }}</a></li>
     </ul>
 
-    <p class="fz-1 mt-4">Ce site «&#8239;<span lang="en">low-tech</span>&#8239;» a été pensé selon une démarche d’éco-conception visant notemment à réduire au maximum le poids de ses pages. <a href="{{ '/low-tech' | relative_url }}">En savoir plus</a></p>
+    <p class="fz-1 mt-4">{{ site.data.translations.low_tech[page.lang] }} {% assign low_tech = site.pages | where: "ref", "low-tech" %}{% for version in low_tech %}{% if version.lang == page.lang %}<a href="{{ version.url }}">{% endif %}{% endfor %}{{ site.data.translations.read_more[page.lang] }}</a></p>
   </nav>
 
   <div class="col fw-book">

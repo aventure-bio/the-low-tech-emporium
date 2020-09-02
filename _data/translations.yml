@@ -1,0 +1,30 @@
+close:
+  fr: Fermer
+  en: Close
+join_us:
+  fr: Rejoignez nous&#8239;!
+  en: Join us!
+zerowaste:
+  fr: ZeroDechet
+  en: ZeroWaste
+privacy_policy:
+  fr: Politique de confidentialité
+  en: Privacy policy
+customer_service:
+  fr: Service client
+  en: Customer service
+read_more:
+  fr: En savoir plus
+  en: Read more
+low_tech:
+  fr: Ce site «&#8239;<span lang="en">low-tech</span>&#8239;» a été pensé selon une démarche d’éco-conception visant notamment à réduire au maximum le poids de ses pages.
+  en: This “low-tech” website has been designed according to an eco-design approach aimed in particular at reducing the weight of its pages as much as possible.
+tagline:
+  fr: Le geste beauté devient un beau geste pour l’environnement.
+  en: The beauty gesture becomes a beautiful gesture for the environment.
+sign_up_newsletter:
+  fr: INSCRIVEZ-VOUS À NOTRE NEWSLETTER&#8239;!
+  en: SIGN UP TO OUR NEWSLETTER!
+lang:
+  fr: Français
+  en: English

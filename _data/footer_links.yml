@@ -1,12 +1,26 @@
-- link: /nos-valeurs
-  name: Nos valeurs
-- link: /la-gamme/shampoings-solides
-  name: La gamme
-- link: /les-ingredients
-  name: Les ingrédients
-- link: /la-pollution-plastique
-  name: La pollution plastique
-- link: /votre-impact
-  name: Votre impact
-- link: /acheter
-  name: Acheter
+fr:
+  - link: /nos-valeurs
+    name: Nos valeurs
+  - link: /la-gamme/shampoings-solides
+    name: La gamme
+  - link: /les-ingredients
+    name: Les ingrédients
+  - link: /la-pollution-plastique
+    name: La pollution plastique
+  - link: /votre-impact
+    name: Votre impact
+  - link: /acheter
+    name: Acheter
+en:
+  - link: /our-values
+    name: Our values
+  - link: /products/solid-shampoos
+    name: Products
+  - link: /ingredients
+    name: Ingredients
+  - link: /plastic-pollution
+    name: Plastic pollution
+  - link: /your-impact
+    name: Your impact
+  - link: /buy
+    name: Buy

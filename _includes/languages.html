@@ -1,0 +1,8 @@
+<ul id="languages">
+{% assign pages=site.html_pages | where:"ref", page.ref | sort: 'lang' %}
+{% for page in pages %}
+  <li>
+    <a href="{{ page.url }}" hreflang="{{ page.lang }}" title="{{ site.data.translations.lang[page.lang] }}">{{ page.lang }}</a>
+  </li>
+{% endfor %}
+</ul>
