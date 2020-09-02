@@ -28,3 +28,33 @@ fr:
     name: Votre impact
   - link: /acheter
     name: Acheter
+en:
+  - link: en/
+    name:
+  - link: en/our-values
+    name: Our values
+  - name: Products
+    link: en/products/solid-shampoos
+    subfolderitems:
+      - name: Solid shampoos
+        link: en/products/solid-shampoos
+      - name: Body soaps
+        link: en/products/body-soaps
+      - name: Deodorants
+        link: en/products/deodorants
+      - name: Face cleansers
+        link: en/products/face-cleansers
+      - name: Hair care
+        link: en/products/hair-care
+      - name: Oriculis
+        link: en/products/oriculis
+      - name: Make-up removal discs
+        link: en/products/make-up-removal-discs
+  - link: en/ingredients
+    name: Ingredients
+  - link: en/plastic-pollution
+    name: Plastic pollution
+  - link: en/your-impact
+    name: Your impact
+  - link: en/buy
+    name: Buy
