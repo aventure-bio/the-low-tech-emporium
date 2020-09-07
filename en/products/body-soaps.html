@@ -1,49 +1,34 @@
 ---
 title: Body soaps
 description: null
-lanf: en
+lang: en
 ref: body-soaps
 image: null
 layout: default
 section_protocole:
   background_color: brand-color
-  titre: Protocole et conseils
+  titre: Tips & advice
   sous_titre: 
-  contenu: Mouillez le savon sous l’eau et frottez-le jusqu’à en obtenir la quantité
-    suffisante pour vous laver l’ensemble du corps. Ce savon très doux est recommandé
-    pour un usage corporel.
+  contenu: Wet the soap with water, then rub it to work up a lather. This soap is very gentle and recommended for use on the entire body.
 section_conseils:
 - numero: N°1
-  paragraphe_1: Savez-vous qu’un savon solide est plus hygiénique qu’un savon liquide&#8239;?
-  paragraphe_2: Sous forme solide les savons ne contiennent pas d’eau, les bactéries
-    ne se développent donc pas. Attention tout de même à bien laisser sécher son pain
-    de savon sur un porte-savon aéré.
+  paragraphe_1: Did you know that solid soap is more hygienic than liquid soap?
+  paragraphe_2: In its solid form, soap doesn't contain any water – and bacteria need water to grow. Make sure you keep your soap dry between uses by placing it on a self-draining soap holder.
 - numero: N°2
-  paragraphe_1: Savez-vous que vous pouvez vous servir des petits morceaux secs de
-    savons restants pour parfumer vos tiroirs et armoires de linge&#8239;?
-  paragraphe_2: 
+  paragraphe_1: Did you know that you can use dry, leftover soap slivers to perfume your drawers and linen cupboards?
+  paragraphe_2:
 section_conseils_background_color: amande-savon
-titre_category_produit: Savon Corps saponifié à froid
+titre_category_produit: Cold-processed body soap
 section_gamme:
-  titre: Savon corps saponifié à froid
-  paragraphe1: La saponification à froid, ou SAF, est une méthode artisanale et ancestrale
-    de fabrication de savon. C’est une réaction chimique entre des huile végétales
-    et une base forte de soude. Le savon créé par ce processus sera doux et hydratant
-    pour l’épiderme de toutes les peaux même sensibles.
-  paragraphe2: La fabrication de nos savons à froid, est économe en énergie et permet
-    de leur donner un surgraissage bon pour la peau.
-  paragraphe3: 'Nous avons créé pour vous un cocktail d’huiles végétales composé <strong>d’huile
-    de tournesol bio</strong> pour ses propriétés adoucissantes, <strong>d’huile de
-    coco bio</strong> réparatrice et <strong>d’huile de colza bio</strong> apaisante.
-    Nous avons associé à ce mélange du <strong>beurre de karité bio</strong> nourrissant
-    et apaisant et des délicieux parfums pour faire de votre douche un moment des
-    plus agréables, au choix : <strong>à l’amande, à la lavande, à la vanille ou à
-    la menthe</strong>&#8239;!'
-  paragraphe4: 
-  paragraphe5: 
-  titre_garantie: 
-  description_garantie: 
-  usage_garantie: 
+  titre: Cold-processed body soap
+  paragraphe1: Cold processing is a traditional, centuries-old soapmaking method that involves a chemical reaction between botanical oils and a lye base. Soaps that are made using this method are gentle and hydrating, and can be used on all skin types, even sensitive.
+  paragraphe2: By using the cold-processing method, we need very little energy to create our soaps, which are extra rich and good for the skin.
+  paragraphe3: We created a blend of botanical oils, using <strong>organic sunflower oil</strong> for its softening properties, <strong> organic coconut oil</strong> for its repairing benefits, and soothing <strong>organic rapeseed oil</strong>. Then we combined this blend with <strong>organic shea butter</strong>, which nourishes and soothes, and added some gorgeous scents&#58; <strong>almond, lavender, vanilla and mint</strong>. The result is a range of soaps that will make you love taking a shower!
+  paragraphe4:
+  paragraphe5:
+  titre_garantie:
+  description_garantie:
+  usage_garantie:
   produits:
   - color: amande-savon-light
     background_url: SAVON_AMANDE.png
@@ -53,9 +38,21 @@ section_gamme:
     background_url: SAVON_MENTHE.png
   - color: vanille-savon-light
     background_url: SAVON_VANILLE.png
+section_porte_solide:
+- titre: Holder for solid products
+  paragraphe1: If you want your solid cosmetics to last for as long as possible, make sure you keep them on a soap holder between uses. Our holder for solid products is made in France from biosourced materials and available in blue or white!
+  paragraphe2: We've designed it to evoke the shape of waves, so that when you take your shower, you'll remember that you're helping to protect the oceans by using solid products!
+  paragraphe3:
+  paragraphe4:
+  paragraphe5:
+  benefices:
+  allergenes:
+  color: background
+  background:
+    url: PORTE-SOLIDE.jpg
 section_ingredients:
-  titre: Découvrez <br>nos ingrédients <br>vegan & naturels
-  href: "/les-ingredients"
+  titre: Discover our <br>natural and vegan <br>ingredients
+  href: "/en/ingredients"
   background:
     url: AdobeStock_-35-b&w-960w.png
     color: fruits-exotiques-light
@@ -72,6 +69,8 @@ section_ingredients:
   <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
 
   {% include gamme_swiper.html gamme=page.section_gamme %}
+
+  {% include gamme.html gamme=page.section_porte_solide %}
 
   {% include ingredients.html ingredients=page.section_ingredients %}
 
