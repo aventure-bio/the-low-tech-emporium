@@ -1,3 +1,36 @@
 <div id="top" class="container invert uppercase fw-bold ta-center flex justify-center items-center">
-    {{ site.data.translations.tagline[page.lang]}}
+    {%- assign i = 0 -%}
+    {%- for item in site.data.announcement[page.lang] -%}
+        {%- assign i = i | plus: 1 -%}
+        {%- if item.url -%}
+            <a href="{{ item.url }}" class="message message-{{ i }}">{{ item.message }}</a>
+        {%- else -%}
+            <p class="message message-{{ i }}">{{ item.message }}</p>
+        {%- endif -%}
+        <style>
+            .message-{{ i }} { animation-name: anim-{{ i }}; }
+        </style>
+    {%- endfor -%}
 </div>
+
+<style>
+{%- assign anim_duration = i | times: 5 %}
+    .message { animation-duration: {{ anim_duration }}s; }
+{%- assign j = 0 -%}
+{%- assign start = 0 -%}
+{%- assign end = 0 -%}
+{%- assign step = 100 | divided_by: i -%}
+{%- assign mvt = step | times: 0.2 -%}
+{% for item in site.data.announcement[page.lang] %}
+    {%- assign j = j | plus: 1 -%}
+    {%- assign end = end | plus: step -%}
+    {%- assign show = start | plus: mvt -%}
+    {%- assign hide = end | minus: mvt -%}
+    @keyframes anim-{{ j }} {
+        0%, {{ start }}% { left: -100%; opacity: 0; }
+        {{ show }}%,{{ hide }}% { left: 0%; opacity: 1; }
+        {{ end }}%, 100% { left: 100%; opacity: 0; }
+    }
+    {%- assign start = end -%}
+{% endfor %}
+</style>
