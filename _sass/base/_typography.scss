@@ -35,7 +35,11 @@ h1, h2 {
 	}
 }
 h3 {
-	font-size: 37px;
+  font-size: 34px;
+  @media (max-width: $breakpoint-sm) {
+		font-size: 24px;
+  }
+  margin-block-end: 0.5em;
 }
 
 h1, h2, h3, h4,
@@ -74,6 +78,11 @@ ul, li {
 .underline,
 .text-container a {
 	text-decoration: underline !important;
+}
+
+figcaption {
+  text-align: center;
+  margin: 0 !important;
 }
 
 /**

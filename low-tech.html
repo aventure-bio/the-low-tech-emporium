@@ -1,18 +1,18 @@
 ---
-title: Qu’est-ce qu’un site «&#8239;low-tech&#8239;»&#8239;?
+title: Notre démarche «&#8239;low-tech&#8239;»&#8239;
 description:
 lang: fr
 ref: low-tech
 image:
 layout: default
 sections:
-  - sous_titre: Page en cours de rédaction
-    contenu: Cette page acceuillera sous peu un article décrivant tout le processus de refonte de notre site web réalisée en partenariat avec <a href="https://www.aventure.bio/" target="_blank">Aventure Bio</a> et <a href="https://timothee.goguely.com/" target="_blank">Timothée Goguely</a>.
+  - sous_titre: En quelques mots
+    contenu: "Contraitement aux idées reçues, l'empreinte écologique du numérique est loin d'être négligeable. Le numérique représente par exemple déjà près de 4% des émissions de CO<sub>2</sub> au monde, en augmentation de près de 10% par an. Il est aujourd'hui impensable pour une marque se voulant éthique d'ignorer ces chiffres. Afin d'avoir une démarche d'ensemble cohérente et de limiter son impact négatif, The Green Emporium a choisi de développer ce site selon les principes low-tech. L'objectif : créer un site fonctionnel, sobre et durable. Fonctionnel car beau et facile d'utilisation. Sobre car peu consommateur en énergie. Et durable car peu dépendant des évolutions techniques et facilement maintenable. Vous naviguez sur le résultat de ce travail."
 
 ---
 
 <main class="nos-valeurs pb-8">
-  
+
   <header class="section invert bg--blue py-6">
     <div class="container flex flex-col items-center justify-center ta-center wave--before wave--after">
       <h1>{{ page.title }}</h1>
@@ -20,14 +20,218 @@ sections:
   </header>
 
   <div class="container">
-    
+
     {% for section in page.sections %}
-    <section class="section py-8 text-container">
+    <section class="section pt-8 pb-4 text-container">
       <h2 class="subtitle">{{ section.sous_titre | textilize }}</h2>
       <p>{{ section.contenu | textilize }}</p>
     </section>
     {% endfor %}
 
-  </div>
+    <section class="section text-container">
+      <h2 class="subtitle">Pour aller plus loin</h2>
 
+      <h3 class="subtitle">La genèse du projet</h3>
+      <blockquote cite="https://theshiftproject.org/article/pour-une-sobriete-numerique-rapport-shift">
+        <p>La transition numérique telle qu’elle est actuellement mise en œuvre participe au dérèglement climatique plus qu’elle n’aide à le prévenir. Il est urgent d’agir.</p>
+        <footer>—The Shift Project, <cite>Pour une sobriété numérique</cite>, 4 octobre 2018</footer>
+      </blockquote>
+      <p>L'impact écologique croissant du numérique amènent aujourd'hui à s'interroger sur sa place dans la transition écologique. Comment rendre compatibles à long terme écologie et numérique ? Dans son rapport <a target="_blank" href="https://www.greenit.fr/wp-content/uploads/2020/06/2020-06-iNum-etude-impacts-numerique-France-rapport.pdf">Impacts écologiques du numérique en France</a>, GreenIT formule 4 recommandations (par ordre de priorité) :</p>
+      <ol>
+        <li><strong>Augmenter la durée de vie des équipements</strong> : fin de l'obsolescence programmée, reconditionnement, etc.</li>
+        <li><strong>Réduire la quantité de équipements mobilisées</strong> : mutualisation, écoconception, etc.</li>
+        <li><strong>Redonner le contrôle aux utilisateurs</strong> : renforcement des indices de durabilités et de réparabilité, affichage de l'impact écologique des produits et services, etc.</li>
+        <li><strong>Ecoconcevoir les services numériques</strong> : réduction de leurs besoins en énergie, etc.</li>
+      </ol>
+      <p>Consciente de son impact et de la nécessaire cohérence dans ses engagements, c'est de ce 4<sup>e</sup> point dont la marque The Green Emporium s'est emparé en cherchant à développant un site vitrine low-tech. Pour cela, The Green Emporium a fait appel à l'expertise d’<a target="_blank" href="https://aventure-studio.fr/">Aventure Bio</a>, eux-mêmes épaulés par <a target="_blank" href="https://timothee.goguely.com">Timothée Goguely</a>, designer et développeur front-end indépendant, et <a target="_blank" href="https://hashbang.fr/">Arthur Vuillard</a>, fondateur de HashBang (pour l'hébergement).</p>
+
+      <h3 class="subtitle">Analyse de l'existant</h3>
+      <p>Tout travail de refonte commence par une phase d’analyse de l’existant.</p>
+      <ul>
+        <li>À quoi sert le site, quels sont ses objectifs ?</li>
+        <li>À quoi ressemble-t-il actuellement ?</li>
+        <li>Comment a-t-il été développé, avec quels outils ?</li>
+        <li>Combien de personnes s’en occupent ?</li>
+        <li>Combien de pages comporte-t-il ?</li>
+        <li>Combien pèsent chacune de ses pages et comment ce poids est-il distribué ?</li>
+        <li>Les standards d’accessibilité sont-ils respectés ?</li>
+        <li>Le site s’affiche-t-il correctement sur mobile ?</li>
+      </ul>
+      <p>Autant de questions auxquelles nous avons apporté des
+      réponses en échangeant avec les équipes ainsi qu’à l’aide de différents outils de tests, dans le but d’identifier au mieux notre point de départ et notre périmètre d’action.</p>
+      <p>Il s’agit donc d’un site marketing présentant la marque The Green Emporium, ses valeurs, sa gamme de produits, les ingrédients utilisés, sensibilisant sur l’impact du plastique et la pollution des océans, et enfin proposant une liste de points de vente physiques où acheter les produits.</p>
+      <p>Techniquement, l’ancien site avait été réalisé à l’aide de Wordpress, sans attention particulière portée aux <a target="_blank" href="https://collectif.greenit.fr/ecoconception-web/115-bonnes-pratiques-eco-conception_web.html">bonnes pratiques en termes d’éco-conception web</a>, comme pouvaient en témoigner les différents scores obtenus sur les sites de tests, souvent bien en dessous de la médiane.</p>
+
+      <h3 class="subtitle">Diagnostique et hypothèses de travail</h3>
+      <p>À la suite de cette analyse, les problèmes à résoudre, par ordre de priorité, et les différents leviers d’action pour y parvenir ont pu être identifiés.</p>
+      <figure class="mb-4">
+        <img class="w-100 py-4" src="{{ 'TGE-low-tech-diagnosis.png' | prepend: '/assets/img/' | relative_url }}" alt="diagnostique low tech">
+        <figcaption>Identification initiale de nos leviers d'action</figcaption>
+      </figure>
+      <p>Le principal levier d’action que nous avons identifié pour réduire le poids des pages – et donc son impact écologique – était les images : leur nombre et leur poids étaient inutilement importants. Même constat du côté des fichiers CSS et JavaScript. Côté hébergement, l’ancien site était hébergé chez OVH, qui n’est pas un hébergeur spécialement reconnu pour son engagement écologique.</p>
+
+      <h3 class="subtitle">Mise en œuvre</h3>
+      <p>Ce diagnostique posé, 3 niveaux d’intervention ont été envisagés, du moins au plus ambitieux :</p>
+      <ol>
+        <li><strong>Intervention au niveau du code</strong> : tous les contenus doivent rester les mêmes, on optimise simplement l’existant partout où c’est possible (HTML, CSS, JS, images, etc.).</li>
+        <li><strong>Intervention au niveau graphique</strong> : on peut modifier le traitement graphique de certains éléments afin de réduire encore leur poids.</li>
+        <li><strong>Intervention au niveau des contenus</strong> : on peut modifier voir supprimer certains contenus ou fonctionnalités si on les juge inutiles et/ou trop gourmands en ressources.</li>
+      </ol>
+      <p>Après discussion, nous avons fait le choix d’intervenir sur les 3 niveaux, tout en essayant de rester le plus fidèle possible à l’existant en terme de design. À cela s’est également ajouter la volonté de revoir l’hébergement du site, en optant pour une solution d’hébergement locale et plus performante d’un point de vue environnemental.</p>
+      <br>
+      <p>Voici un résumé des principales actions réalisées point par point :</p>
+      <ul>
+        <li><strong>Passage du site en statique</strong> : Un site statique pré-génère toutes ses pages et les envoie telles quelles. Un site dynamique génère la page à chaque visite. Un site statique c'est une page générée une fois pour 1000 requêtes, un site dynamique c'est une page générée 1000 fois pour 1000 requêtes. Alors un site low tech c'est
+        forcément un site statique. Pour générer notre site statique, nous avons utilisé <a target="_blank" href="https://jekyllrb.com/">Jekyll</a>, notamment car nous maîtrisions déjà cet outil</li>
+        <li><strong>Optimisation des images</strong> : Suppression des images jugées inutiles et optimisation extrême des images restantes ; utilisation d’images vectorielles partout où cela était possible et compression à l’aide de SVGOMG ; réduction de la taille des images restantes, traitement graphique en PNG 16, 8 ou 4 couleurs ou en 1-bit noir et blanc avec ajout de filtres de couleurs via le CSS, puis compression à l’aide de TinyJPG.</li>
+        <li><strong>Suppression de certaines fonctionnalités du site particulièrement gourmandes</strong> telles que le flux Instagram auparavant présent sur chaque page ou la carte des points de vente (remplacée par un champ de recherche). Ce genre de fonctionnalités font souvent appel à de nombreux scripts, alourdissant de manière significative le poids des pages. Ces scripts posent également des questions en termes de gestion de données.</li>
+        <li><strong>Réécriture du code</strong> : Le code HTML, CSS et JavaScript a été entièrement réécrit pour le simplifier, l'améliorer sémantiquement et réduire sa taille et le nombre de requêtes effectuées. Une attention particulière a été portée à son accessibilité. Une seule librairie externe JavaScript a été conservée pour permettre l'utilisation d'un carousel d'images.</li>
+        <li><strong>Optimisation des polices de caractères</strong> : Faute de pouvoir réduire leur nombre au regard de la charte graphique déjà en place que nous avions décidé de respecter au maximum, nous avons optimisé leur poids grâce au subsetting (suppression des glyphes non nécessaire au Français) et leur vitesse de chargement en les préchargeant.</li>
+        <li><strong>Cookies et analytics</strong> : Supression pure et simple de tout besoin d’utiliser des cookies et choix de ne pas inclure d’outil d’analytics.</li>
+        <li><strong>Hébergement</strong> : Après un tentative infructueuse (et peu intéressante écologiquement parlant) d'utiliser un RaspberryPi pour héberger le site, il a été décidé de faire appel aux serveurs mutualisés et alimentés en énergie renouvelables d'<a target="_blank" href="https://hashbang.fr/">Hashbang</a> situés à Lyon. Une solution locale et écologique.</li>
+      </ul>
+
+      <h3 class="subtitle">Résultats</h3>
+      <p>Pour se rendre compte des résultats obtenus, rien de tel qu’un tableau comparatif avant/après regroupant de manière synthétique les moyennes des différents indicateurs calculées à l’aide des outils suivants : <a target="_blank" href="http://www.ecoindex.fr/">EcoIndex</a>, <a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> et <a target="_blank" href="https://tools.pingdom.com/">Pingdom</a>. Pour un même critère (comme le nombre de requêtes), les résultats peuvent parfois varier d’un outil à l’autre du fait qu’ils ne comptent pas exactement de la même façon.</p>
+      <table class="w-100 my-4">
+        <caption>Résultats des différentes outils de test réalisés avant et après refonte. Les chiffres présentés correspondent à la moyenne calculée à partir des scores de l’ensemble des pages du site. Source : <a target="_blank" href="https://docs.google.com/spreadsheets/d/1TCD38ccYhZQ45Li1vjpWkgSFRkWtCEEwU6Q2HcAHtAU/edit?usp=sharing">tableau d’analyse complet avant/après</a>.</caption>
+        <tbody>
+          <tr>
+            <td></td>
+            <td><strong>Avant</strong></td>
+            <td><strong>Après</strong></td>
+            <td><strong>Progression</strong></td>
+          </tr>
+          <tr>
+            <td><strong>EcoIndex</strong></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Performance environnementale (sur 100)</td>
+            <td>47,76</td>
+            <td>78,94</td>
+            <td>+32,18</td>
+          </tr>
+          <tr>
+            <td>Empreinte environnementale : GES (gCO<sub>2</sub>e)</td>
+            <td>2,08</td>
+            <td>1,42</td>
+            <td>-31,64%</td>
+          </tr>
+          <tr>
+            <td>Empreinte environnementale : Eau (cl)</td>
+            <td>3,10</td>
+            <td>2,13</td>
+            <td>-31,20%</td>
+          </tr>
+          <tr>
+            <td>Complexité de la page (nombre d'éléments)</td>
+            <td>473,14</td>
+            <td>222,45</td>
+            <td>-52,98%</td>
+          </tr>
+          <tr>
+            <td>Bande passante : poids (Ko)</td>
+            <td>3590</td>
+            <td>359,82</td>
+            <td>-89,98%</td>
+          </tr>
+          <tr>
+            <td>Charge serveur (nombre de requêtes)</td>
+            <td>86,14</td>
+            <td>16,36</td>
+            <td>-81,00%</td>
+          </tr>
+          <tr>
+            <td><strong>PageSpeed Insights</strong></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Score Mobile (sur 100)</td>
+            <td>7,57</td>
+            <td>96,1</td>
+            <td>+88,53</td>
+          </tr>
+          <tr>
+            <td>Score Desktop (sur 100)</td>
+            <td>37,29</td>
+            <td>99,9</td>
+            <td>+62,61</td>
+          </tr>
+          <tr>
+            <td><strong>Pingdom</strong></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Performance Grade (sur 100)</td>
+            <td>67,57</td>
+            <td>87,38</td>
+            <td>+19,81</td>
+          </tr>
+          <tr>
+            <td>Page size (Ko)</td>
+            <td>3773,27</td>
+            <td>325,00</td>
+            <td>-91,39%</td>
+          </tr>
+          <tr>
+            <td>Load Time (secondes)</td>
+            <td>4,82</td>
+            <td>0,24</td>
+            <td>-95,06%</td>
+          </tr>
+          <tr>
+            <td>Requests (nombre de requêtes)</td>
+            <td>88,14</td>
+            <td>19,08</td>
+            <td>-78,36%</td>
+          </tr>
+          <tr>
+            <td>Images size (Ko)</td>
+            <td>2528,21</td>
+            <td>192,80</td>
+            <td>-92,37%</td>
+          </tr>
+          <tr>
+            <td>Fonts size (Ko)</td>
+            <td>132,56</td>
+            <td>68,00</td>
+            <td>-48,70%</td>
+          </tr>
+          <tr>
+            <td>Scripts size (Ko)</td>
+            <td>465,01</td>
+            <td>37,10</td>
+            <td>-92,02%</td>
+          </tr>
+          <tr>
+            <td>CSS size (Ko)</td>
+            <td>586,53</td>
+            <td>19,60</td>
+            <td>-96,66%</td>
+          </tr>
+          <tr>
+            <td>HTML size (Ko)</td>
+            <td>60,96</td>
+            <td>6,82</td>
+            <td>-88,81%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="subtitle">Conclusion</h3>
+      <p>S'il serait évidemment possible d’aller encore plus loin sur certains points tels que
+      l’accessibilité, cette refonte incarne le fait qu’il n'est pas compliqué pour une marque comme The Green Emporium de réduire drastiquement l’impact environnemental de son site web pour un budget raisonnable et ce tout en respectant l’identité visuelle déjà en place et en conservant la plupart des contenus présents sur le site.</p>
+
+      <p>The Green Emporium s'attache ainsi à rester en cohérence avec les valeurs qu'elle porte auprès de ses clients.</p>
+
+      <p>Vous êtes une entreprise sensible à ces questions et souhaitez développer un site low-tech ? N'hésitez pas à contacter <a target="_blank" href="https://aventure-studio.fr/">Aventure Bio</a>.</p>
+    </section>
+  </div>
 </main>

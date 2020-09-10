@@ -41,3 +41,16 @@ a {
   }
 }
 
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+  @media (min-width: $breakpoint-sm) {
+		padding: 6px;
+  }
+}
