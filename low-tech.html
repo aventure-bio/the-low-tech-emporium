@@ -22,7 +22,7 @@ sections:
   <div class="container">
 
     {% for section in page.sections %}
-    <section class="section pt-8 pb-4 text-container">
+    <section class="section pt-6 pb-4 text-container">
       <h2 class="subtitle">{{ section.sous_titre | textilize }}</h2>
       <p>{{ section.contenu | textilize }}</p>
     </section>
@@ -32,9 +32,9 @@ sections:
       <h2 class="subtitle">Pour aller plus loin</h2>
 
       <h3 class="subtitle">La genèse du projet</h3>
-      <blockquote cite="https://theshiftproject.org/article/pour-une-sobriete-numerique-rapport-shift">
+      <blockquote cite="https://theshiftproject.org/article/pour-une-sobriete-numerique-rapport-shift" class="my-6">
         <p>La transition numérique telle qu’elle est actuellement mise en œuvre participe au dérèglement climatique plus qu’elle n’aide à le prévenir. Il est urgent d’agir.</p>
-        <footer>—The Shift Project, <cite>Pour une sobriété numérique</cite>, 4 octobre 2018</footer>
+        <footer>— The Shift Project, <cite>Pour une sobriété numérique</cite>, 4 octobre 2018</footer>
       </blockquote>
       <p>L'impact écologique croissant du numérique amènent aujourd'hui à s'interroger sur sa place dans la transition écologique. Comment rendre compatibles à long terme écologie et numérique ? Dans son rapport <a target="_blank" href="https://www.greenit.fr/wp-content/uploads/2020/06/2020-06-iNum-etude-impacts-numerique-France-rapport.pdf">Impacts écologiques du numérique en France</a>, GreenIT formule 4 recommandations (par ordre de priorité) :</p>
       <ol>
@@ -64,8 +64,8 @@ sections:
 
       <h3 class="subtitle">Diagnostique et hypothèses de travail</h3>
       <p>À la suite de cette analyse, les problèmes à résoudre, par ordre de priorité, et les différents leviers d’action pour y parvenir ont pu être identifiés.</p>
-      <figure class="mb-4">
-        <img class="w-100 py-4" src="{{ 'TGE-low-tech-diagnosis.png' | prepend: '/assets/img/' | relative_url }}" alt="diagnostique low tech">
+      <figure class="my-6">
+        <img class="w-100" src="{{ 'TGE-low-tech-diagnosis.png' | prepend: '/assets/img/' | relative_url }}" alt="diagnostique low tech">
         <figcaption>Identification initiale de nos leviers d'action</figcaption>
       </figure>
       <p>Le principal levier d’action que nous avons identifié pour réduire le poids des pages – et donc son impact écologique – était les images : leur nombre et leur poids étaient inutilement importants. Même constat du côté des fichiers CSS et JavaScript. Côté hébergement, l’ancien site était hébergé chez OVH, qui n’est pas un hébergeur spécialement reconnu pour son engagement écologique.</p>
@@ -93,8 +93,8 @@ sections:
 
       <h3 class="subtitle">Résultats</h3>
       <p>Pour se rendre compte des résultats obtenus, rien de tel qu’un tableau comparatif avant/après regroupant de manière synthétique les moyennes des différents indicateurs calculées à l’aide des outils suivants : <a target="_blank" href="http://www.ecoindex.fr/">EcoIndex</a>, <a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> et <a target="_blank" href="https://tools.pingdom.com/">Pingdom</a>. Pour un même critère (comme le nombre de requêtes), les résultats peuvent parfois varier d’un outil à l’autre du fait qu’ils ne comptent pas exactement de la même façon.</p>
-      <table class="w-100 my-4">
-        <caption>Résultats des différentes outils de test réalisés avant et après refonte. Les chiffres présentés correspondent à la moyenne calculée à partir des scores de l’ensemble des pages du site. Source : <a target="_blank" href="https://docs.google.com/spreadsheets/d/1TCD38ccYhZQ45Li1vjpWkgSFRkWtCEEwU6Q2HcAHtAU/edit?usp=sharing">tableau d’analyse complet avant/après</a>.</caption>
+      <table class="w-100 my-6">
+        <caption class="my-2">Résultats des différentes outils de test réalisés avant et après refonte. Les chiffres présentés correspondent à la moyenne calculée à partir des scores de l’ensemble des pages du site. Source : <a target="_blank" href="https://docs.google.com/spreadsheets/d/1TCD38ccYhZQ45Li1vjpWkgSFRkWtCEEwU6Q2HcAHtAU/edit?usp=sharing">tableau d’analyse complet avant/après</a>.</caption>
         <tbody>
           <tr>
             <td></td>
@@ -118,31 +118,31 @@ sections:
             <td>Empreinte environnementale : GES (gCO<sub>2</sub>e)</td>
             <td>2,08</td>
             <td>1,42</td>
-            <td>-31,64%</td>
+            <td>−31,64%</td>
           </tr>
           <tr>
             <td>Empreinte environnementale : Eau (cl)</td>
             <td>3,10</td>
             <td>2,13</td>
-            <td>-31,20%</td>
+            <td>−31,20%</td>
           </tr>
           <tr>
             <td>Complexité de la page (nombre d'éléments)</td>
             <td>473,14</td>
             <td>222,45</td>
-            <td>-52,98%</td>
+            <td>−52,98%</td>
           </tr>
           <tr>
             <td>Bande passante : poids (Ko)</td>
             <td>3590</td>
             <td>359,82</td>
-            <td>-89,98%</td>
+            <td>−89,98%</td>
           </tr>
           <tr>
             <td>Charge serveur (nombre de requêtes)</td>
             <td>86,14</td>
             <td>16,36</td>
-            <td>-81,00%</td>
+            <td>−81,00%</td>
           </tr>
           <tr>
             <td><strong>PageSpeed Insights</strong></td>
@@ -178,49 +178,49 @@ sections:
             <td>Page size (Ko)</td>
             <td>3773,27</td>
             <td>325,00</td>
-            <td>-91,39%</td>
+            <td>−91,39%</td>
           </tr>
           <tr>
             <td>Load Time (secondes)</td>
             <td>4,82</td>
             <td>0,24</td>
-            <td>-95,06%</td>
+            <td>−95,06%</td>
           </tr>
           <tr>
             <td>Requests (nombre de requêtes)</td>
             <td>88,14</td>
             <td>19,08</td>
-            <td>-78,36%</td>
+            <td>−78,36%</td>
           </tr>
           <tr>
             <td>Images size (Ko)</td>
             <td>2528,21</td>
             <td>192,80</td>
-            <td>-92,37%</td>
+            <td>−92,37%</td>
           </tr>
           <tr>
             <td>Fonts size (Ko)</td>
             <td>132,56</td>
             <td>68,00</td>
-            <td>-48,70%</td>
+            <td>−48,70%</td>
           </tr>
           <tr>
             <td>Scripts size (Ko)</td>
             <td>465,01</td>
             <td>37,10</td>
-            <td>-92,02%</td>
+            <td>−92,02%</td>
           </tr>
           <tr>
             <td>CSS size (Ko)</td>
             <td>586,53</td>
             <td>19,60</td>
-            <td>-96,66%</td>
+            <td>−96,66%</td>
           </tr>
           <tr>
             <td>HTML size (Ko)</td>
             <td>60,96</td>
             <td>6,82</td>
-            <td>-88,81%</td>
+            <td>−88,81%</td>
           </tr>
         </tbody>
       </table>
@@ -232,6 +232,21 @@ sections:
       <p>The Green Emporium s'attache ainsi à rester en cohérence avec les valeurs qu'elle porte auprès de ses clients.</p>
 
       <p>Vous êtes une entreprise sensible à ces questions et souhaitez développer un site low-tech ? N'hésitez pas à contacter <a target="_blank" href="https://aventure-studio.fr/">Aventure Bio</a>.</p>
+
+      <h3 class="subtitle">Pour aller plus loin</h3>
+      <p>Si vous souhaitez approfondir le sujet, voici une sélection de quelques liens :</p>
+      <ul>
+        <li>GreenIT, <a href="https://www.greenit.fr/2020/06/23/quels-sont-les-impacts-environnementaux-du-numerique-en-france/">Quels sont les impacts environnementaux du numérique en France ?</a>, 23 juin 2020 (article +
+        rapport complet de 21 pages)</li>
+        <li>The Shift Project, <a href="https://theshiftproject.org/wp-content/uploads/2018/10/R%C3%A9sum%C3%A9-aux-d%C3%A9cideurs_Pour-une-sobri%C3%A9t%C3%A9-num%C3%A9rique_Rapport_The-Shift-Project.pdf">Pour une sobriété numérique, résumer aux décideurs</a>, octobre 2018 (PDF, 2 pages)</li>
+        <li>The Shift Project, <a href="https://theshiftproject.org/wp-content/uploads/2018/11/Rapport-final-v8-WEB.pdf">Lean ICT – Pour une sobriété numérique</a>, octobre 2018 (PDF, 88 pages)</li>
+        <li>Frédérique Bordage, <a href="https://www.greenit.fr/2019/09/24/%ef%bb%bfpour-une-low-tech-numerique/">Pour une low-tech numérique</a>, GreenIT, septembre 2019</li>
+        <li>solar.lowtechagazine.com, <a href="https://solar.lowtechmagazine.com/about.html"></a>About this website</a>, 2019 (dernière mise à jour janvier 2020)</li>
+        <li>Framalang, <a href="https://framablog.org/2019/01/24/pour-un-web-frugal/">Pour un web frugal</a>, Framablog, janvier 2019</li>
+        <li>Roel Roscam Abbing, <a href="https://homebrewserver.club/low-tech-website-howto.html">How to build a Low-Tech website: Software & Hardware</a>, septembre 2018</li>
+        <li>Gauthier Roussilhe, <a href="http://gauthierroussilhe.com/fr/posts/convert-low-tech">Guide de conversion numérique au low tech</a>, mars 2019</li>
+        <li>Tom Greenwood, <a href="https://www.wholegraindigital.com/blog/website-energy-efficiency/">17 ways to make your website more energy efficient</a>, Wholegrain Digital, octobre 2019</li>
+      </ul>
     </section>
   </div>
 </main>

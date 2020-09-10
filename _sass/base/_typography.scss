@@ -80,6 +80,20 @@ ul, li {
 	text-decoration: underline !important;
 }
 
+.text-container > ul, .text-container > ol {
+  max-width: 40em;
+}
+
+.text-container > ul {
+  padding-left: 2em;
+}
+
+blockquote {
+  border-left: 1px solid var(--brand-color);
+  margin-left: 0;
+  padding-left: 1em;
+}
+
 figcaption {
   text-align: center;
   margin: 0 !important;
