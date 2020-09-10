@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the announcement component.
+// -----------------------------------------------------------------------------
+
+.message {
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+	animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    max-width: unset;
+}

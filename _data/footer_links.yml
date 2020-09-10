@@ -12,15 +12,15 @@ fr:
   - link: /acheter
     name: Acheter
 en:
-  - link: /our-values
+  - link: /en/our-values
     name: Our values
-  - link: /products/solid-shampoos
+  - link: /en/products/solid-shampoos
     name: Products
-  - link: /ingredients
+  - link: /en/ingredients
     name: Ingredients
-  - link: /plastic-pollution
+  - link: /en/plastic-pollution
     name: Plastic pollution
-  - link: /your-impact
+  - link: /en/your-impact
     name: Your impact
-  - link: /buy
+  - link: /en/buy
     name: Buy

@@ -1,33 +1,32 @@
 ---
-title: What is a “low-tech” website&#8239;?
+title: Our «&#8239;low-tech&#8239;»&#8239; approach
 description:
 lang: en
 ref: low-tech
 image:
 layout: default
 sections:
-  - sous_titre: Page en cours de rédaction
-    contenu: Cette page acceuillera sous peu un article décrivant tout le processus de refonte de notre site web réalisée en partenariat avec <a href="https://www.aventure.bio/" target="_blank">Aventure Bio</a> et <a href="https://timothee.goguely.com/" target="_blank">Timothée Goguely</a>.
+  - sous_titre: In a few words
+    contenu: "Coming soon"
 
 ---
 
 <main class="nos-valeurs pb-8">
-  
+
   <header class="section invert bg--blue py-6">
-    <div class="container flex flex-col items-center justify-center ta-center wave--before wave--after">
+    <div
+      class="container flex flex-col items-center justify-center ta-center wave--before wave--after">
       <h1>{{ page.title }}</h1>
     </div>
   </header>
 
   <div class="container">
-    
+
     {% for section in page.sections %}
-    <section class="section py-8 text-container">
+    <section class="section pt-8 pb-4 text-container">
       <h2 class="subtitle">{{ section.sous_titre | textilize }}</h2>
       <p>{{ section.contenu | textilize }}</p>
     </section>
     {% endfor %}
-
   </div>
-
 </main>
