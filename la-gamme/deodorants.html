@@ -78,11 +78,11 @@ section_ingredients:
 
   <h1 class="visually-hidden">{{ page.title }}</h1>
 
+  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
+
   {% include protocole.html protocole=page.section_protocole %}
 
   {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
-
-  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
 
   {% include gamme.html gamme=page.section_gamme %}
 

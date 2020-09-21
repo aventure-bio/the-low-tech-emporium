@@ -8,7 +8,7 @@ layout: default
 section_protocole:
   background_color: brand-color
   titre: Protocole et conseils
-  sous_titre: 
+  sous_titre:
   contenu: Mouillez le savon sous l’eau et frottez-le jusqu’à en obtenir la quantité
     suffisante pour vous laver l’ensemble du corps. Ce savon très doux est recommandé
     pour un usage corporel.
@@ -21,7 +21,7 @@ section_conseils:
 - numero: N°2
   paragraphe_1: Savez-vous que vous pouvez vous servir des petits morceaux secs de
     savons restants pour parfumer vos tiroirs et armoires de linge&#8239;?
-  paragraphe_2: 
+  paragraphe_2:
 section_conseils_background_color: amande-savon
 titre_category_produit: Savon Corps saponifié à froid
 section_gamme:
@@ -39,11 +39,11 @@ section_gamme:
     et apaisant et des délicieux parfums pour faire de votre douche un moment des
     plus agréables, au choix : <strong>à l’amande, à la lavande, à la vanille ou à
     la menthe</strong>&#8239;!'
-  paragraphe4: 
-  paragraphe5: 
-  titre_garantie: 
-  description_garantie: 
-  usage_garantie: 
+  paragraphe4:
+  paragraphe5:
+  titre_garantie:
+  description_garantie:
+  usage_garantie:
   produits:
   - color: amande-savon-light
     background_url: SAVON_AMANDE.png
@@ -77,11 +77,11 @@ section_ingredients:
 
   <h1 class="visually-hidden">{{ page.title }}</h1>
 
+  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
+
   {% include protocole.html protocole=page.section_protocole %}
 
   {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
-
-  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
 
   {% include gamme_swiper.html gamme=page.section_gamme %}
 

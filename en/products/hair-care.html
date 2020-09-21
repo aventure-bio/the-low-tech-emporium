@@ -8,7 +8,7 @@ layout: default
 section_conseils:
 - numero: N°1
   paragraphe_1: Did you know that eating well and drinking lots of water is one of the best ways to care for your hair? The beauty of your hair is linked to the health of your body!
-  paragraphe_2: 
+  paragraphe_2:
 - numero: N°2
   paragraphe_1: Did you know that essential oils have lots of benefits for your hair?
   paragraphe_2: Clary sage essential oil promotes hair growth, ylang-ylang essential oil helps to repair hair damaged by colour treatments, juniper essential oil combats dandruff, etc.
@@ -23,15 +23,15 @@ titre_category_produit1: Our solid conditioner
 section_protocole1:
   background_color: agrumes
   titre: Tips & advice
-  sous_titre: 
+  sous_titre:
   contenu: Our conditioner doesn't need to be left on! After washing and rinsing your hair, work the conditioner through lengths and ends, and massage it into your hair. Then all you have to do is rinse it off!
 section_gamme1:
 - titre: Solid conditioner
   paragraphe1: 'The hair-loving ingredients in our conditioner are: sunflower oil, broccoli oil, carnauba wax, corn starch, fragrance, a natural antioxidant, and a pigment to give it its fabulous orange colour!'
   paragraphe2: "<strong>Organic broccoli oil</strong> relaxes and smoothes the hair fibre, making it easier to detangle the hair, control frizz and define curls. <strong>Organic coconut oil</strong> leaves hair feeling soft, healthy and perfectly hydrated."
-  paragraphe3: 
-  paragraphe4: 
-  paragraphe5: 
+  paragraphe3:
+  paragraphe4:
+  paragraphe5:
   allergenes: Contains essential oils. Not suitable for pregnant women.
   color: agrumes-light
   background:
@@ -40,17 +40,17 @@ titre_category_produit2: Our solid hair mask
 section_protocole2:
   background_color: tiare
   titre: Tips & advice
-  sous_titre: 
+  sous_titre:
   contenu: This mask deeply nourishes the hair and must be left on. After shampooing, apply the mask to damp hair, working it through lengths and/or ends, and paying particular attention to damaged hair. Massage it into your hair, leave on for 5 minutes, then rinse off!
 section_gamme2:
 - titre: Solid hair mask
   paragraphe1: 'Our hair mask is made with the following ingredients: organic sunflower oil, organic carnauba wax, organic shea butter, organic argan oil, organic jojoba oil, fragrance, a natural antioxidant, and a pigment to give it its beautiful, lagoon blue colour!'
   paragraphe2: Our solid mask works to nourish and restructure the hair, and can be used on all hair types. It protects hair against environmental aggressors, strengthens ends, conditions dry hair, and leaves your locks soft and shiny, without weighing it down.
-  paragraphe3: 
-  paragraphe4: 
-  paragraphe5: 
+  paragraphe3:
+  paragraphe4:
+  paragraphe5:
   benefices: You only need a small amount for big results!
-  allergenes: 
+  allergenes:
   color: tiare-light
   background:
     url: MASQUE_TIARE.png
@@ -77,18 +77,18 @@ section_ingredients:
 
   <h1 class="visually-hidden">{{ page.title }}</h1>
 
-  {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
-
   <h2 class="ta-center py-7">{{ page.titre_category_produit1 | textilize }}</h2>
 
   {% include protocole.html protocole=page.section_protocole1 %}
 
   {% include gamme.html gamme=page.section_gamme1 %}
 
+  {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
+
   <h2 class="ta-center py-7">{{ page.titre_category_produit2 | textilize }}</h2>
 
   {% include protocole.html protocole=page.section_protocole2 %}
-  
+
   <div id="masque-capilaire-solide">
   {% include gamme.html gamme=page.section_gamme2 %}
   </div>

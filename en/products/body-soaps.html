@@ -8,7 +8,7 @@ layout: default
 section_protocole:
   background_color: brand-color
   titre: Tips & advice
-  sous_titre: 
+  sous_titre:
   contenu: Wet the soap with water, then rub it to work up a lather. This soap is very gentle and recommended for use on the entire body.
 section_conseils:
 - numero: N°1
@@ -62,11 +62,11 @@ section_ingredients:
 
   <h1 class="visually-hidden">{{ page.title }}</h1>
 
+  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
+
   {% include protocole.html protocole=page.section_protocole %}
 
   {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
-
-  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
 
   {% include gamme_swiper.html gamme=page.section_gamme %}
 

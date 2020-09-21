@@ -8,7 +8,7 @@ layout: default
 section_protocole:
   background_color: brand-color
   titre: Protocole et conseils
-  sous_titre: 
+  sous_titre:
   contenu: L’Oriculi permet de nettoyer le conduit auditif. Prenez le bâtonnet en
     main comme si vous teniez un crayon et positionnez vos doigts en butée contre
     la boule. Insérez l’Oriculi dans l’oreille puis, doucement, effectuez des mouvements
@@ -23,7 +23,7 @@ section_conseils:
 - numero: N°2
   paragraphe_1: Savez-vous que les ORL s’accordent à dire que nettoyer ses oreilles
     1 fois par semaine est suffisant&#8239;?
-  paragraphe_2: 
+  paragraphe_2:
 - numero: N°3
   paragraphe_1: Savez-vous que les ORL ne recommandent pas l’usage des bâtonnets ouatés&#8239;?
   paragraphe_2: Ils poussent le cérumen au fond de l’oreille, créent des bouchons,
@@ -36,7 +36,7 @@ section_conseils:
   paragraphe_1: Veillez à être au calme lorsque vous serez en train de vous nettoyer
     les oreilles. Si vous avez des enfants, l’Oriculi doit être manipulé par un adulte
     afin d’éviter toute blessure des tympans.
-  paragraphe_2: 
+  paragraphe_2:
 section_conseils_background_color: jaune-oriculis
 titre_category_produit: Nos oriculis
 section_gamme:
@@ -49,8 +49,8 @@ section_gamme:
     le pousse pas au fond. Pas de bouchon avec notre nettoyeur d’oreilles écologique&#8239;!
   paragraphe3: Notre Oriculi est en <strong>bioplastique. 100% biosourcé en huile
     de ricin</strong>, et fabriqué en France&#8239;!
-  paragraphe4: 
-  paragraphe5: 
+  paragraphe4:
+  paragraphe5:
   titre_garantie: Condition de garantie
   description_garantie: Puisque l’Oriculi remplace les bâtonnets ouatés à vie, The
     Green Emporium garantie son Oriculi à vie&#8239;!! Parce que nous nous engageons
@@ -81,11 +81,11 @@ section_ingredients:
 
   <h1 class="visually-hidden">{{ page.title }}</h1>
 
+  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
+
   {% include protocole.html protocole=page.section_protocole %}
 
   {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
-
-  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
 
   {% include gamme_swiper.html gamme=page.section_gamme %}
 

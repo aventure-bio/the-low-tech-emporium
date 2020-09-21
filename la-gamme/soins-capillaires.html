@@ -10,7 +10,7 @@ section_conseils:
   paragraphe_1: Savez-vous que bien manger et boire beaucoup d’eau est le premier
     geste de soin pour nos cheveux&#8239;? Leur beauté est liée à la santé de notre
     corps&#8239;!
-  paragraphe_2: 
+  paragraphe_2:
 - numero: N°2
   paragraphe_1: Savez-vous que les huiles essentielles peuvent se révéler très utiles
     pour prendre soin de vos cheveux&#8239;?
@@ -31,7 +31,7 @@ titre_category_produit1: Notre après-shampoing solide
 section_protocole1:
   background_color: agrumes
   titre: Protocole et conseils
-  sous_titre: 
+  sous_titre:
   contenu: Notre après-shampoing ne nécessite pas de temps de pose&#8239;! Après le
     lavage, sur cheveux humides, appliquer notre après-shampoing sur les longueurs
     et pointes en effectuant des mouvements de coiffage. Masser pour le répartir et
@@ -46,9 +46,9 @@ section_gamme1:
     la lisse. Le démêlage est facilité, les frisottis domptés, les boucles dessinées&#8239;!
     Et <strong>l’huile de coco bio</strong> donne une chevelure douce, saine et parfaitement
     hydratée."
-  paragraphe3: 
-  paragraphe4: 
-  paragraphe5: 
+  paragraphe3:
+  paragraphe4:
+  paragraphe5:
   allergenes: Contient des huiles essentielles, ne convient pas aux femmes enceintes
   color: agrumes-light
   background:
@@ -57,7 +57,7 @@ titre_category_produit2: Notre masque capillaire solide
 section_protocole2:
   background_color: tiare
   titre: Protocole et conseils
-  sous_titre: 
+  sous_titre:
   contenu: Ce masque est un soin qui nourrit le cheveu en profondeur et nécessite
     un temps de pose. Après le lavage, sur cheveux encore humides, appliquez le masque
     en effectuant des mouvements de coiffage sur les longueurs et/ou pointes suivant
@@ -72,11 +72,11 @@ section_gamme2:
   paragraphe2: Notre masque nourrit et restructure tous types de cheveux. Il protège  des
     agressions extérieures, il renforce les pointes, les cheveux secs, et offre douceur
     et brillance sans alourdir les cheveux.
-  paragraphe3: 
-  paragraphe4: 
-  paragraphe5: 
+  paragraphe3:
+  paragraphe4:
+  paragraphe5:
   benefices: Avec notre masque, peu de produit déposé suffit pour beaucoup d’effet&#8239;!
-  allergenes: 
+  allergenes:
   color: tiare-light
   background:
     url: MASQUE_TIARE.png
@@ -103,18 +103,18 @@ section_ingredients:
 
   <h1 class="visually-hidden">{{ page.title }}</h1>
 
-  {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
-
   <h2 class="ta-center py-7">{{ page.titre_category_produit1 | textilize }}</h2>
 
   {% include protocole.html protocole=page.section_protocole1 %}
 
   {% include gamme.html gamme=page.section_gamme1 %}
 
+  {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
+
   <h2 class="ta-center py-7">{{ page.titre_category_produit2 | textilize }}</h2>
 
   {% include protocole.html protocole=page.section_protocole2 %}
-  
+
   <div id="masque-capilaire-solide">
   {% include gamme.html gamme=page.section_gamme2 %}
   </div>
