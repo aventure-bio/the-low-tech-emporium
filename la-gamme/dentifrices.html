@@ -1,0 +1,68 @@
+---
+title: Dentifrices à croquer
+description: null
+lang: fr
+ref: dentifrices
+image: null
+layout: default
+section_protocole:
+  background_color: brand-color
+  titre: Protocole et conseils
+  sous_titre:
+  contenu: Prenez une pastille, croquez-là et laissez le produit se dissoudre et mousser dans votre
+    bouche. Munissez-vous de votre brosse à dents et commencez à frotter comme d’habitude.
+    Après cela, rincez !
+    Pour une conservation optimale, vos pastilles doivent être rangées dans un endroit bien sec.
+section_conseils:
+- numero: N°1
+  paragraphe_1: Saviez-vous qu’il faut se brosser les dents 2 fois par jour, le matin après le
+    petit déjeuner et le soir après le dîner, pendant environ 2 minutes afin d’éviter les problèmes
+    bucco-dentaires ?
+- numero: N°2
+  paragraphe_1: "Pour arriver à un brossage de dent optimal, utilisez différents accessoires en
+    complément de votre brosse à dent : fil dentaire, jet d’eau, etc…"
+- numero: N°3
+  paragraphe_1: Saviez-vous que manger une pomme permet de nettoyer vos dents sans y déposer de
+    sucre ? Astuce qui peut s’avérer utile quand on n’a pas sa brosse à dent le midi après le repas.
+section_conseils_background_color: bambou-nettoyant
+titre_category_produit: Nos déodorants solides
+section_gamme:
+- titre: "Notre dernière nouveauté : un dentifrice zéro-déchet à croquer !"
+  paragraphe1: Parfait pour utiliser à la maison, ce dentifrice est aussi très simple à emporter
+    partout avec soi. Le <strong>bicarbonate de sodium</strong> et la <strong>silice</strong> vont
+    permettre de nettoyer délicatement vos dents.
+  paragraphe2: "Notre boîte en carton contient 120 pastilles : 1 pastille = 1 brossage de dents !"
+  paragraphe3: En plus de ça, la boîte est en carton biosourcé mais elle est surtout biodégradable
+    par compostage ! Encore un pas vers le zéro-déchet, tout simplement. Alors croquez, mâchez,
+    brossez puis rincez, souriez et recommencez à l’infini !!!
+  paragraphe4: Dans le respect de la charte Cosmos Natural, notre dentifrice contient plus de 95%
+    d’ingrédients d’origine naturelle et est certifié vegan.
+  paragraphe5:
+  benefices:
+  allergenes: Ce dentifrice à croquer ne contient pas de fluor.
+  color: bambou-nettoyant-light
+  background:
+    url: DENTIFRICE_SOLIDE.png
+section_ingredients:
+  titre: Découvrez <br>nos ingrédients <br>vegan & naturels
+  href: "/les-ingredients"
+  background:
+    url: AdobeStock_-35-b&w-960w.png
+    color: fruits-exotiques-light
+---
+
+<main class="la-gamme">
+
+  <h1 class="visually-hidden">{{ page.title }}</h1>
+
+  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
+
+  {% include protocole.html protocole=page.section_protocole %}
+
+  {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
+
+  {% include gamme.html gamme=page.section_gamme %}
+
+  {% include ingredients.html ingredients=page.section_ingredients %}
+
+</main>
