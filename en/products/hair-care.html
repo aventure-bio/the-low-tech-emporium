@@ -19,6 +19,7 @@ section_conseils:
   paragraphe_1: What's the difference between a conditioner and a mask?
   paragraphe_2: A conditioner doesn't always need to be left on the hair, and has a smoothing and detangling effect. A mask, on the other hand, must be left on the hair as it contains richer ingredients for a deep conditioning treatment.
 section_conseils_background_color: brand-color
+titre_category_produit: Our solid hair cair products
 titre_category_produit1: Our solid conditioner
 section_protocole1:
   background_color: agrumes
@@ -77,13 +78,15 @@ section_ingredients:
 
   <h1 class="visually-hidden">{{ page.title }}</h1>
 
+  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
+
+  {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
+
   <h2 class="ta-center py-7">{{ page.titre_category_produit1 | textilize }}</h2>
 
   {% include protocole.html protocole=page.section_protocole1 %}
 
   {% include gamme.html gamme=page.section_gamme1 %}
-
-  {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
 
   <h2 class="ta-center py-7">{{ page.titre_category_produit2 | textilize }}</h2>
 

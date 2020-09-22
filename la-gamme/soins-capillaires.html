@@ -27,6 +27,7 @@ section_conseils:
     effet lissant et démêlant. Le masque, à l’inverse, doit poser sur les cheveux,
     il des composants plus riches qui permettent une action en profondeur.
 section_conseils_background_color: brand-color
+titre_category_produit: Nos soins capillaires solides
 titre_category_produit1: Notre après-shampoing solide
 section_protocole1:
   background_color: agrumes
@@ -107,13 +108,15 @@ section_ingredients:
 
   <h1 class="visually-hidden">{{ page.title }}</h1>
 
+  <h2 class="ta-center py-7">{{ page.titre_category_produit | textilize }}</h2>
+
+  {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
+
   <h2 class="ta-center py-7">{{ page.titre_category_produit1 | textilize }}</h2>
 
   {% include protocole.html protocole=page.section_protocole1 %}
 
   {% include gamme.html gamme=page.section_gamme1 %}
-
-  {% include conseils.html conseils=page.section_conseils background_color=page.section_conseils_background_color %}
 
   <h2 class="ta-center py-7">{{ page.titre_category_produit2 | textilize }}</h2>
 
