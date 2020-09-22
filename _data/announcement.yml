@@ -1,8 +1,12 @@
 fr:
-  - message: Le geste beauté devient un beau geste pour l’environnement.
-    url: 
+  - message: Le geste beauté devient un beau geste pour l’environnement
+    url: null
   - message: Fabrication 100% française
     url: /nos-valeurs
+  - message: Retrouvez-nous en grande surface !
+    url: 'https://the-green-emporium.com/acheter'
+  - message: '2 magasins ouverts cette semaine :)'
+    url: ''
 en:
   - message: The beauty gesture becomes a beautiful gesture for the environment.
-    url:
+    url: null
