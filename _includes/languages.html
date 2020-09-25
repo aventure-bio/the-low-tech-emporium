@@ -1,5 +1,5 @@
 <ul id="languages">
-{% assign pages=site.html_pages | where:"ref", page.ref | sort: 'lang' %}
+{% assign pages=site.html_pages | where:"ref", page.ref | sort: 'lang' | uniq %}
 {% for page in pages %}
   <li>
     <a href="{{ page.url }}" hreflang="{{ page.lang }}" title="{{ site.data.translations.lang[page.lang] }}">{{ page.lang }}</a>
