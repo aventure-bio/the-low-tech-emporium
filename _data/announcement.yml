@@ -5,8 +5,8 @@ fr:
     url: 
   - message: En octobre, retrouvez-nous chez Leclerc !
     url: 'https://the-green-emporium.com/nous-trouver'
-  - message: '2 magasins ouverts cette semaine :)'
-    url: ''
+  - message: Fabrication 100% française.
+    url: 'https://the-green-emporium.com/nos-valeurs'
 en:
   - message: The beauty gesture becomes a beautiful gesture for the environment.
     url: null
