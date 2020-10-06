@@ -1,9 +1,9 @@
 fr:
   - message: Le geste beauté devient un beau geste pour l’environnement
     url: null
-  - message: Fabrication 100% française
-    url: /nos-valeurs
-  - message: Retrouvez-nous en grande surface !
+  - message: 25 Leclerc partout en France !
+    url: 
+  - message: En octobre, retrouvez-nous chez Leclerc !
     url: 'https://the-green-emporium.com/nous-trouver'
   - message: '2 magasins ouverts cette semaine :)'
     url: ''
