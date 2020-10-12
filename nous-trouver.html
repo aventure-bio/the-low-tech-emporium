@@ -52,7 +52,7 @@ section_magasins:
   <section id="magasins" class="section flex flex-col justify-center mx-auto py-8 px-6">
 
     <label for="filter" class="visually-hidden">Rechercher</label>
-    <input type="text" class="pl-6 pr-7 py-4" id="filter" onkeyup="filterList()" placeholder="Rechercher un magasin…">
+    <input type="text" class="pl-6 pr-7 py-4" id="filter" onkeyup="filterList()" placeholder="Rechercher un magasin par nom, ville, code postal... ">
 
     <ul class="magasins no-list-style">
       {% for magasin in page.section_magasins %}
