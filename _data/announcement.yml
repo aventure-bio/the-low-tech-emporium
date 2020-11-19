@@ -7,8 +7,8 @@ fr:
     url: null
   - message: Déjà 180 points de vente en France !
     url: 'https://the-green-emporium.com/nous-trouver'
-  - message: Fabrication 100% française.
-    url: 'https://the-green-emporium.com/nos-valeurs'
+  - message: Dispo en Belgique depuis novembre !
+    url: null
 en:
   - message: null
     url: null
