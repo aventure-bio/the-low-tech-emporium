@@ -1,3 +1,4 @@
+<!-- NOTE: Gestion du multilinguisme -->
 <ul id="languages">
 {% assign pages=site.html_pages | where:"ref", page.ref | sort: 'lang' | uniq %}
 {% for page in pages %}

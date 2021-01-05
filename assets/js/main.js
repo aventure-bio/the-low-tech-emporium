@@ -1,6 +1,7 @@
 ---
 ---
 
+// NOTE: Setup Progressive Web App
 if ("serviceWorker" in navigator) {
   // if (navigator.serviceWorker.controller) {
   //   console.log("An active service worker found, no need to register");
