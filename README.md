@@ -2,7 +2,7 @@
 
 ## Historique
 
-Ce projet a été développé pour [Lamazuna](https://www.lamazuna.com/) pour leur marque The Green Emporium. Cette marque est à destination de la grande distribution. Il a été initialement développé par [Timothée Goguely](https://timothee.goguely.com/) en collaboration avec Aventure Bio. Il est désormais 100% maintenu par Aventure Bio. Nous travaillons désormais principalement sur le projet avec Laëtitia, Damien et Elsa de Lamazuna.
+Ce projet a été développé pour [Lamazuna](https://www.lamazuna.com/) pour leur marque The Green Emporium. Cette marque est à destination de la grande distribution. Il a été initialement développé par [Timothée Goguely](https://timothee.goguely.com/) en collaboration avec Aventure Bio. Il est désormais 100% maintenu par Aventure Bio. Nous travaillons désormais principalement sur le projet avec Laëtitia (fondatrice), Damien et Elsa (respos projets sur The Green Emporium) de Lamazuna.
 
 ## Low Tech
 
