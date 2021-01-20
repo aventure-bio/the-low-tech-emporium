@@ -23,6 +23,7 @@ exclude: ['README.md']
 
 sass:
   style: compressed
+  cache: false
 
 jekyll_admin:
   hidden_links:
