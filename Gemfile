@@ -7,7 +7,6 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag', "~> 2.6", ">= 2.6.1"
   gem 'jekyll_picture_tag', '~> 1.8'
   gem 'jekyll-minifier', '~> 0.1.10'
-  gem 'github-pages', '~> 204'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
